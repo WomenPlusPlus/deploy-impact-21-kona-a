@@ -13,5 +13,4 @@ export default function Cover({ navigation }) {
            <Button title='Start Questionnaire' onPress={pressHandler} /> 
         </View>
     )
-
 }

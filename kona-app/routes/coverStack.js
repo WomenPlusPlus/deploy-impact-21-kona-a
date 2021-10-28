@@ -1,18 +1,30 @@
-import { createStackNavigator} from 'react-navigation-stack';
-import { createAppContainer } from 'react-navigation';
 import Cover from '../screens/cover';
 import Questionnaire from '../screens/startQuestionnaire';
+import React from 'react';
+import MyTheme from '../components/globals/MyTheme'
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const screens = {
-    Cover: {
-        screen: Cover
-            },
-    Questionnaire: {
-        screen: Questionnaire
-            }
-        
-    }
 
-    const CoverStack = createStackNavigator(screens);
 
-    export default createAppContainer(CoverStack);
+const Stack = createNativeStackNavigator();
+
+const MyStack = () => {
+  return (
+    <NavigationContainer theme={MyTheme}>
+        <Stack.Navigator>
+            <Stack.Screen
+             name="Cover"
+             component={Cover}
+            //  options={{ title: 'Cover' }}
+            />
+            <Stack.Screen
+             name="Questionnaire"
+             component={Questionnaire}
+            />
+        </Stack.Navigator>
+    </NavigationContainer>
+    );
+};
+
+    export default MyStack;
