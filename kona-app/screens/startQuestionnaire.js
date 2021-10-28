@@ -1,10 +1,13 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import {  View } from 'react-native';
+import Header from '../components/questionnaire/Header';
+import OrgList from '../components/questionnaire/OrganizatonsList'
 
 export default function Questionnaire() {
     return(
-        <View style={{paddingTop: 20}}>
-           <Text>CoverScreen</Text> 
+        <View>
+            <Header />
+            <OrgList />
         </View>
     )
 }
