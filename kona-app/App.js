@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Home from './screens/home';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
+import MyStack from './routes/homeStack';
 
 const getFonts = () => Font.loadAsync({
   'poppins-regular': require('./assets/fonts/Poppins-Regular.ttf'),
@@ -16,7 +17,7 @@ export default function App() {
 
   if(fontsLoaded){
     return (
-      <Home />
+      <MyStack />
     );
   } else {
     return (
