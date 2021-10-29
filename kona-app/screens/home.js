@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Home () {
   return (
     <View style={styles.container}>
-      <Text>Homepage of dots</Text>
+      <Text style={styles.titleText}>Welcome to DOTS!</Text>
     </View>
   )
 }
@@ -16,4 +16,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  titleText: {
+    fontFamily: 'poppins-medium',
+    fontSize: 24,
+    lineHeight: 36,
+  }
 });
