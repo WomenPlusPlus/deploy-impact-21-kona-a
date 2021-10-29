@@ -49,5 +49,8 @@ export const globalStyles = StyleSheet.create({
         textDecorationLine: 'underline',
         textAlign: 'right',
         fontWeight: 'bold'
+    },
+    bigButton: {
+      backgroundColor: '#E5E5E5'
     }
 })

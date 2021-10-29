@@ -9,11 +9,16 @@ export default function Questionnaire({ navigation }) {
         navigation.navigate('DropdownQuestion')
     }
 
+    const pressHandlerButton = () => {
+        navigation.navigate('QuestionWithButtons')
+    }
+
     return(
         <View>
             <Header />
             <OrgList />
             <Button title='Dropdown Question' onPress={pressHandler} />
+            <Button title='Question with Buttons' onPress={pressHandlerButton} />
         </View>
     )
 }

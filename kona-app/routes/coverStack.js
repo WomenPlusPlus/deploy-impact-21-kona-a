@@ -1,13 +1,12 @@
+import React from 'react';
 import Home from '../screens/home';
 import Cover from '../screens/cover';
 import Questionnaire from '../screens/startQuestionnaire';
 import DropdownQuestion from '../screens/dropdownQuestion';
-import React from 'react';
+import QuestionWithButtons from '../screens/questionWithButtons';
 import MyTheme from '../components/globals/MyTheme'
-import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-
 
 const Stack = createNativeStackNavigator();
 
@@ -18,7 +17,6 @@ const MyStack = () => {
             <Stack.Screen
              name="Home"
              component={Home}
-            //  options={{ title: 'Cover' }}
             />
             <Stack.Screen
              name="Cover"
@@ -33,6 +31,10 @@ const MyStack = () => {
              name="DropdownQuestion"
              component={DropdownQuestion}
             />
+            <Stack.Screen
+             name="QuestionWithButtons"
+             component={QuestionWithButtons}
+             />
         </Stack.Navigator>
     </NavigationContainer>
     );
