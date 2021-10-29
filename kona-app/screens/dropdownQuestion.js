@@ -1,11 +1,13 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { globalStyles } from '../globals/GlobalStyles';
+import Card from '../components/question/card';
+import Dropdown from '../components/question/dropdown';
 
 export default function DropdownQuestion () {
   return (
-    <View style={globalStyles.container}>
-      <Text style={globalStyles.titleTextQuestion}>Dropdown Question Page</Text>
+    <View>
+      <Card />
+      <Dropdown />
     </View>
   )
 }

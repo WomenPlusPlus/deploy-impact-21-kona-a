@@ -1,6 +1,7 @@
 import Home from '../screens/home';
 import Cover from '../screens/cover';
 import Questionnaire from '../screens/startQuestionnaire';
+import DropdownQuestion from '../screens/dropdownQuestion';
 import React from 'react';
 import MyTheme from '../components/globals/MyTheme'
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
@@ -27,6 +28,10 @@ const MyStack = () => {
             <Stack.Screen
              name="Questionnaire"
              component={Questionnaire}
+            />
+            <Stack.Screen
+             name="DropdownQuestion"
+             component={DropdownQuestion}
             />
         </Stack.Navigator>
     </NavigationContainer>

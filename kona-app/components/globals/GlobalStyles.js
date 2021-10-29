@@ -12,8 +12,14 @@ export const globalStyles = StyleSheet.create({
       lineHeight: 36,
       color: '#6B6B6B',
     },
-    titleTextQuestion: {
+    titleTextBold: {
       fontFamily: 'poppins-bold',
+      fontSize: 16,
+      lineHeight: 24,
+      color: '#212121',
+    },
+    normalText: {
+      fontFamily: 'poppins-medium',
       fontSize: 16,
       lineHeight: 24,
       color: '#212121',
@@ -23,17 +29,23 @@ export const globalStyles = StyleSheet.create({
         height: 100
     },
     button: {
-        borderRadius: 8,
-        paddingVertical: 14,
-        paddingHorizontal: 10,
-        backgroundColor: 'black',
-        width: 150
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      paddingVertical: 15,
+      paddingHorizontal: 20,
+      backgroundColor: '#212121',
+      borderRadius: 10,
     },
     buttonText: {
-        color:'white',
-        fontWeight: 'bold',
-        fontSize: 16,
-        textAlign: 'center'
+      fontFamily: 'poppins-medium',
+      fontSize: 16,
+      lineHeight: 24,
+      color: '#ffffff',
+      flexGrow: 0,
+      marginVertical: 0,
+      marginHorizontal: 10,
     },
     textLink: {
         paddingTop: 10,
