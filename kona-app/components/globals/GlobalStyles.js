@@ -29,9 +29,6 @@ export const globalStyles = StyleSheet.create({
         height: 100
     },
     button: {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'center',
       alignItems: 'center',
       paddingVertical: 15,
       paddingHorizontal: 20,
@@ -43,7 +40,6 @@ export const globalStyles = StyleSheet.create({
       fontSize: 16,
       lineHeight: 24,
       color: '#ffffff',
-      flexGrow: 0,
       marginVertical: 0,
       marginHorizontal: 10,
     },

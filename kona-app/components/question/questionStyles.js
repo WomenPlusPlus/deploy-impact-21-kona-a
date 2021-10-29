@@ -1,20 +1,19 @@
 import {StyleSheet} from 'react-native';
 
 export const questionStyles = StyleSheet.create({
-  questionContainer: {
-    position: 'absolute',
-    width: 325,
-    height: 109,
-    left: 24,
-    top: 198,
+  mainContainer: {
     display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'flex-start',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+  },
+  questionContainer: {
   },
   dropdownContainer: {
-    position: 'absolute',
-    width: 325,
-    height: 58,
-    left: 24,
-    top: 290,
+  },
+  btnContainer: {
   },
   dropdownBtnStyle: {
     width: 325,
