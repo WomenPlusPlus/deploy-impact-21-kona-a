@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function Home () {
   return (
-    <View style={StyleSheet.container}>
-      <text>Homepage of dots</text>
+    <View style={styles.container}>
+      <Text>Homepage of dots</Text>
     </View>
   )
 }
