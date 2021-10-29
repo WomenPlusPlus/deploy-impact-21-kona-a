@@ -15,7 +15,7 @@ const Dropdown = () => {
           onSelect={(selectedItem, index) => {
             console.log(selectedItem, index);
           }}
-          defaultButtonText={"Select country"}
+          defaultButtonText={"Choose country"}
           buttonTextAfterSelection={(selectedItem, index) => {
             return selectedItem;
           }}
@@ -26,7 +26,7 @@ const Dropdown = () => {
           buttonTextStyle={globalStyles.normalText}
           renderDropdownIcon={() => {
             return (
-              <FontAwesome name="chevron-down" color={"#444"} size={18} />
+              <FontAwesome name="chevron-down" color={"#212121"} size={18} />
             );
           }}
           dropdownIconPosition={"right"}
