@@ -1,3 +1,4 @@
+import Home from '../screens/home';
 import Cover from '../screens/cover';
 import Questionnaire from '../screens/startQuestionnaire';
 import React from 'react';
@@ -13,6 +14,11 @@ const MyStack = () => {
   return (
     <NavigationContainer theme={MyTheme}>
         <Stack.Navigator>
+            <Stack.Screen
+             name="Home"
+             component={Home}
+            //  options={{ title: 'Cover' }}
+            />
             <Stack.Screen
              name="Cover"
              component={Cover}

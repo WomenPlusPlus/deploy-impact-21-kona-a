@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 export const globalStyles = StyleSheet.create({
     container: {
@@ -6,10 +6,17 @@ export const globalStyles = StyleSheet.create({
         padding: 24,
         backgroundColor: 'rgb(242,240,240)'
     },
-    titleText: {
-        fontSize: 18,
-        color: 'black',
-        fontWeight: 'bold'
+    titleTextHomepage: {
+      fontFamily: 'poppins-medium',
+      fontSize: 24,
+      lineHeight: 36,
+      color: '#6B6B6B',
+    },
+    titleTextQuestion: {
+      fontFamily: 'poppins-bold',
+      fontSize: 16,
+      lineHeight: 24,
+      color: '#212121',
     },
     card: {
         width: 100,

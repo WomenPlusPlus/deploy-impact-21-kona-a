@@ -1,6 +1,6 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
-import {globalStyles} from '../globals/GlobalStyles';
+import { Image, Text, View } from 'react-native';
+import { globalStyles } from '../globals/GlobalStyles';
 import { questStyles } from './QuestStyles';
 
 const Card = () => {

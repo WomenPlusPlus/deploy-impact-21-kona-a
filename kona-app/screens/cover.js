@@ -9,8 +9,8 @@ export default function Cover({ navigation }) {
 
     return (
         <View style={{paddingTop: 20}}>
-           <Text>CoverScreen</Text>
-           <Button title='Start Questionnaire' onPress={pressHandler} /> 
+          <Text>CoverScreen</Text>
+          <Button title='Start Questionnaire' onPress={pressHandler} />
         </View>
     )
 }

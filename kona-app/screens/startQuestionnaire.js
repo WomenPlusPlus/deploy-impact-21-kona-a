@@ -1,5 +1,5 @@
 import React from 'react';
-import {  View } from 'react-native';
+import { View } from 'react-native';
 import Header from '../components/questionnaire/Header';
 import OrgList from '../components/questionnaire/OrganizatonsList'
 
