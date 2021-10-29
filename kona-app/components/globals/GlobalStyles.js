@@ -27,7 +27,7 @@ export const globalStyles = StyleSheet.create({
     },
     card: {
         width: 100,
-        height: 100
+        height: 100,
     },
     button: {
       alignItems: 'center',
@@ -63,6 +63,12 @@ export const globalStyles = StyleSheet.create({
       padding: 5
     },
     cardsContainer: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'space-around',
+      marginVertical: 16
+    },
+    cardsContainerLeft: {
       flexDirection: 'row',
       flexWrap: 'wrap',
       justifyContent: 'space-between',

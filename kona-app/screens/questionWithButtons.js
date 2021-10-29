@@ -13,7 +13,7 @@ const QuestionWithButtons = () => {
             <View>
                 <Subject />
                 <QuestionText />
-                <View style={globalStyles.cardsContainer}>
+                <View style={globalStyles.cardsContainerLeft}>
                     <BigButton answer='Access to education' />
                     <BigButton answer='Legal rights' />
                     <BigButton answer='Improve education' />
