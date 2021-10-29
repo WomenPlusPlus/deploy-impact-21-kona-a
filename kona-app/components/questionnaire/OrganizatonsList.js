@@ -6,13 +6,9 @@ import { questStyles } from './QuestStyles';
 
 const OrgList = () => {
     return (
-        <View style={{paddingTop: 10}}>
+        <View style={globalStyles.pt}>
             <Text style={ questStyles.h2 }>These organization might be able to help:</Text>
-            <View style={{
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-                justifyContent: 'space-around'
-            }}>
+            <View style={ globalStyles.cardsContainer }>
                 <Card />
                 <Card />
                 <Card />
