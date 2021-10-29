@@ -4975,6 +4975,11 @@ react-is@^17.0.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
+react-native-element-dropdown@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/react-native-element-dropdown/-/react-native-element-dropdown-1.4.6.tgz#f04ab29a352d3c5898430ae454fa24cb44f7c24b"
+  integrity sha512-MkS9eC0vuNrHIxeCbU61gFESqeO4VwKqqalemr813zEvGoAykmaWKdVodwnjtLEZCF9vwI7s7L8sI4AZ4w64QQ==
+
 react-native-gesture-handler@~1.10.2:
   version "1.10.3"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.10.3.tgz#942bbf2963bbf49fa79593600ee9d7b5dab3cfc0"

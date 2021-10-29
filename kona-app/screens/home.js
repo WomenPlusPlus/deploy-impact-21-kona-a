@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { globalStyles } from '../components/globals/GlobalStyles';
+import FlatButton from '../components/globals/Button';
 
 export default function Home({ navigation }) {
 
@@ -11,7 +12,7 @@ export default function Home({ navigation }) {
     return (
       <View style={globalStyles.container}>
         <Text style={globalStyles.titleTextHomepage}>Welcome to DOTS!</Text>
-        <Button title='Cover Page' onPress={pressHandler} />
+        <FlatButton text='Cover Page' onPress={pressHandler} />
       </View>
     )
 }

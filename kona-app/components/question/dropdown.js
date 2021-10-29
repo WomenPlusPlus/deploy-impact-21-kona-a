@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { globalStyles } from '../globals/GlobalStyles';
 import { questionStyles } from './questionStyles';
 import SelectDropdown from 'react-native-select-dropdown'
+import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 const Dropdown = () => {
   const countries = ["Senegal", "Switzerland", "Ghana", "England"]
@@ -12,18 +13,26 @@ const Dropdown = () => {
         <SelectDropdown
           data={countries}
           onSelect={(selectedItem, index) => {
-            console.log(selectedItem, index)
+            console.log(selectedItem, index);
           }}
+          defaultButtonText={"Select country"}
           buttonTextAfterSelection={(selectedItem, index) => {
-            // text represented after item is selected
-            // if data array is an array of objects then return selectedItem.property to render after item is selected
-            return selectedItem
+            return selectedItem;
           }}
           rowTextForSelection={(item, index) => {
-            // text represented for each item in dropdown
-            // if data array is an array of objects then return item.property to represent item in dropdown
-            return item
+            return item;
           }}
+          buttonStyle={questionStyles.dropdownBtnStyle}
+          buttonTextStyle={globalStyles.normalText}
+          renderDropdownIcon={() => {
+            return (
+              <FontAwesome name="chevron-down" color={"#444"} size={18} />
+            );
+          }}
+          dropdownIconPosition={"right"}
+          dropdownStyle={questionStyles.dropdownDropdownStyle}
+          rowStyle={questionStyles.dropdownRowStyle}
+          rowTextStyle={questionStyles.dropdownRowTxtStyle}
         />
       </Text>
     </View>
