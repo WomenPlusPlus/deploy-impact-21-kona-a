@@ -3,7 +3,7 @@ import { Image, Text, View } from 'react-native';
 import { globalStyles } from '../globals/GlobalStyles';
 import { questStyles } from './QuestStyles';
 
-const Card = () => {
+const OrgCard = () => {
     return (
     <View style={ questStyles.cardStyle }>
         <Image source={require('../../assets/Logo-warc.png')} style={ globalStyles.card }></Image>
@@ -14,4 +14,4 @@ const Card = () => {
     )
 }
 
-export default Card;
+export default OrgCard;

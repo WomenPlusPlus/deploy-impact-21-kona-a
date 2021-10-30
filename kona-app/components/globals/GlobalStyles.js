@@ -23,10 +23,11 @@ export const globalStyles = StyleSheet.create({
       fontSize: 16,
       lineHeight: 24,
       color: '#212121',
+      textAlign: 'center'
     },
     card: {
         width: 100,
-        height: 100
+        height: 100,
     },
     button: {
       alignItems: 'center',
@@ -51,6 +52,44 @@ export const globalStyles = StyleSheet.create({
         fontWeight: 'bold'
     },
     bigButton: {
-      backgroundColor: '#E5E5E5'
+      flexDirection: 'row',
+      backgroundColor: '#E5E5E5',
+      width: 158,
+      height: 148,
+      borderRadius: 10,
+      marginBottom: 10,
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: 5
+    },
+    cardsContainer: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'space-around',
+      marginVertical: 16
+    },
+    cardsContainerLeft: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+      marginVertical: 16
+    },
+    pt: {
+      paddingTop: 10
+    },
+    questionContainer: {
+      // display: 'flex',
+      flexDirection: 'column',
+      // justifyContent: 'flex-start',
+      alignItems: 'flex-start',
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+    },
+    questionText: {
+      fontFamily: 'poppins-medium',
+      fontSize: 16,
+      lineHeight: 24,
+      color: '#212121',
+      // textAlign: 'start'
     }
 })

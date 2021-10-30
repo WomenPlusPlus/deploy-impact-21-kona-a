@@ -14,6 +14,7 @@ export const questionStyles = StyleSheet.create({
   dropdownContainer: {
   },
   btnContainer: {
+    alignItems: 'flex-end'
   },
   dropdownBtnStyle: {
     width: 325,
