@@ -8,8 +8,8 @@ import { GlobalStyles } from '../components/globals/GlobalStyles';
 
 export default function DropdownQuestion () {
   return (
-    <View style={GlobalStyles.questionContainer}>
-      <View style={GlobalStyles.smallerQuestionContainer}>
+    <View style={QuestionStyles.questionContainer}>
+      <View style={QuestionStyles.smallerQuestionContainer}>
         <Card />
         <Dropdown />
         <FlatButton style={QuestionStyles.btnContainer} text='Next' onPress={() => console.log("OK Pressed")}/>

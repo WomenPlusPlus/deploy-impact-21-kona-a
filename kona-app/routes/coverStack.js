@@ -1,7 +1,7 @@
 import React from 'react';
 import Home from '../screens/Home';
 import Cover from '../screens/Cover';
-import Questionnaire from '../screens/StartQuestionnaire';
+import StartQuestionnaire from '../screens/StartQuestionnaire';
 import DropdownQuestion from '../screens/DropdownQuestion';
 import QuestionWithButtons from '../screens/QuestionWithButtons';
 import MyTheme from '../components/globals/MyTheme'
@@ -24,8 +24,8 @@ const CoverStack = () => {
             //  options={{ title: 'Cover' }}
             />
             <Stack.Screen
-             name="Questionnaire"
-             component={Questionnaire}
+             name="StartQuestionnaire"
+             component={StartQuestionnaire}
             />
             <Stack.Screen
              name="DropdownQuestion"

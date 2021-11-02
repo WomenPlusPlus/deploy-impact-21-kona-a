@@ -5,7 +5,7 @@ import { QuestionStyles } from './QuestionStyles';
 
 const Subject = () => {
     return (
-    <View style={QuestionStyles.questionContainer}>
+    <View style={QuestionStyles.subjectContainer}>
       <Text style={GlobalStyles.titleTextBold}>Education</Text>
     </View>
     )

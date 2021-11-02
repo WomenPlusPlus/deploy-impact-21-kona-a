@@ -4,15 +4,15 @@ import BigButton from '../components/globals/BigButton';
 import QuestionText from '../components/question/QuestionText';
 import FlatButton from '../components/globals/Button';
 import Subject from '../components/question/Subject';
-import { GlobalStyles } from '../components/globals/GlobalStyles';
+import { QuestionStyles } from '../components/question/QuestionStyles';
 
 const QuestionWithButtons = () => {
     return (
-        <View style={GlobalStyles.questionContainer}>
-            <View style={GlobalStyles.smallerQuestionContainer}>
+        <View style={QuestionStyles.questionContainer}>
+            <View style={QuestionStyles.smallerQuestionContainer}>
                 <Subject />
                 <QuestionText />
-                <View style={GlobalStyles.cardsContainerLeft}>
+                <View style={QuestionStyles.cardsContainerLeft}>
                     <BigButton answer='Access to education' />
                     <BigButton answer='Legal rights' />
                     <BigButton answer='Improve education' />
