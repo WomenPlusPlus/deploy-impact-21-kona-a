@@ -78,18 +78,20 @@ export const globalStyles = StyleSheet.create({
       paddingTop: 10
     },
     questionContainer: {
-      // display: 'flex',
       flexDirection: 'column',
-      // justifyContent: 'flex-start',
+      justifyContent: 'center',
       alignItems: 'flex-start',
       paddingVertical: 10,
       paddingHorizontal: 20,
+      height: '100%'
+    },
+    smallerQuestionContainer: {
+      alignSelf: 'center'
     },
     questionText: {
       fontFamily: 'poppins-medium',
       fontSize: 16,
       lineHeight: 24,
       color: '#212121',
-      // textAlign: 'start'
     }
 })

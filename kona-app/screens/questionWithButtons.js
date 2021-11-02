@@ -10,7 +10,7 @@ import { globalStyles } from '../components/globals/GlobalStyles';
 const QuestionWithButtons = () => {
     return (
         <View style={globalStyles.questionContainer}>
-            <View>
+            <View style={globalStyles.smallerQuestionContainer}>
                 <Subject />
                 <QuestionText />
                 <View style={globalStyles.cardsContainerLeft}>

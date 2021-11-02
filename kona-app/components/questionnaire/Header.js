@@ -8,7 +8,7 @@ import { questStyles } from './QuestStyles';
 const Header = () => {
     return (
         <View style={ globalStyles.container }>
-            <Text style={ globalStyles.titleTextQuestion }>Answer a few questions in order to find the organization that can help you.</Text>
+            <Text style={ globalStyles.questionText }>Answer a few questions in order to find the organization that can help you.</Text>
             <View style={ questStyles.smallContainer}>
             <Feather name="clock" size={16} style={ questStyles.greyText } />
                 <Text style={ questStyles.greyText }> Duration: 2 min.</Text>
