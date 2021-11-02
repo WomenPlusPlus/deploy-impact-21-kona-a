@@ -1,19 +1,18 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import Card from '../components/question/card';
-import Dropdown from '../components/question/dropdown';
+import { View } from 'react-native';
+import Card from '../components/question/Card';
+import Dropdown from '../components/question/Dropdown';
 import FlatButton from '../components/globals/Button';
-import { questionStyles } from '../components/question/questionStyles';
-import { globalStyles } from '../components/globals/GlobalStyles';
+import { QuestionStyles } from '../components/question/QuestionStyles';
+import { GlobalStyles } from '../components/globals/GlobalStyles';
 
 export default function DropdownQuestion () {
   return (
-    // <View style={questionStyles.mainContainer}>
-    <View style={globalStyles.questionContainer}>
-      <View style={globalStyles.smallerQuestionContainer}>
+    <View style={GlobalStyles.questionContainer}>
+      <View style={GlobalStyles.smallerQuestionContainer}>
         <Card />
         <Dropdown />
-        <FlatButton style={questionStyles.btnContainer} text='Next' onPress={() => console.log("OK Pressed")}/>
+        <FlatButton style={QuestionStyles.btnContainer} text='Next' onPress={() => console.log("OK Pressed")}/>
       </View>
     </View>
   )

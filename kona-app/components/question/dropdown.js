@@ -1,15 +1,15 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { globalStyles } from '../globals/GlobalStyles';
-import { questionStyles } from './questionStyles';
+import { GlobalStyles } from '../globals/GlobalStyles';
+import { QuestionStyles } from './QuestionStyles';
 import SelectDropdown from 'react-native-select-dropdown'
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 const Dropdown = () => {
   const countries = ["Senegal", "Switzerland", "Ghana", "England"]
     return (
-    <View style={questionStyles.dropdownContainer}>
-      <Text style={globalStyles.normalText}>
+    <View style={QuestionStyles.dropdownContainer}>
+      <Text style={GlobalStyles.normalText}>
         <SelectDropdown
           data={countries}
           onSelect={(selectedItem, index) => {
@@ -22,17 +22,17 @@ const Dropdown = () => {
           rowTextForSelection={(item, index) => {
             return item;
           }}
-          buttonStyle={questionStyles.dropdownBtnStyle}
-          buttonTextStyle={globalStyles.normalText}
+          buttonStyle={QuestionStyles.dropdownBtnStyle}
+          buttonTextStyle={GlobalStyles.normalText}
           renderDropdownIcon={() => {
             return (
               <FontAwesome name="chevron-down" color={"#212121"} size={18} />
             );
           }}
           dropdownIconPosition={"right"}
-          dropdownStyle={questionStyles.dropdownDropdownStyle}
-          rowStyle={questionStyles.dropdownRowStyle}
-          rowTextStyle={questionStyles.dropdownRowTxtStyle}
+          dropdownStyle={QuestionStyles.dropdownDropdownStyle}
+          rowStyle={QuestionStyles.dropdownRowStyle}
+          rowTextStyle={QuestionStyles.dropdownRowTxtStyle}
         />
       </Text>
     </View>

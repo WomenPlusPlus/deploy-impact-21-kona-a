@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { globalStyles } from '../globals/GlobalStyles';
-import { questionStyles } from './questionStyles';
+import { GlobalStyles } from '../globals/GlobalStyles';
+import { QuestionStyles } from './QuestionStyles';
 
 const Subject = () => {
     return (
-    <View style={questionStyles.questionContainer}>
-      <Text style={globalStyles.titleTextBold}>Education</Text>
+    <View style={QuestionStyles.questionContainer}>
+      <Text style={GlobalStyles.titleTextBold}>Education</Text>
     </View>
     )
 }
