@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text, TouchableOpacity, View } from "react-native";
-import { globalStyles } from './GlobalStyles';
+import { GlobalStyles } from './GlobalStyles';
 
 const BigButton = ({answer, onPress }) => {
     return (
         <TouchableOpacity onPress={onPress}>
-            <View style={globalStyles.bigButton}>
-                <Text style={globalStyles.normalText}>{ answer } </Text>
+            <View style={GlobalStyles.bigButton}>
+                <Text style={GlobalStyles.normalText}>{ answer } </Text>
             </View>
         </TouchableOpacity>
     )

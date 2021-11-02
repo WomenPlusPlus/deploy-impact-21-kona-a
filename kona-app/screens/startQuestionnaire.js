@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, View } from 'react-native';
-import Header from '../components/questionnaire/Header';
-import OrgList from '../components/questionnaire/OrganizatonsList'
+import Header from '../components/startQuestionnaire/Header';
+import OrgList from '../components/startQuestionnaire/OrganizatonsList'
 
 export default function Questionnaire({ navigation }) {
 

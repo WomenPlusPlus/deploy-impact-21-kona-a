@@ -1,13 +1,14 @@
 import React from 'react';
-import { Text, View } from 'react-native';
-import { globalStyles } from '../globals/GlobalStyles';
-import { questionStyles } from './questionStyles';
+import { View } from 'react-native';
+import { QuestionStyles } from './QuestionStyles';
+import Subject from './Subject';
+import QuestionText from './QuestionText'
 
 const Card = () => {
     return (
-    <View style={questionStyles.questionContainer}>
-      <Text style={globalStyles.titleTextBold}>Education</Text>
-      <Text style={globalStyles.normalText}>In which Country do you live?</Text>
+    <View style={QuestionStyles.questionContainer}>
+      <Subject />
+      <QuestionText />
     </View>
     )
 }

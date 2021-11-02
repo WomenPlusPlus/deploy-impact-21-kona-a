@@ -1,16 +1,16 @@
 import React from 'react';
-import Home from '../screens/home';
-import Cover from '../screens/cover';
-import Questionnaire from '../screens/startQuestionnaire';
-import DropdownQuestion from '../screens/dropdownQuestion';
-import QuestionWithButtons from '../screens/questionWithButtons';
+import Home from '../screens/Home';
+import Cover from '../screens/Cover';
+import Questionnaire from '../screens/StartQuestionnaire';
+import DropdownQuestion from '../screens/DropdownQuestion';
+import QuestionWithButtons from '../screens/QuestionWithButtons';
 import MyTheme from '../components/globals/MyTheme'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
-const MyStack = () => {
+const CoverStack = () => {
   return (
     <NavigationContainer theme={MyTheme}>
         <Stack.Navigator>
@@ -40,4 +40,4 @@ const MyStack = () => {
     );
 };
 
-    export default MyStack;
+    export default CoverStack;

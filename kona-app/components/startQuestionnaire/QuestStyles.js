@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-export const questStyles = StyleSheet.create({
+export const QuestStyles = StyleSheet.create({
     greyText: {
         color: 'grey',
         marginBottom: 5

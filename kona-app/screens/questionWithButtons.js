@@ -1,19 +1,18 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import BigButton from '../components/globals/BigButton';
-import { questionStyles } from '../components/question/questionStyles';
 import QuestionText from '../components/question/QuestionText';
 import FlatButton from '../components/globals/Button';
 import Subject from '../components/question/Subject';
-import { globalStyles } from '../components/globals/GlobalStyles';
+import { GlobalStyles } from '../components/globals/GlobalStyles';
 
 const QuestionWithButtons = () => {
     return (
-        <View style={globalStyles.questionContainer}>
-            <View style={globalStyles.smallerQuestionContainer}>
+        <View style={GlobalStyles.questionContainer}>
+            <View style={GlobalStyles.smallerQuestionContainer}>
                 <Subject />
                 <QuestionText />
-                <View style={globalStyles.cardsContainerLeft}>
+                <View style={GlobalStyles.cardsContainerLeft}>
                     <BigButton answer='Access to education' />
                     <BigButton answer='Legal rights' />
                     <BigButton answer='Improve education' />
