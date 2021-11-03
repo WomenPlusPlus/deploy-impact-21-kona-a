@@ -1,7 +1,6 @@
 import React from 'react';
 import { Image, Text, View, TouchableOpacity } from 'react-native';
-import { GlobalStyles } from '../globals/GlobalStyles';
-import { QuestStyles } from './QuestStyles';
+import { QuestionStyles } from '../question/QuestionStyles';
 import { FontAwesome } from '@expo/vector-icons';
 import { useState } from 'react';
 import { Storage } from 'expo-storage';
@@ -35,13 +34,13 @@ const OrgCard = (props) => {
     }
     
     return (
-       <View style={ QuestStyles.cardStyle }>
-            <Image source={require('../../assets/Logo-warc.png')} style={ GlobalStyles.card }></Image>
+       <View style={ QuestionStyles.cardStyle }>
+            <Image source={require('../../assets/Logo-warc.png')} style={ QuestionStyles.card }></Image>
             <TouchableOpacity onPress={pressHandler}
                 style={{position: 'absolute', right: 8, top: 8 }} >
                     <FontAwesome name={save ? "heart" : "heart-o"} size={24} color="black" />
             </TouchableOpacity>
-            <Text style={ QuestStyles.bold }>Contact</Text>
+            <Text style={ QuestionStyles.bold }>Contact</Text>
             <Text>00403346643445</Text>
             <Text>Address</Text>
         </View>
