@@ -4,7 +4,6 @@ import Card from '../components/question/Card';
 import Dropdown from '../components/question/Dropdown';
 import FlatButton from '../components/globals/Button';
 import { QuestionStyles } from '../components/question/QuestionStyles';
-import { GlobalStyles } from '../components/globals/GlobalStyles';
 
 export default function DropdownQuestion () {
   return (

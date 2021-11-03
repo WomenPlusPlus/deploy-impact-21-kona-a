@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { GlobalStyles } from '../globals/GlobalStyles';
 import { QuestionStyles } from './QuestionStyles';
 
 

@@ -33,6 +33,12 @@ export const QuestionStyles = StyleSheet.create({
     lineHeight: 24,
     color: '#212121',
   },
+  cardsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    marginVertical: 16
+  },
   cardsContainerLeft: {
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -87,5 +93,9 @@ export const QuestionStyles = StyleSheet.create({
     h2: {
         paddingLeft: 16,
         paddingBottom: 10
+  },
+    card: {
+        width: 100,
+        height: 100,
   },
 })
