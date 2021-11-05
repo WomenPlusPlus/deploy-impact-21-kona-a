@@ -10,13 +10,13 @@ const Organisations = require('../assets/dummy_orgs.json')
         <Text> {name} </Text>
         <Text> - </Text>
         <Text> {mainCategory} </Text>
+        <Text>****************</Text>
     </View>
   );
 
 export default function Cover({ navigation }) {
 
     const renderItem = ({item}) => (
-        // <Item name={item.Name} />
         <Item name={item.Name} mainCategory ={item["Main Category"]} />
     );
 
