@@ -11,8 +11,7 @@ export default function Home({ navigation }) {
     const pressHandler = () => {
         navigation.navigate('Cover')
     }
-    const filteredOrgs = Data.map((org) => {
-      // need to fix if statement so that only TRUE objects are returned and not false ones as "undefined"
+    const filteredOrgs = Data.filter((org) => {
       if (org['Main Category'].includes('Food')) {
         return org
       }

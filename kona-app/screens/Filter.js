@@ -11,8 +11,8 @@ export default function Filter({ route, navigation }) {
 
   return (
     <View style={GlobalStyles.container}>
-      { console.log(object[0]['Name']) }
-      { /* doesn't work because all objects are passing not just true ones. object.forEach(org => console.log(org)) */ }
+      { console.log(object) }
+      { object.forEach(org => console.log(org["Name"])) }
       <Text style={GlobalStyles.titleTextHomepage}>Let's narrow down your results</Text>
       <View style={QuestionStyles.cardsContainerLeft}>
         <BigButton answer='Food' />
