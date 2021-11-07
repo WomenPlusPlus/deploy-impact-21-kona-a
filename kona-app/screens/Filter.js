@@ -8,13 +8,12 @@ import { QuestionStyles } from '../components/question/QuestionStyles';
 export default function Filter({ route, navigation }) {
 
   const object = route.params;
-  console.log(object)
 
   return (
     <View style={GlobalStyles.container}>
+      { object.forEach(org => console.log(org)) }
       <Text style={GlobalStyles.titleTextHomepage}>Let's narrow down your results</Text>
       <View style={QuestionStyles.cardsContainerLeft}>
-        <Text></Text>
         <BigButton answer='Food' />
         <BigButton answer='Shelter' />
         <BigButton answer='Education' />
