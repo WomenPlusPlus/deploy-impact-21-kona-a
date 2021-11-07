@@ -11,14 +11,20 @@ export default function Home({ navigation }) {
     const pressHandler = () => {
         navigation.navigate('Cover')
     }
+    const filteredOrgs = Data.map((org) => {
+      if (org['Main Category'].includes('Food')) {
+        return org
+      }
+    })
 
     const pressFilter = () => {
-        navigation.navigate('Filter', Data)
+        navigation.navigate('Filter', filteredOrgs)
     }
 
     return (
       <View style={GlobalStyles.container}>
         { Data.forEach(org => console.log(org['Name'])) }
+        { console.log(filteredOrgs) }
         <Text style={GlobalStyles.titleTextHomepage}>What do you need help with?</Text>
         <View style={QuestionStyles.cardsContainerLeft}>
           <BigButton answer='Food' onPress={pressFilter} />
