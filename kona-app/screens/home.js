@@ -24,7 +24,9 @@ export default function Home({ navigation }) {
     return (
       <View style={GlobalStyles.container}>
         { Data.forEach(org => console.log(org['Name'])) }
+        { console.log(typeof(Data)) }
         { console.log(filteredOrgs) }
+        { console.log(typeof(filteredOrgs)) }
         <Text style={GlobalStyles.titleTextHomepage}>What do you need help with?</Text>
         <View style={QuestionStyles.cardsContainerLeft}>
           <BigButton answer='Food' onPress={pressFilter} />
