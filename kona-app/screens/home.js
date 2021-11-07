@@ -12,6 +12,7 @@ export default function Home({ navigation }) {
         navigation.navigate('Cover')
     }
     const filteredOrgs = Data.map((org) => {
+      // need to fix if statement so that only TRUE objects are returned and not false ones as "undefined"
       if (org['Main Category'].includes('Food')) {
         return org
       }
