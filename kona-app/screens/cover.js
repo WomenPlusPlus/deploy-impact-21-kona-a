@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button, FlatList, Text, View } from 'react-native'; 
-import dummy_orgs from '../assets/dummy_orgs.json'
+import Data from '../assets/dummy_orgs.json'
 
 
 const Organisations = require('../assets/dummy_orgs.json')
+
+
 
   const Item = ({ name, mainCategory }) => (
       <View>
@@ -14,11 +16,21 @@ const Organisations = require('../assets/dummy_orgs.json')
     </View>
   );
 
-export default function Cover({ navigation }) {
+export default function Cover({ route, navigation }) {
 
     const renderItem = ({item}) => (
         <Item name={item.Name} mainCategory ={item["Main Category"]} />
     );
+
+    console.log(route.params);
+
+    const searchQuery = route.params;
+
+    const FilteredOrganisations = Organisations.filter((org) => {
+        if (org['Main Category'].includes(searchQuery)) {
+          return org
+        }
+      })
 
     const pressHandler = () => {
         navigation.navigate('StartQuestionnaire')
@@ -27,12 +39,12 @@ export default function Cover({ navigation }) {
     return (
         <View style={{paddingTop: 20}}>
             <FlatList
-                data={Organisations}
+                data={FilteredOrganisations}
                 renderItem={renderItem}
-                keyExtractor={item => item}
+                keyExtractor={item => item["Name"]}
             />
-            <Text>{dummy_orgs.name}</Text>
-            <Text>{dummy_orgs.mainCategory}</Text>
+            <Text>{Data.name}</Text>
+            <Text>{Data.mainCategory}</Text>
           <Text>CoverScreen</Text>
           <Button title='Start Questionnaire' onPress={pressHandler} />
         </View>

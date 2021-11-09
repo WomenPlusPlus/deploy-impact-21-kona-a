@@ -7,9 +7,9 @@ import { Storage } from 'expo-storage';
 
 
 
-const OrgCard = (props) => {
+const OrgCard = ({item}) => {
 
-    const storageKey = props.id;
+    const storageKey = item.Name;
     const [save, setSaved] = useState(false);
 
     Storage.getItem({ key: `${storageKey}` }).then((storedValue) => {
@@ -40,9 +40,10 @@ const OrgCard = (props) => {
                 style={{position: 'absolute', right: 8, top: 8 }} >
                     <FontAwesome name={save ? "heart" : "heart-o"} size={24} color="black" />
             </TouchableOpacity>
+            <Text>{item["Name"]}</Text>
             <Text style={ QuestionStyles.bold }>Contact</Text>
-            <Text>00403346643445</Text>
-            <Text>Address</Text>
+            <Text>{item["Phone Number"]}</Text>
+            <Text>{item["Address"]}</Text>
         </View>
     )
 }

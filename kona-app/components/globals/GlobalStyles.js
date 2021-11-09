@@ -93,5 +93,13 @@ export const GlobalStyles = StyleSheet.create({
       fontSize: 16,
       lineHeight: 24,
       color: '#212121',
-    }
+    },
+    searchContainer: {
+      backgroundColor: 'white',
+      padding: 10,
+      borderRadius: 5
+    },
+    itemStyle: {
+      padding: 10,
+    },
 })
