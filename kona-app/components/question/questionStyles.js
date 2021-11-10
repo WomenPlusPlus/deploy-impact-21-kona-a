@@ -88,9 +88,16 @@ export const QuestionStyles = StyleSheet.create({
         paddingLeft: 16,
         paddingBottom: 10
   },
-    card: {
-        width: 100,
+    imageContainer: {
+        width: '100%',
         height: 100,
+        backgroundColor: ('rgb(232,232,232)')
+  },
+  image: {
+      flex: 1,
+      width: undefined,
+      height: undefined,
+      resizeMode: 'cover'
   },
   filterButton: {
   }

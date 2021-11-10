@@ -35,7 +35,9 @@ const OrgCard = ({item}) => {
     
     return (
        <View style={ QuestionStyles.cardStyle }>
-            <Image source={require('../../assets/Logo-warc.png')} style={ QuestionStyles.imageContainer }></Image>
+            <View style= {QuestionStyles.imageContainer}>
+                <Image source={require('../../assets/Logo-warc.png')} style={ QuestionStyles.imageContainer } resizeMode="contain"></Image>
+            </View>
             <TouchableOpacity onPress={pressHandler}
                 style={{position: 'absolute', right: 8, top: 8 }} >
                     <FontAwesome name={save ? "heart" : "heart-o"} size={24} color="black" />

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, FlatList, ScrollView} from 'react-native';
+import {View, Text, FlatList, SafeAreaView} from 'react-native';
 import { GlobalStyles } from '../globals/GlobalStyles';
 import OrgCard from './OrgCard'
 
@@ -9,7 +9,7 @@ const OrgList = ({orgs}) => {
     );
 
     return (
-        <ScrollView style={GlobalStyles.pt}>
+        <SafeAreaView style={GlobalStyles.pt}>
             <Text style={ GlobalStyles.h2 }>These organizations might be able to help:</Text>
             <View style={ GlobalStyles.cardsContainerLeft }>
                 <FlatList
@@ -23,7 +23,7 @@ const OrgList = ({orgs}) => {
                 <OrgCard item={{}}/> */}
             </View>
             <Text style={ GlobalStyles.textLink }>See all</Text>
-        </ScrollView>
+        </SafeAreaView>
     ) }
 
 export default OrgList;
