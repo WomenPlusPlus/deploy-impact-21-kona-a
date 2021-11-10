@@ -53,14 +53,14 @@ const filteredOrgsYulia = Data.filter((org) => {
           { console.log(typeof(filteredOrgs)) }
           <Text style={GlobalStyles.titleTextHomepage}>What do you need help with?</Text>
         </View>
-        <View style={QuestionStyles.whiteContainer}>
+        <View style={GlobalStyles.whiteContainer}>
           <Text style={GlobalStyles.normalText}>I need help with:</Text>
           <BigButton answer='Food' onPress={pressFilter} />
           <BigButton answer='Shelter' onPress={pressFilter} />
           <BigButton answer='Education' onPress={pressFilter} />
           <BigButton answer='Agriculture' onPress={pressFilter} />
           <BigButton answer='Social Protection' onPress={pressFilter} />
-        <FlatButton text='Cover Page' onPress={pressHandler} />
+          <FlatButton text='Cover Page' onPress={pressHandler} />
         </View>
       </View>
     )

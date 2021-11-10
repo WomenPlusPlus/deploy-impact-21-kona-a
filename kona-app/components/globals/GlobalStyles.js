@@ -8,8 +8,6 @@ export const GlobalStyles = StyleSheet.create({
     },
     whiteContainer: {
         flexDirection: 'column',
-    },
-    margin: {
         margin: 20,
     },
     titleTextHomepage: {
@@ -57,10 +55,9 @@ export const GlobalStyles = StyleSheet.create({
         fontWeight: 'bold'
     },
     bigButton: {
-      flexDirection: 'row',
       backgroundColor: '#F5F5F5',
       borderRadius: 10,
-      margin: 20,
+      marginVertical: 5,
       padding: 5,
     },
     cardsContainer: {
