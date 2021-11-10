@@ -13,6 +13,10 @@ export const GlobalStyles = StyleSheet.create({
     greyContainer: {
         backgroundColor: '#EAEAEA',
     },
+    topFilterSection: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
     flexDirectionColumn: {
       flexDirection: 'column',
     },

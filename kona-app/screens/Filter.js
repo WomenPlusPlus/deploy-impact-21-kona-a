@@ -1,13 +1,22 @@
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
-import FlatButton from '../components/globals/Button';
 import BigButton from '../components/globals/BigButton';
 import { QuestionStyles } from '../components/question/QuestionStyles';
+import FilterButton from '../components/question/Filter';
 
 export default function Filter({ route, navigation }) {
 
   const object = route.params;
+
+    /* if (searchQuery) {
+        return (
+          <View style={GlobalStyles.container}>
+            <SearchBar data={Data} setSearchQuery = {setSearchQuery}/>
+            <FlatButton text='Search' onPress={pressSearchHandler} />
+          </View>
+        );
+    } */
 
   return (
     <ScrollView>
@@ -15,7 +24,10 @@ export default function Filter({ route, navigation }) {
       { object.forEach(org => console.log(org["Name"])) }
       <View style={GlobalStyles.greyContainer}>
         <View style={GlobalStyles.whiteContainer}>
-          <Text style={GlobalStyles.normalText}>I need help with:</Text>
+          <View style={GlobalStyles.topFilterSection}>
+            <Text style={GlobalStyles.normalText}>I need help with:</Text>
+            <FilterButton answer= "Filter"/>
+          </View>
           <View style={QuestionStyles.flexDirectionColumn}>
             <BigButton answer='Food' />
           </View>
