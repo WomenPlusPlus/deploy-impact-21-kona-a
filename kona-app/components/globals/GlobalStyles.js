@@ -38,6 +38,12 @@ export const GlobalStyles = StyleSheet.create({
       lineHeight: 24,
       color: '#212121',
     },
+    placeholderText: {
+      fontFamily: 'poppins-regular',
+      fontSize: 16,
+      lineHeight: 24,
+      color: '#6B6B6B',
+    },
     card: {
         width: 100,
         height: 100,
@@ -108,11 +114,26 @@ export const GlobalStyles = StyleSheet.create({
     searchContainer: {
       backgroundColor: 'white',
       padding: 10,
-      borderRadius: 5
+      borderRadius: 10,
+      flex: 1,
+      flexDirection: 'row',
+      borderWidth: 1,
+      borderColor: "#6B6B6B",
+      height: 52,
+    },
+    searchIcon: {
+      paddingRight: 10,
+      color: '#6B6B6B',
+      fontSize: 16,
+      paddingTop: 2,
     },
     itemStyle: {
       padding: 10,
     },
+    ptpb: {
+      paddingTop: 10,
+      paddingBottom: 10,
+    }, 
     supportContainer: {
       flex: 1,
       },

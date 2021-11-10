@@ -51,7 +51,7 @@ const filteredOrgsYulia = Data.filter((org) => {
                We're here to help you find the support you need.
               </Text>
             </ImageBackground> 
-            <Text>What do you need help with?</Text>
+            <Text style={[GlobalStyles.normalText, GlobalStyles.ptpb]}>What do you need help with?</Text>
             <SearchBar data={Data} setSearchQuery = {setSearchQuery}/>
           </View>
           { Data.forEach(org => console.log(org['Name'])) }

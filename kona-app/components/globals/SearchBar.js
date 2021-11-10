@@ -7,16 +7,16 @@ import { FontAwesome } from '@expo/vector-icons';
 
 export default function SearchBar ({ placeholder, data, setSearchQuery }) {
     const handleFilter = (text) => {
-            setSearchQuery(text);
+            setSearchQuery(text)
     }
     return (
-        <View>
-            <View>
+        <View >
+            <View style={GlobalStyles.searchContainer}>
+                <FontAwesome style={GlobalStyles.searchIcon} name="search" />
                 <TextInput
-                style={GlobalStyles.searchContainer}
-                placeholder="Search here"
+                 style={GlobalStyles.placeholderText}
+                placeholder="Search"
                 onChangeText={handleFilter}/>
-                <FontAwesome name="search" />
             </View>    
         </View>
     );
