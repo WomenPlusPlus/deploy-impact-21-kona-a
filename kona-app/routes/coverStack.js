@@ -2,6 +2,7 @@ import React from 'react';
 import Home from '../screens/Home';
 import Cover from '../screens/Cover';
 import Filter from '../screens/Filter';
+import FilteredOrgs from '../screens/FilteredOrgs';
 import StartQuestionnaire from '../screens/StartQuestionnaire';
 import DropdownQuestion from '../screens/DropdownQuestion';
 import QuestionWithButtons from '../screens/QuestionWithButtons';
@@ -22,6 +23,10 @@ const CoverStack = () => {
             <Stack.Screen
              name="Filter"
              component={Filter}
+            />
+            <Stack.Screen
+             name="FilteredOrgs"
+             component={FilteredOrgs}
             />
             <Stack.Screen
              name="Cover"
