@@ -10,6 +10,12 @@ export const GlobalStyles = StyleSheet.create({
         flexDirection: 'column',
         margin: 20,
     },
+    greyContainer: {
+        backgroundColor: '#EAEAEA',
+    },
+    flexDirectionColumn: {
+      flexDirection: 'column',
+    },
     titleTextHomepage: {
       fontFamily: 'poppins-medium',
       fontSize: 24,

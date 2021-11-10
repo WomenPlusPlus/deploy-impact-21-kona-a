@@ -4,7 +4,6 @@ import { GlobalStyles } from '../components/globals/GlobalStyles';
 import FlatButton from '../components/globals/Button';
 import BigButton from '../components/globals/BigButton';
 import Data from '../assets/dummy_v3.json';
-import { QuestionStyles } from '../components/question/QuestionStyles';
 import SearchBar from '../components/globals/SearchBar';
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import FlatButton from '../components/globals/Button';
 import BigButton from '../components/globals/BigButton';
@@ -10,17 +10,21 @@ export default function Filter({ route, navigation }) {
   const object = route.params;
 
   return (
-    <View style={GlobalStyles.container}>
+    <ScrollView>
       { console.log(object) }
       { object.forEach(org => console.log(org["Name"])) }
-      <Text style={GlobalStyles.titleTextHomepage}>Let's narrow down your results</Text>
-      <View style={QuestionStyles.cardsContainerLeft}>
-        <BigButton answer='Food' />
-        <BigButton answer='Shelter' />
-        <BigButton answer='Education' />
-        <BigButton answer='Agriculture' />
-        <BigButton answer='Social Protection' />
+      <View style={GlobalStyles.greyContainer}>
+        <View style={GlobalStyles.whiteContainer}>
+          <Text style={GlobalStyles.normalText}>I need help with:</Text>
+          <View style={QuestionStyles.flexDirectionColumn}>
+            <BigButton answer='Food' />
+          </View>
+          <Text style={GlobalStyles.normalText}>I need help for:</Text>
+          <View style={QuestionStyles.flexDirectionColumn}>
+            <BigButton answer='Refugees' />
+          </View>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   )
 }
