@@ -33,18 +33,7 @@ export const QuestionStyles = StyleSheet.create({
     lineHeight: 24,
     color: '#212121',
   },
-  cardsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    marginVertical: 16
-  },
-  cardsContainerLeft: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    marginVertical: 16
-  },
+
   dropdownContainer: {
   },
   btnContainer: {
@@ -87,8 +76,13 @@ export const QuestionStyles = StyleSheet.create({
         flexDirection:'row'
   },
     cardStyle: {
-        width: '40%',
-        marginTop: 12
+        width: '100%',
+        marginTop: 12,
+        borderRadius: 5,
+        borderColor: 'black',
+        padding: 5,
+        borderWidth: 1,
+        borderStyle: 'solid'
   },
     h2: {
         paddingLeft: 16,
