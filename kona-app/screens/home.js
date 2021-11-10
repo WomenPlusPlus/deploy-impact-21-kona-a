@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import FlatButton from '../components/globals/Button';
 import BigButton from '../components/globals/BigButton';
@@ -44,7 +44,7 @@ const filteredOrgsYulia = Data.filter((org) => {
         );
     }
     return (
-      <View>
+      <ScrollView>
         <View style={GlobalStyles.container}>
           <SearchBar data={Data} setSearchQuery = {setSearchQuery}/>
           { Data.forEach(org => console.log(org['Name'])) }
@@ -60,8 +60,17 @@ const filteredOrgsYulia = Data.filter((org) => {
           <BigButton answer='Education' onPress={pressFilter} />
           <BigButton answer='Agriculture' onPress={pressFilter} />
           <BigButton answer='Social Protection' onPress={pressFilter} />
-          <FlatButton text='Cover Page' onPress={pressHandler} />
         </View>
-      </View>
+        <View style={GlobalStyles.whiteContainer}>
+          <Text style={GlobalStyles.normalText}>I need help for:</Text>
+          <BigButton answer='Victims of domestic violence' onPress={pressFilter} />
+          <BigButton answer='Refugees' onPress={pressFilter} />
+          <BigButton answer='Homeless People' onPress={pressFilter} />
+          <BigButton answer='Disabled People' onPress={pressFilter} />
+          <BigButton answer='LGBTQIA+' onPress={pressFilter} />
+          <BigButton answer='Migrants' onPress={pressHandler} />
+        </View>
+        <FlatButton text='Cover Page' onPress={pressHandler} />
+      </ScrollView>
     )
 }
