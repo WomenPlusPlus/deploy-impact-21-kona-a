@@ -56,9 +56,12 @@ export const GlobalStyles = StyleSheet.create({
     },
     bigButton: {
       backgroundColor: '#F5F5F5',
+      height: 54,
       borderRadius: 10,
       marginVertical: 5,
-      padding: 5,
+      paddingVertical: 15,
+      paddingHorizontal: 20,
+      alignSelf: 'flex-start',
     },
     cardsContainer: {
       flexDirection: 'row',
