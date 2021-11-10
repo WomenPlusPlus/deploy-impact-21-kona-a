@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, ScrollView } from 'react-native';
+import { Text, View, ImageBackground, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import FlatButton from '../components/globals/Button';
 import BigButton from '../components/globals/BigButton';
@@ -12,7 +12,7 @@ export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const pressHandler = () => {
-    navigation.navigate('Cover', searchQuery)
+    navigation.navigate('FilteredOrgs', searchQuery)
 }
 
 const filteredOrgsYulia = Data.filter((org) => {
@@ -45,12 +45,19 @@ const filteredOrgsYulia = Data.filter((org) => {
     return (
       <ScrollView>
         <View style={GlobalStyles.container}>
-          <SearchBar data={Data} setSearchQuery = {setSearchQuery}/>
+          <View style={{flex: 1}}>
+            <ImageBackground source={require('../assets/Vector.png')} style={{flex: 1, justifyContent: 'center'}}>
+              <Text style={GlobalStyles.bannerText}>
+               We're here to help you find the support you need.
+              </Text>
+            </ImageBackground> 
+            <Text>What do you need help with?</Text>
+            <SearchBar data={Data} setSearchQuery = {setSearchQuery}/>
+          </View>
           { Data.forEach(org => console.log(org['Name'])) }
           { console.log(typeof(Data)) }
           { console.log(filteredOrgs) }
           { console.log(typeof(filteredOrgs)) }
-          <Text style={GlobalStyles.titleTextHomepage}>What do you need help with?</Text>
         </View>
         <View style={GlobalStyles.whiteContainer}>
           <Text style={GlobalStyles.normalText}>I need help with:</Text>
