@@ -6,6 +6,20 @@ export const GlobalStyles = StyleSheet.create({
         padding: 24,
         backgroundColor: 'rgb(242,240,240)'
     },
+    whiteContainer: {
+        flexDirection: 'column',
+        margin: 20,
+    },
+    greyContainer: {
+        backgroundColor: '#EAEAEA',
+    },
+    topFilterSection: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+    },
+    flexDirectionColumn: {
+      flexDirection: 'column',
+    },
     titleTextHomepage: {
       fontFamily: 'poppins-medium',
       fontSize: 24,
@@ -23,7 +37,6 @@ export const GlobalStyles = StyleSheet.create({
       fontSize: 16,
       lineHeight: 24,
       color: '#212121',
-      textAlign: 'center'
     },
     card: {
         width: 100,
@@ -52,15 +65,13 @@ export const GlobalStyles = StyleSheet.create({
         fontWeight: 'bold'
     },
     bigButton: {
-      flexDirection: 'row',
-      backgroundColor: '#E5E5E5',
-      width: 158,
-      height: 148,
+      backgroundColor: '#F5F5F5',
+      height: 54,
       borderRadius: 10,
-      marginBottom: 10,
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: 5
+      marginVertical: 5,
+      paddingVertical: 15,
+      paddingHorizontal: 20,
+      alignSelf: 'flex-start',
     },
     cardsContainer: {
       flexDirection: 'row',
