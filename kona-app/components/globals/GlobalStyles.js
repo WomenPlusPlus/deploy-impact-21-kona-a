@@ -6,6 +6,12 @@ export const GlobalStyles = StyleSheet.create({
         padding: 24,
         backgroundColor: 'rgb(242,240,240)'
     },
+    whiteContainer: {
+        flexDirection: 'column',
+    },
+    margin: {
+        margin: 20,
+    },
     titleTextHomepage: {
       fontFamily: 'poppins-medium',
       fontSize: 24,
@@ -23,7 +29,6 @@ export const GlobalStyles = StyleSheet.create({
       fontSize: 16,
       lineHeight: 24,
       color: '#212121',
-      textAlign: 'center'
     },
     card: {
         width: 100,
@@ -53,14 +58,10 @@ export const GlobalStyles = StyleSheet.create({
     },
     bigButton: {
       flexDirection: 'row',
-      backgroundColor: '#E5E5E5',
-      width: 158,
-      height: 148,
+      backgroundColor: '#F5F5F5',
       borderRadius: 10,
-      marginBottom: 10,
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: 5
+      margin: 20,
+      padding: 5,
     },
     cardsContainer: {
       flexDirection: 'row',

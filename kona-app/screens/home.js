@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import FlatButton from '../components/globals/Button';
 import BigButton from '../components/globals/BigButton';
-import Data from '../assets/dummy_orgs.json';
+import Data from '../assets/dummy_v3.json';
 import { QuestionStyles } from '../components/question/QuestionStyles';
 import SearchBar from '../components/globals/SearchBar';
 
@@ -25,7 +25,7 @@ const filteredOrgsYulia = Data.filter((org) => {
     const pressSearchHandler = () => {
         navigation.navigate('FilteredOrgs', filteredOrgsYulia)
     }
-    
+
     const filteredOrgs = Data.filter((org) => {
       if (org['Main Category'].includes('Food')) {
         return org
@@ -44,22 +44,24 @@ const filteredOrgsYulia = Data.filter((org) => {
         );
     }
     return (
-      <View style={GlobalStyles.container}>
-        <SearchBar data={Data} setSearchQuery = {setSearchQuery}/>
-        { Data.forEach(org => console.log(org['Name'])) }
-        { console.log(typeof(Data)) }
-        { console.log(filteredOrgs) }
-        { console.log(typeof(filteredOrgs)) }
-        <Text style={GlobalStyles.titleTextHomepage}>What do you need help with?</Text>
-        <View style={QuestionStyles.cardsContainerLeft}>
+      <View>
+        <View style={GlobalStyles.container}>
+          <SearchBar data={Data} setSearchQuery = {setSearchQuery}/>
+          { Data.forEach(org => console.log(org['Name'])) }
+          { console.log(typeof(Data)) }
+          { console.log(filteredOrgs) }
+          { console.log(typeof(filteredOrgs)) }
+          <Text style={GlobalStyles.titleTextHomepage}>What do you need help with?</Text>
+        </View>
+        <View style={QuestionStyles.whiteContainer}>
+          <Text style={GlobalStyles.normalText}>I need help with:</Text>
           <BigButton answer='Food' onPress={pressFilter} />
           <BigButton answer='Shelter' onPress={pressFilter} />
           <BigButton answer='Education' onPress={pressFilter} />
           <BigButton answer='Agriculture' onPress={pressFilter} />
           <BigButton answer='Social Protection' onPress={pressFilter} />
-        </View>
         <FlatButton text='Cover Page' onPress={pressHandler} />
+        </View>
       </View>
-
     )
 }
