@@ -5,7 +5,6 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { useState } from 'react';
 import { Storage } from 'expo-storage';
-import Solo from '../../screens/Solo';
 import { useNavigation } from '@react-navigation/native';
 
 
@@ -38,7 +37,7 @@ const OrgCard = ({item}) => {
     }
 
     const navigateToSolo =() => {
-        navigation.navigate('Organization', Solo)
+        navigation.navigate('Organization', item)
     }
     
     return (
