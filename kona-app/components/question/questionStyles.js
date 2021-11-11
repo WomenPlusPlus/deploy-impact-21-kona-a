@@ -90,15 +90,35 @@ export const QuestionStyles = StyleSheet.create({
   },
     imageContainer: {
         width: '100%',
-        height: 100,
+        height: 150,
         backgroundColor: ('rgb(232,232,232)')
   },
-  image: {
+    image: {
       flex: 1,
       width: undefined,
       height: undefined,
       resizeMode: 'cover'
   },
-  filterButton: {
-  }
+     filterButton: {
+  },
+    name: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    paddingVertical: 8 
+  },
+    fieldName: {
+      color: '#6B6B6B',
+      fontWeight: 'bold'
+    },
+    field: {
+      display: 'flex',
+      flexDirection: 'row',
+      paddingVertical: 8
+    },
+    fieldText: {
+      alignSelf: 'center',
+      color: '#6B6B6B',
+      fontWeight: 'bold',
+      fontSize: 16
+    },
 })
