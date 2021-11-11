@@ -7,7 +7,7 @@ import FilterButton from '../components/question/Filter';
 
 export default function Filter({ route, navigation }) {
 
-  const object = route.params;
+  // const object = route.params;
 
     /* if (searchQuery) {
         return (
@@ -19,9 +19,9 @@ export default function Filter({ route, navigation }) {
     } */
 
   return (
-    <ScrollView>
-      { console.log(object) }
-      { object.forEach(org => console.log(org["Name"])) }
+    <View>
+      {/* { console.log(object) } */}
+      {/* { object.forEach(org => console.log(org["Name"])) } */}
       <View style={GlobalStyles.greyContainer}>
         <View style={GlobalStyles.whiteContainer}>
           <View style={GlobalStyles.topFilterSection}>
@@ -37,6 +37,6 @@ export default function Filter({ route, navigation }) {
           </View>
         </View>
       </View>
-    </ScrollView>
+    </View>
   )
 }
