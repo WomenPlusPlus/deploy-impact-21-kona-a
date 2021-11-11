@@ -1,13 +1,17 @@
 import React from 'react';
-import { Button, View } from 'react-native';
-import Header from '../components/startQuestionnaire/Header';
-import OrgList from '../components/startQuestionnaire/OrganizatonsList'
+import OrgList from '../components/startQuestionnaire/OrganizatonsList';
+import Filter from '../screens/Filter';
+import { View, ScrollView } from 'react-native';
 
 export default function FilteredOrgs({ route, navigation }) {
 
     return(
-        <View>
-            <OrgList orgs={route.params} />
-             </View>
+        <ScrollView>
+            <Filter />
+
+            <View>
+                <OrgList orgs={route.params} />
+            </View>
+      </ScrollView>
     )
 }
