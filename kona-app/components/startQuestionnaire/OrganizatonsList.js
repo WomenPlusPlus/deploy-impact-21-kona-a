@@ -15,8 +15,8 @@ const OrgList = ({orgs}) => {
                 <FlatList
                     data={orgs}
                     renderItem={renderItem}
-                    keyExtractor={item => item["Name"]}
-                />
+                    keyExtractor={item => item["Name"]} />
+
                 {/* <OrgCard item={{}}/>
                 <OrgCard item={{}}/>
                 <OrgCard item={{}}/>

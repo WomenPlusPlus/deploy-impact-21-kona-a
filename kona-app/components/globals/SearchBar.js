@@ -5,7 +5,7 @@ import { TextInput } from 'react-native-gesture-handler';
 import { GlobalStyles } from './GlobalStyles';
 import { FontAwesome } from '@expo/vector-icons';
 
-export default function SearchBar({ placeholder, data, setSearchQuery }) {
+export default function SearchBar({ placeholder, setSearchQuery, onSubmit }) {
   const handleFilter = (text) => {
     setSearchQuery(text);
   };
@@ -17,6 +17,7 @@ export default function SearchBar({ placeholder, data, setSearchQuery }) {
           style={[GlobalStyles.placeholderText, GlobalStyles.input]}
           placeholder="Search"
           onChangeText={handleFilter}
+          onSubmitEditing={onSubmit}
         />
       </View>
     </View>
