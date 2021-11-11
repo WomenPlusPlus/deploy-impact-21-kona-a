@@ -5,6 +5,8 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { useState } from 'react';
 import { Storage } from 'expo-storage';
+import Solo from '../../screens/Solo';
+import { useNavigation } from '@react-navigation/native';
 
 
 
@@ -12,6 +14,7 @@ const OrgCard = ({item}) => {
 
     const storageKey = item.Name;
     const [save, setSaved] = useState(false);
+    const navigation = useNavigation();
 
     Storage.getItem({ key: `${storageKey}` }).then((storedValue) => {
         const newSaveValue = !!storedValue;
@@ -33,6 +36,10 @@ const OrgCard = ({item}) => {
             });
         }
     }
+
+    const navigateToSolo =() => {
+        navigation.navigate('Organization', Solo)
+    }
     
     return (
        <ScrollView style={ QuestionStyles.cardStyle }>
@@ -43,7 +50,7 @@ const OrgCard = ({item}) => {
                 style={{position: 'absolute', right: 8, top: 8 }} >
                     <FontAwesome name={save ? "heart" : "heart-o"} size={24} color="black" />
             </TouchableOpacity>
-            <Text style={ QuestionStyles.name}>{item["Name"]}</Text>
+            <Text style={ QuestionStyles.name} onPress={navigateToSolo}>{item["Name"]}</Text>
             <View style={ QuestionStyles.field }>
                 <Entypo name="old-mobile" size={24} color= '#6B6B6B' />
                 <Text style={ QuestionStyles.fieldText }>Phone</Text>
