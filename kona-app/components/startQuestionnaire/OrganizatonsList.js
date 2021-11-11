@@ -1,8 +1,7 @@
 import React from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {View, Text, FlatList, SafeAreaView} from 'react-native';
 import { GlobalStyles } from '../globals/GlobalStyles';
 import OrgCard from './OrgCard'
-import { QuestionStyles } from '../question/QuestionStyles';
 
 const OrgList = ({orgs}) => {
     const renderItem = ({item}) => (
@@ -10,9 +9,9 @@ const OrgList = ({orgs}) => {
     );
 
     return (
-        <View style={GlobalStyles.pt}>
-            <Text style={ QuestionStyles.h2 }>These organizations might be able to help:</Text>
-            <View style={ QuestionStyles.cardsContainerLeft }>
+        <SafeAreaView style={GlobalStyles.pt}>
+            <Text style={ GlobalStyles.h2 }>These organizations might be able to help:</Text>
+            <View style={ GlobalStyles.cardsContainerLeft }>
                 <FlatList
                     data={orgs}
                     renderItem={renderItem}
@@ -24,7 +23,7 @@ const OrgList = ({orgs}) => {
                 <OrgCard item={{}}/> */}
             </View>
             <Text style={ GlobalStyles.textLink }>See all</Text>
-        </View>
+        </SafeAreaView>
     ) }
 
 export default OrgList;

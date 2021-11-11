@@ -6,7 +6,6 @@ import BigButton from '../components/globals/BigButton';
 import Data from '../assets/dummy_orgs.json';
 import SearchBar from '../components/globals/SearchBar';
 
-
 export default function Home({ navigation }) {
 
   const [searchQuery, setSearchQuery] = useState('');

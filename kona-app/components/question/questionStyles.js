@@ -33,18 +33,7 @@ export const QuestionStyles = StyleSheet.create({
     lineHeight: 24,
     color: '#212121',
   },
-  cardsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    marginVertical: 16
-  },
-  cardsContainerLeft: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    marginVertical: 16
-  },
+
   dropdownContainer: {
   },
   btnContainer: {
@@ -87,17 +76,49 @@ export const QuestionStyles = StyleSheet.create({
         flexDirection:'row'
   },
     cardStyle: {
-        width: '40%',
-        marginTop: 12
+        width: '100%',
+        marginTop: 12,
+        borderRadius: 5,
+        borderColor: 'black',
+        padding: 5,
+        borderWidth: 1,
+        borderStyle: 'solid'
   },
     h2: {
         paddingLeft: 16,
         paddingBottom: 10
   },
-    card: {
-        width: 100,
-        height: 100,
+    imageContainer: {
+        width: '100%',
+        height: 150,
+        backgroundColor: ('rgb(232,232,232)')
   },
-  filterButton: {
-  }
+    image: {
+      flex: 1,
+      width: undefined,
+      height: undefined,
+      resizeMode: 'cover'
+  },
+     filterButton: {
+  },
+    name: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    paddingVertical: 8 
+  },
+    fieldName: {
+      color: '#6B6B6B',
+      fontWeight: 'bold'
+    },
+    field: {
+      display: 'flex',
+      flexDirection: 'row',
+      paddingVertical: 8
+    },
+    fieldText: {
+      alignSelf: 'center',
+      color: '#6B6B6B',
+      fontWeight: 'bold',
+      fontSize: 16
+    },
 })

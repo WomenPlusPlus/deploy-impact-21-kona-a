@@ -113,6 +113,11 @@ export const GlobalStyles = StyleSheet.create({
     itemStyle: {
       padding: 10,
     },
+    h2: {
+      paddingLeft: 16,
+      paddingBottom: 10
+    },
+
     supportContainer: {
       flex: 1,
       },

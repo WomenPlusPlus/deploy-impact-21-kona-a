@@ -1,7 +1,8 @@
 import React from 'react';
-import { Image, Text, View, TouchableOpacity } from 'react-native';
+import { Image, Text, View, TouchableOpacity, ScrollView } from 'react-native';
 import { QuestionStyles } from '../question/QuestionStyles';
 import { FontAwesome } from '@expo/vector-icons';
+import { Entypo } from '@expo/vector-icons';
 import { useState } from 'react';
 import { Storage } from 'expo-storage';
 
@@ -34,17 +35,26 @@ const OrgCard = ({item}) => {
     }
     
     return (
-       <View style={ QuestionStyles.cardStyle }>
-            <Image source={require('../../assets/Logo-warc.png')} style={ QuestionStyles.card }></Image>
+       <ScrollView style={ QuestionStyles.cardStyle }>
+            <View style= {QuestionStyles.imageContainer}>
+                <Image source={require('../../assets/Logo-warc.png')} style={ QuestionStyles.imageContainer } resizeMode="contain"></Image>
+            </View>
             <TouchableOpacity onPress={pressHandler}
                 style={{position: 'absolute', right: 8, top: 8 }} >
                     <FontAwesome name={save ? "heart" : "heart-o"} size={24} color="black" />
             </TouchableOpacity>
-            <Text>{item["Name"]}</Text>
-            <Text style={ QuestionStyles.bold }>Contact</Text>
-            <Text>{item["Phone Number"]}</Text>
-            <Text>{item["Address"]}</Text>
-        </View>
+            <Text style={ QuestionStyles.name}>{item["Name"]}</Text>
+            <View style={ QuestionStyles.field }>
+                <Entypo name="old-mobile" size={24} color= '#6B6B6B' />
+                <Text style={ QuestionStyles.fieldText }>Phone</Text>
+            </View>
+            <Text style={QuestionStyles.questionText} >{item["Phone Number"]}</Text>
+            <View style={ QuestionStyles.field }>  
+                <FontAwesome name="building" size={20} color='#6B6B6B' />
+                <Text style={ QuestionStyles.fieldText }>Address</Text>
+            </View>
+            <Text style={QuestionStyles.questionText} >{item["Address"]}</Text>
+        </ScrollView>
     )
 }
 
