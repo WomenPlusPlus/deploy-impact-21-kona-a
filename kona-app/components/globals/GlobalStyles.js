@@ -117,4 +117,17 @@ export const GlobalStyles = StyleSheet.create({
       paddingLeft: 16,
       paddingBottom: 10
     },
-  })
+
+    supportContainer: {
+      flex: 1,
+      },
+    bannerText: {
+      fontFamily: 'poppins-medium',
+      fontSize: 24,
+      lineHeight: 36,
+      color: '#6B6B6B',
+      paddingHorizontal: 10,
+      paddingVertical: 100
+    }
+      
+})
