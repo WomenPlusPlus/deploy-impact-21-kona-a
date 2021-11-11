@@ -7,7 +7,7 @@ import Data from '../assets/dummy_orgs.json';
 import SearchBar from '../components/globals/SearchBar';
 
 export default function Home({ navigation }) {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
 
   const pressHandler = () => {
     navigation.navigate('FilteredOrgs', searchQuery)
@@ -29,7 +29,7 @@ const filteredOrgsSearch = Data.filter((org) => {
         if (org['Main Category'].includes(category)) {
           return org
         }
-        
+
       });
 
         navigation.navigate('FilteredOrgs', filteredOrgs)
