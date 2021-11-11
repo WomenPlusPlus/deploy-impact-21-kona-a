@@ -105,11 +105,6 @@ export const GlobalStyles = StyleSheet.create({
       lineHeight: 24,
       color: '#212121',
     },
-    searchContainer: {
-      backgroundColor: 'white',
-      padding: 10,
-      borderRadius: 5
-    },
     itemStyle: {
       padding: 10,
     },
@@ -126,8 +121,48 @@ export const GlobalStyles = StyleSheet.create({
       fontSize: 24,
       lineHeight: 36,
       color: '#6B6B6B',
-      paddingHorizontal: 10,
+      paddingRight: 20,
       paddingVertical: 100
-    }
+    },
+    homepageContainer: {
+      position: 'relative',
+      textAlign: "left",
+    },
+    handImage: {
+      width: 189,
+      height: 180,
+      position: "absolute",
+      right: -25,
+      top: 88,
+    },
+    placeholderText: {
+      fontFamily: "poppins-regular",
+      fontSize: 16,
+      lineHeight: 24,
+      color: "#6B6B6B",
+    },
+    searchContainer: {
+      backgroundColor: "white",
+      padding: 10,
+      borderRadius: 10,
+      flex: 1,
+      flexDirection: "row",
+      borderWidth: 1,
+      borderColor: "#6B6B6B",
+      height: 52,
+    },
+    input: {
+      width: "100%",
+    },
+    searchIcon: {
+      paddingRight: 10,
+      color: "#6B6B6B",
+      fontSize: 16,
+      paddingTop: 2,
+    },
+    ptpb: {
+      paddingTop: 10,
+      paddingBottom: 10,
+    },
       
 })
