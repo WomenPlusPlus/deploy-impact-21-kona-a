@@ -3,7 +3,7 @@ import { Text, View, Image, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import FlatButton from '../components/globals/Button';
 import BigButton from '../components/globals/BigButton';
-import Data from '../assets/dummy_orgs.json';
+import Data from '../assets/new_json.json';
 import SearchBar from '../components/globals/SearchBar';
 
 export default function Home({ navigation }) {
