@@ -12,7 +12,7 @@ export default function Solo ({route}) {
     return (
         <ScrollView>
             <View style= {QuestionStyles.soloImageContainer}>
-                <Image source={require('../assets/Logo-warc.png')} style={ QuestionStyles.soloImageContainer } resizeMode="contain"></Image>
+                <Image source={require('../assets/unhcr.png')} style={ QuestionStyles.soloImageContainer } resizeMode="contain"></Image>
             </View>
             <View style={{margin: 20}}>
                 <Text style={ QuestionStyles.name}>{item.Name}</Text>
