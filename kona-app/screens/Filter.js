@@ -5,7 +5,7 @@ import BigButton from '../components/globals/BigButton';
 import { QuestionStyles } from '../components/question/QuestionStyles';
 import FilterButton from '../components/question/Filter';
 
-export default function Filter({ route, navigation }) {
+export default function Filter({ route, navigation, filterKeyword }) {
 
   // const object = route.params;
 
@@ -29,7 +29,7 @@ export default function Filter({ route, navigation }) {
             <FilterButton answer= "Filter"/>
           </View>
           <View style={QuestionStyles.flexDirectionColumn}>
-            <BigButton answer='Food' />
+            <BigButton answer={filterKeyword} checked/>
           </View>
           <Text style={GlobalStyles.normalText}>I need help for:</Text>
           <View style={QuestionStyles.flexDirectionColumn}>

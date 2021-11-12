@@ -76,6 +76,7 @@ export const GlobalStyles = StyleSheet.create({
       paddingVertical: 15,
       paddingHorizontal: 20,
       alignSelf: 'flex-start',
+      flexDirection: 'row'
     },
     cardsContainer: {
       flexDirection: 'row',

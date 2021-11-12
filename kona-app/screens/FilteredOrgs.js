@@ -5,12 +5,15 @@ import { View, ScrollView } from 'react-native';
 
 export default function FilteredOrgs({ route, navigation }) {
 
+    const filteredOrgs = route.params.orgs;
+    const filter = route.params.filter;
+
     return(
         <ScrollView>
-            <Filter />
+            <Filter filterKeyword = {filter}/>
 
             <View>
-                <OrgList orgs={route.params} />
+                <OrgList orgs={filteredOrgs}/>
             </View>
       </ScrollView>
     )
