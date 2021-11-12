@@ -28,10 +28,11 @@ export const QuestionStyles = StyleSheet.create({
     alignSelf: 'center'
   },
   questionText: {
-    fontFamily: 'poppins-medium',
+    fontFamily: 'poppins-regular',
     fontSize: 16,
     lineHeight: 24,
     color: '#212121',
+    fontWeight: '400',
   },
 
   dropdownContainer: {
@@ -77,10 +78,8 @@ export const QuestionStyles = StyleSheet.create({
   },
     cardStyle: {
         width: '100%',
-        marginTop: 12,
-        borderRadius: 5,
+        borderRadius: 10,
         borderColor: 'black',
-        padding: 5,
         borderWidth: 1,
         borderStyle: 'solid'
   },
@@ -90,6 +89,8 @@ export const QuestionStyles = StyleSheet.create({
   },
     imageContainer: {
         width: '100%',
+        borderTopEndRadius: 10,
+        borderTopStartRadius: 10,
         height: 150,
         backgroundColor: ('rgb(232,232,232)')
   },
@@ -102,9 +103,10 @@ export const QuestionStyles = StyleSheet.create({
      filterButton: {
   },
     name: {
-    fontWeight: 'bold',
+    fontWeight: '600',
     fontSize: 20,
-    paddingVertical: 8 
+    paddingVertical: 8,
+    lineHeight: 30,
   },
     fieldName: {
       color: '#6B6B6B',
@@ -113,12 +115,21 @@ export const QuestionStyles = StyleSheet.create({
     field: {
       display: 'flex',
       flexDirection: 'row',
-      paddingVertical: 8
+      paddingVertical: 8,
+      paddingBottom: 2,
     },
     fieldText: {
       alignSelf: 'center',
       color: '#6B6B6B',
       fontWeight: 'bold',
-      fontSize: 16
+      fontSize: 16,
+      lineHeight: 24,
     },
+    orgContainer: {
+      marginHorizontal: 25,
+      marginBottom: 30,
+    },
+    orgTextContainer: {
+      padding: 24, 
+    }
 })
