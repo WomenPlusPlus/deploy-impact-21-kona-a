@@ -44,7 +44,12 @@ const OrgCard = ({item}) => {
        <ScrollView style={ QuestionStyles.orgContainer }>
            <View style={QuestionStyles.cardStyle}>
             <View style= {QuestionStyles.imageContainer}>
-                <Image source={require('../../assets/Logo-warc.png')} style={ QuestionStyles.imageContainer } resizeMode="contain"></Image>
+                <View style={QuestionStyles.label}>
+                    <Text style={QuestionStyles.questionText, {color: 'white'}}>Refugee</Text>
+                </View>
+                <View style={ QuestionStyles.imageContainer}>
+                <Image source={require('../../assets/unhcr.png')}  style={QuestionStyles.orgImage}resizeMode="contain"></Image>
+                </View>
             </View>
             <View style={QuestionStyles.orgTextContainer}>
             <TouchableOpacity onPress={pressHandler}

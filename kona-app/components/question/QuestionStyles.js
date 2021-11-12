@@ -79,7 +79,7 @@ export const QuestionStyles = StyleSheet.create({
     cardStyle: {
         width: '100%',
         borderRadius: 10,
-        borderColor: 'black',
+        borderColor: '#212121',
         borderWidth: 1,
         borderStyle: 'solid'
   },
@@ -91,8 +91,7 @@ export const QuestionStyles = StyleSheet.create({
         width: '100%',
         borderTopEndRadius: 10,
         borderTopStartRadius: 10,
-        height: 150,
-        backgroundColor: ('rgb(232,232,232)')
+        backgroundColor: ('rgb(232,232,232)'),
   },
     soloImageContainer: {
       width: '100%',
@@ -135,9 +134,22 @@ export const QuestionStyles = StyleSheet.create({
       marginBottom: 30,
     },
     orgTextContainer: {
-      padding: 24, 
+      padding: 24,
     },
     helpContainer: {
       paddingVertical: 20
+    },
+    label: {
+      width: 123,
+      backgroundColor: '#212121',
+      borderBottomRightRadius:10,
+      borderTopLeftRadius:10,
+      padding: 10,
+      textAlign: 'center'
+    },
+    orgImage: {
+      height: 130, 
+      width: "100%",
+      marginVertical: 10,
     }
 })
