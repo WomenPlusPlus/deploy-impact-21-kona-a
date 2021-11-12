@@ -94,6 +94,11 @@ export const QuestionStyles = StyleSheet.create({
         height: 150,
         backgroundColor: ('rgb(232,232,232)')
   },
+    soloImageContainer: {
+      width: '100%',
+      height: 195,
+      backgroundColor: ('rgb(232,232,232)')
+    },
     image: {
       flex: 1,
       width: undefined,
@@ -131,5 +136,8 @@ export const QuestionStyles = StyleSheet.create({
     },
     orgTextContainer: {
       padding: 24, 
+    },
+    helpContainer: {
+      paddingVertical: 20
     }
 })
