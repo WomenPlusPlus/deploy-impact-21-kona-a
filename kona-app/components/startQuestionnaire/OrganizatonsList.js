@@ -16,11 +16,6 @@ const OrgList = ({orgs}) => {
                     data={orgs}
                     renderItem={renderItem}
                     keyExtractor={item => item["Name"]} />
-
-                {/* <OrgCard item={{}}/>
-                <OrgCard item={{}}/>
-                <OrgCard item={{}}/>
-                <OrgCard item={{}}/> */}
             </View>
             <Text style={ GlobalStyles.textLink }>See all</Text>
         </SafeAreaView>

@@ -16,7 +16,7 @@ const filteredOrgsSearch = Data.filter((org) => {
 })
 
     const navigateToFilteredOrgs = () => {
-        navigation.navigate('FilteredOrgs', filteredOrgsSearch)
+        navigation.navigate('FilteredOrgs', {orgs: filteredOrgsSearch, filter: searchQuery})
     }
 
   const filterBy = (field, keyword) => {
@@ -28,8 +28,8 @@ const filteredOrgsSearch = Data.filter((org) => {
 
       });
 
-        navigation.navigate('FilteredOrgs', filteredOrgs)
-      };
+        navigation.navigate('FilteredOrgs', {orgs: filteredOrgs, filter: keyword})
+    };
   
   const filterByMainCategory = (category) => filterBy('Main Category', category);
 
