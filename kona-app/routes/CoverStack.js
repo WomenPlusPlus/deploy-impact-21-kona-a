@@ -6,6 +6,7 @@ import FilteredOrgs from '../screens/FilteredOrgs';
 import StartQuestionnaire from '../screens/StartQuestionnaire';
 import DropdownQuestion from '../screens/DropdownQuestion';
 import QuestionWithButtons from '../screens/QuestionWithButtons';
+import Solo from '../screens/Solo';
 import MyTheme from '../components/globals/MyTheme'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -44,6 +45,10 @@ const CoverStack = () => {
             <Stack.Screen
              name="QuestionWithButtons"
              component={QuestionWithButtons}
+             />
+            <Stack.Screen
+             name="Organization"
+             component={Solo}
              />
         </Stack.Navigator>
     </NavigationContainer>
