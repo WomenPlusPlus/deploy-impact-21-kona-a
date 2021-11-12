@@ -42,9 +42,9 @@ const OrgCard = ({item}) => {
     
     return (
        <ScrollView style={ QuestionStyles.cardStyle }>
-            <View style= {QuestionStyles.imageContainer}>
+            <TouchableOpacity style= {QuestionStyles.imageContainer} onPress={navigateToSolo} >
                 <Image source={require('../../assets/Logo-warc.png')} style={ QuestionStyles.imageContainer } resizeMode="contain"></Image>
-            </View>
+            </TouchableOpacity>
             <TouchableOpacity onPress={pressHandler}
                 style={{position: 'absolute', right: 8, top: 8 }} >
                     <FontAwesome name={save ? "heart" : "heart-o"} size={24} color="black" />
