@@ -6,6 +6,10 @@ export const GlobalStyles = StyleSheet.create({
         padding: 24,
         backgroundColor: 'rgb(242,240,240)'
     },
+    sbWhiteContainer: {
+        flexDirection: 'column',
+        padding: 24,
+    },
     whiteContainer: {
         flexDirection: 'column',
         margin: 20,
