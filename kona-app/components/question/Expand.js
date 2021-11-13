@@ -19,7 +19,7 @@ const ExpandSeeAll = (props) => {
     setCollapsed(!collapsed);
   };
 
-  const buttonNames = props.categories.buttons
+  const buttonNames = props.categories
 
   return (
     <SafeAreaView>

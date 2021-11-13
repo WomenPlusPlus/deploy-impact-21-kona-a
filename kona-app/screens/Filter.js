@@ -19,13 +19,22 @@ export default function Filter({ route, navigation, filterKeyword }) {
         );
     } */
 
-  const mainCategories = {
-    buttons: ['Food', 'Shelter', 'Education', 'Agriculture', 'Social Protection']
-  }
+  const mainCategories = ['Food', 'Shelter', 'Education', 'Agriculture', 'Social Protection']
 
-  const targetGroups = {
-    buttons: ['Victims of domestic Violence', 'Refugees', 'Homeless People', 'Disabled People', 'LGBTQIA+', 'Migrants']
-  }
+  const targetGroups = ['Victims of domestic Violence', 'Refugees', 'Homeless People', 'Disabled People', 'LGBTQIA+', 'Migrants']
+
+  const filterBy = (selectedCat, buttonNames) => {
+
+    const filteredCats = buttonNames.filter((cat) => {
+      if (cat != selectedCat) {
+        return cat
+      }
+    });
+    return filteredCats
+  };
+
+  const filterByMainCategory = filterBy(filterKeyword, mainCategories);
+  const filterByTargetGroup = filterBy('Refugees', targetGroups);
 
   return (
     <View>
@@ -39,12 +48,12 @@ export default function Filter({ route, navigation, filterKeyword }) {
           </View>
           <View style={QuestionStyles.flexDirectionColumn}>
             <BigButton answer={filterKeyword} checked/>
-            <ExpandSeeAll categories={mainCategories}/>
+            <ExpandSeeAll categories={filterByMainCategory}/>
           </View>
           <Text style={GlobalStyles.normalText}>I need help for:</Text>
           <View style={QuestionStyles.flexDirectionColumn}>
             <BigButton answer='Refugees' />
-            <ExpandSeeAll categories={targetGroups}/>
+            <ExpandSeeAll categories={filterByTargetGroup}/>
           </View>
         </View>
       </View>
