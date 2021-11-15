@@ -5,22 +5,23 @@ import Accordion from 'react-native-collapsible/Accordion';
 import { GlobalStyles } from '../globals/GlobalStyles';
 import { QuestionStyles } from './QuestionStyles';
 import BigButton from '../globals/BigButton';
+import { AntDesign, Feather } from '@expo/vector-icons';
 
 const CONTENT = [
 {
-  title: 'Terms and Conditions',
+  title: 'Gender',
   content:
-    'The following terms and conditions, together with any referenced documents (collectively, "Terms of Use") form a legal agreement between you and your employer, employees, agents, contractors and any other entity on whose behalf you accept these terms (collectively, “you” and “your”), and ServiceNow, Inc. (“ServiceNow,” “we,” “us” and “our”).',
+    'Woman',
 },
 {
-  title: 'Privacy Policy',
+  title: 'Age',
   content:
-    'A Privacy Policy agreement is the agreement where you specify if you collect personal data from your users, what kind of personal data you collect and what you do with that data.',
+    'A Pa.',
 },
 {
-  title: 'Return Policy',
+  title: 'Location',
   content:
-    'Our Return & Refund Policy template lets you get started with a Return and Refund Policy agreement. This template is free to download and use.According to TrueShip study, over 60% of customers review a Return/Refund Policy before they make a purchasing decision.',
+    'Our  sion.',
 },
 ];
 
@@ -42,10 +43,11 @@ const AccordionFilter = () => {
     //Accordion Header view
     return (
       <Animatable.View
-        duration={400}
-        style={[styles.header, isActive ? styles.active : styles.inactive]}
-        transition="backgroundColor">
-        <Text style={styles.headerText}>{section.title}</Text>
+        duration={400}>
+        <View style={QuestionStyles.topFilterSection}>
+          <Text style={QuestionStyles.accordionTextTitle}>{section.title}</Text>
+          { isActive ? <AntDesign name="minus" size={24} color="#212121" /> : <AntDesign name="plus" size={24} color="#212121" /> }
+        </View>
       </Animatable.View>
     );
   };
@@ -54,12 +56,11 @@ const AccordionFilter = () => {
     //Accordion Content view
     return (
       <Animatable.View
-        duration={400}
-        style={[styles.content, isActive ? styles.active : styles.inactive]}
-        transition="backgroundColor">
+        duration={100}>
         <Animatable.Text
-          animation={isActive ? 'bounceIn' : undefined}
-          style={{ textAlign: 'center' }}>
+          animation={isActive ? 'fadeInDown' : undefined}
+          style={{ textAlign: 'left' }}>
+          <Feather name="square" size={24} color="#212121" />
           {section.content}
         </Animatable.Text>
       </Animatable.View>
@@ -67,12 +68,11 @@ const AccordionFilter = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={styles.container}>
+    <SafeAreaView>
+      <View style={GlobalStyles.whiteContainer}>
         <ScrollView>
-          <View style={{ backgroundColor: '#000', height: 1, marginTop: 10 }} />
-          <View style={styles.multipleToggle}>
-            <Text style={styles.multipleToggle__title}>
+          <View>
+            <Text style={GlobalStyles.normalText}>
               Multiple Expand Allowed?
             </Text>
             <Switch
@@ -82,9 +82,6 @@ const AccordionFilter = () => {
               }
             />
           </View>
-          <Text style={styles.selectTitle}>
-            Please select below option to expand
-          </Text>
           {/*Code for Accordion/Expandable List starts here*/}
           <Accordion
             activeSections={activeSections}
@@ -116,64 +113,3 @@ const AccordionFilter = () => {
 };
 
 export default AccordionFilter;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F5FCFF',
-    paddingTop: 30,
-  },
-  title: {
-    textAlign: 'center',
-    fontSize: 18,
-    fontWeight: '300',
-    marginBottom: 20,
-  },
-  header: {
-    backgroundColor: '#F5FCFF',
-    padding: 10,
-  },
-  headerText: {
-    textAlign: 'center',
-    fontSize: 16,
-    fontWeight: '500',
-  },
-  content: {
-    padding: 20,
-    backgroundColor: '#fff',
-  },
-  active: {
-    backgroundColor: 'rgba(255,255,255,1)',
-  },
-  inactive: {
-    backgroundColor: 'rgba(245,252,255,1)',
-  },
-  selectors: {
-    marginBottom: 10,
-    flexDirection: 'row',
-    justifyContent: 'center',
-  },
-  selector: {
-    backgroundColor: '#F5FCFF',
-    padding: 10,
-  },
-  activeSelector: {
-    fontWeight: 'bold',
-  },
-  selectTitle: {
-    fontSize: 14,
-    fontWeight: '500',
-    padding: 10,
-    textAlign: 'center',
-  },
-  multipleToggle: {
-    flexDirection: 'row',
-    justifyContent: 'center',
-    marginVertical: 30,
-    alignItems: 'center',
-  },
-  multipleToggle__title: {
-    fontSize: 16,
-    marginRight: 8,
-  },
-});

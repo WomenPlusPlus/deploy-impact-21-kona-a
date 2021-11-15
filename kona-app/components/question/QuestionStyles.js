@@ -34,7 +34,6 @@ export const QuestionStyles = StyleSheet.create({
     color: '#212121',
     fontWeight: '400',
   },
-
   dropdownContainer: {
   },
   btnContainer: {
@@ -69,87 +68,98 @@ export const QuestionStyles = StyleSheet.create({
     color: 'grey',
     marginBottom: 5
   },
-    bold: {
-        fontWeight: 'bold'
+  bold: {
+    fontWeight: 'bold'
   },
-    smallContainer: {
-        paddingTop: 20,
-        flexDirection:'row'
+  smallContainer: {
+    paddingTop: 20,
+    flexDirection:'row'
   },
-    cardStyle: {
-        width: '100%',
-        borderRadius: 10,
-        borderColor: '#212121',
-        borderWidth: 1,
-        borderStyle: 'solid'
+  cardStyle: {
+    width: '100%',
+    borderRadius: 10,
+    borderColor: '#212121',
+    borderWidth: 1,
+    borderStyle: 'solid'
   },
-    h2: {
-        paddingLeft: 16,
-        paddingBottom: 10
+  h2: {
+    paddingLeft: 16,
+    paddingBottom: 10
   },
-    imageContainer: {
-        width: '100%',
-        borderTopEndRadius: 10,
-        borderTopStartRadius: 10,
-        backgroundColor: ('rgb(232,232,232)'),
+  imageContainer: {
+    width: '100%',
+    borderTopEndRadius: 10,
+    borderTopStartRadius: 10,
+    backgroundColor: ('rgb(232,232,232)'),
   },
-    soloImageContainer: {
-      width: '100%',
-      height: 195,
-      backgroundColor: ('rgb(232,232,232)')
-    },
-    image: {
-      flex: 1,
-      width: undefined,
-      height: undefined,
-      resizeMode: 'cover'
+  soloImageContainer: {
+    width: '100%',
+    height: 195,
+    backgroundColor: ('rgb(232,232,232)')
   },
-     filterButton: {
+  image: {
+    flex: 1,
+    width: undefined,
+    height: undefined,
+    resizeMode: 'cover'
   },
-    name: {
+  name: {
     fontWeight: '600',
     fontSize: 20,
     paddingVertical: 8,
     lineHeight: 30,
   },
-    fieldName: {
-      color: '#6B6B6B',
-      fontWeight: 'bold'
-    },
-    field: {
-      display: 'flex',
-      flexDirection: 'row',
-      paddingVertical: 8,
-      paddingBottom: 2,
-    },
-    fieldText: {
-      alignSelf: 'center',
-      color: '#6B6B6B',
-      fontWeight: 'bold',
-      fontSize: 16,
-      lineHeight: 24,
-    },
-    orgContainer: {
-      marginHorizontal: 25,
-      marginBottom: 30,
-    },
-    orgTextContainer: {
-      padding: 24,
-    },
-    helpContainer: {
-      paddingVertical: 20
-    },
-    label: {
-      width: 123,
-      backgroundColor: '#212121',
-      borderBottomRightRadius:10,
-      borderTopLeftRadius:10,
-      padding: 10,
-      textAlign: 'center'
-    },
-    orgImage: {
-      height: 130, 
-      width: "100%",
-      marginVertical: 10,
-    }
+  fieldName: {
+    color: '#6B6B6B',
+    fontWeight: 'bold'
+  },
+  field: {
+    display: 'flex',
+    flexDirection: 'row',
+    paddingVertical: 8,
+    paddingBottom: 2,
+  },
+  fieldText: {
+    alignSelf: 'center',
+    color: '#6B6B6B',
+    fontWeight: 'bold',
+    fontSize: 16,
+    lineHeight: 24,
+  },
+  orgContainer: {
+    marginHorizontal: 25,
+    marginBottom: 30,
+  },
+  orgTextContainer: {
+    padding: 24,
+  },
+  helpContainer: {
+    paddingVertical: 20
+  },
+  label: {
+    width: 123,
+    backgroundColor: '#212121',
+    borderBottomRightRadius:10,
+    borderTopLeftRadius:10,
+    padding: 10,
+    textAlign: 'center'
+  },
+  orgImage: {
+    height: 130,
+    width: "100%",
+    marginVertical: 10,
+  },
+  topFilterSection: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    borderBottomColor: '#212121',
+    borderBottomWidth: 1,
+  },
+  accordionTextTitle: {
+    fontFamily: 'poppins-medium',
+    fontSize: 18,
+    lineHeight: 27,
+    color: '#212121',
+    marginVertical: 19,
+  }
 })
