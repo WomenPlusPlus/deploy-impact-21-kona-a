@@ -10,12 +10,13 @@ const OrgList = ({orgs}) => {
 
     return (
         <SafeAreaView style={GlobalStyles.pt}>
-            <Text style={ GlobalStyles.h2 }>These organizations might be able to help:</Text>
+            <Text style={ GlobalStyles.h2 }>{(orgs.length)} organizations found</Text>
+            
             <View style={ GlobalStyles.cardsContainerLeft }>
                 <FlatList
                     data={orgs}
                     renderItem={renderItem}
-                    keyExtractor={item => item["Name"]} />
+                    keyExtractor={item => item["ID"]} />
             </View>
             <Text style={ GlobalStyles.textLink }>See all</Text>
         </SafeAreaView>

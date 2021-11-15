@@ -4,9 +4,9 @@ import Collapsible from 'react-native-collapsible';
 import { GlobalStyles } from '../globals/GlobalStyles';
 import { QuestionStyles } from './QuestionStyles';
 import BigButton from '../globals/BigButton';
+import CheckButton from '../globals/CheckButton';
 
-
-const ExpandSeeAll = (props) => {
+const ExpandSeeAll = ({categories, onCheck, onUncheck}) => {
   // Collapsed condition for the single collapsible
   const [collapsed, setCollapsed] = useState(true);
   // MultipleSelect is for the Multiple Expand allowed
@@ -19,7 +19,9 @@ const ExpandSeeAll = (props) => {
     setCollapsed(!collapsed);
   };
 
-  const buttonNames = props.categories
+  const buttonNames = categories
+
+  const selectedButton = (answer) => {console.log(answer)}
 
   return (
     <SafeAreaView>
@@ -36,7 +38,7 @@ const ExpandSeeAll = (props) => {
           <Collapsible collapsed={collapsed}>
             <View>
               { buttonNames.map((button) => (
-                  <BigButton answer={button} />
+                  <CheckButton answer={button} onCheck={onCheck} onUncheck={onUncheck}/>
                 ))
               }
             </View>
