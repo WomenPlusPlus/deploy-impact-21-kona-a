@@ -11,17 +11,17 @@ const CONTENT = [
 {
   title: 'Gender',
   content:
-    'Woman',
+    [ 'Woman', 'Man', 'Non-binary', 'Other' ]
 },
 {
-  title: 'Age',
+  title: 'Age Group',
   content:
-    'A Pa.',
+    [ 'Children', 'Youth', 'Adult' ]
 },
 {
   title: 'Location',
   content:
-    'Our  sion.',
+    [ 'Country Side', 'City' ]
 },
 ];
 
@@ -54,14 +54,21 @@ const AccordionFilter = () => {
 
   const renderContent = (section, _, isActive) => {
     //Accordion Content view
+    const checkboxText = section.content
     return (
       <Animatable.View
         duration={100}>
         <Animatable.Text
-          animation={isActive ? 'fadeInDown' : undefined}
-          style={{ textAlign: 'left' }}>
-          <Feather name="square" size={24} color="#212121" />
-          {section.content}
+          animation={isActive ? 'fadeInDown' : undefined}>
+          <View style={GlobalStyles.flexDirectionColumn}>
+            { checkboxText.map((text) => (
+                <TouchableOpacity style={QuestionStyles.checkboxItems}>
+                  <Feather name="square" size={24} color="#212121" />
+                  <Text style={QuestionStyles.checkboxText}>{text}</Text>
+                </TouchableOpacity>
+              ))
+            }
+          </View>
         </Animatable.Text>
       </Animatable.View>
     );

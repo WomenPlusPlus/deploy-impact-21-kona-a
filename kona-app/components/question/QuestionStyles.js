@@ -161,5 +161,13 @@ export const QuestionStyles = StyleSheet.create({
     lineHeight: 27,
     color: '#212121',
     marginVertical: 19,
-  }
+  },
+  checkboxItems: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start'
+  },
+  checkboxText: {
+    marginLeft: 10,
+    marginTop: 5,
+  },
 })
