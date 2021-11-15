@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ScrollView, Text, View, TouchableOpacity, SafeAreaView, Switch, StyleSheet } from 'react-native';
-import Collapsible from 'react-native-collapsible';
 import * as Animatable from 'react-native-animatable';
 import Accordion from 'react-native-collapsible/Accordion';
 import { GlobalStyles } from '../globals/GlobalStyles';
@@ -25,31 +24,14 @@ const CONTENT = [
 },
 ];
 
-//To make the selector (Something like tabs)
-const SELECTORS = [
-{ title: 'T&C', value: 0 },
-{ title: 'Privacy Policy', value: 1 },
-{ title: 'Return Policy', value: 2 },
-{ title: 'Reset all' },
-];
-
-
-
 const AccordionFilter = () => {
 
   // Ddefault active selector
   const [activeSections, setActiveSections] = useState([]);
-  // Collapsed condition for the single collapsible
-  const [collapsed, setCollapsed] = useState(true);
   // MultipleSelect is for the Multiple Expand allowed
   // True: Expand multiple at a time
   // False: One can be expand at a time
   const [multipleSelect, setMultipleSelect] = useState(false);
-
-  const toggleExpanded = () => {
-    //Toggling the state of single Collapsible
-    setCollapsed(!collapsed);
-  };
 
   const setSections = (sections) => {
     //setting up a active section state
@@ -88,28 +70,6 @@ const AccordionFilter = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <ScrollView>
-          <Text style={styles.title}>
-            Example of Collapsible/Accordion/Expandable List View in React
-            Native
-          </Text>
-
-          {/*Code for Single Collapsible Start*/}
-          <TouchableOpacity onPress={toggleExpanded}>
-            <View style={styles.header}>
-              <Text style={styles.headerText}>Single Collapsible</Text>
-              {/*Heading of Single Collapsible*/}
-            </View>
-          </TouchableOpacity>
-          {/*Content of Single Collapsible*/}
-          <Collapsible collapsed={collapsed} align="center">
-            <View style={styles.content}>
-              <Text style={{ textAlign: 'center' }}>
-                This is a dummy text of Single Collapsible View
-              </Text>
-            </View>
-          </Collapsible>
-          {/*Code for Single Collapsible Ends*/}
-
           <View style={{ backgroundColor: '#000', height: 1, marginTop: 10 }} />
           <View style={styles.multipleToggle}>
             <Text style={styles.multipleToggle__title}>
@@ -125,30 +85,6 @@ const AccordionFilter = () => {
           <Text style={styles.selectTitle}>
             Please select below option to expand
           </Text>
-
-          {/*Code for Selector starts here*/}
-          <View style={styles.selectors}>
-            {SELECTORS.map((selector) => (
-              <TouchableOpacity
-                key={selector.title}
-                onPress={() => setSections([selector.value])}
-                //on Press of any selector sending the selector value to
-                // setSections function which will expand the Accordion accordingly
-              >
-                <View style={styles.selector}>
-                  <Text
-                    style={
-                      activeSections.includes(selector.value) &&
-                      styles.activeSelector
-                    }>
-                    {selector.title}
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            ))}
-          </View>
-          {/*Code for Selector ends here*/}
-
           {/*Code for Accordion/Expandable List starts here*/}
           <Accordion
             activeSections={activeSections}
