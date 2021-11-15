@@ -1,32 +1,51 @@
 <p align="center"><img width=30.5% src="https://kona-connect.org/wp-content/uploads/2021/03/cropped-connect_logo_positive-e1614970117884-300x97.png"></p>
 
+
+   
+   <h2 align="center">Dots: The alternative legal aid tech connecting individuals to the right organisations</h2>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
+   [![Build Status](https://travis-ci.org/anfederico/clairvoyant.svg?branch=master)](https://travis-ci.org/anfederico/clairvoyant)
+   ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
+   [![GitHub Issues](https://img.shields.io/github/issues/anfederico/clairvoyant.svg)](https://github.com/anfederico/clairvoyant/issues)
+   ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 ---
+
 ## 🧐  About 
 
 Kona Connect’s legal team, together with students and expert volunteers from around the world, are developing a tool to connect people in need to 
 the organisations best equipped to help them. This tool – a legal aid chatbot – accessible 24/7 through any smartphone device, will automatically 
 guide its users, whilst simultaneously reducing aid agencies’ staggering workloads, freeing up time to help more individuals.
-## Getting Started
+
+This has been a 6 week volunteer project in collaboration with Kona-Connect and Women++. The team's goal is to develop an application that will connect Sengalese people to various NGO's and organizations that can provide assistance for specific needs.
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+The fastest way to get up and running is to use the Expo Go app on your iOS or Android device. Expo Go allows you to open up apps that are being served through Expo CLI.
 ```
-Instal Expo onto mobile phone
+npm install --global expo-cli
 ```
 
-### Installing
+Download Expo Go on your mobile device
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+<a href="https://play.google.com/store/apps/details?id=host.exp.exponent">🤖 Android Play Store - Android Lollipop (5) and greater.
+</a>
 
-### Executing program
+<a href="https://apps.apple.com/us/app/expo-go/id982107779">🍎 iOS App Store - iOS 11 and greater</a>
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
+
+### Application Design
+
+* React-Native
+* Expo
+* JSON for data storage
+
+In order to keep the app light-weight, we decided to use a JSON to store the data infrastruture. 
+
+
 
 ## Help
 
@@ -43,6 +62,7 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
+* [discord-hackathon](https://github.com/campus-experts/discord-hackathon-template/blob/main/README.md)
 
 
 
