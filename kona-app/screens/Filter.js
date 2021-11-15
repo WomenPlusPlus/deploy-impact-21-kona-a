@@ -5,6 +5,7 @@ import BigButton from '../components/globals/BigButton';
 import { QuestionStyles } from '../components/question/QuestionStyles';
 import FilterButton from '../components/question/Filter';
 import ExpandSeeAll from '../components/question/Expand';
+import AccordionFilter from '../components/question/Accordion';
 
 
 
@@ -57,6 +58,7 @@ export default function Filter({ route, navigation, filterKeyword }) {
           </View>
         </View>
       </View>
+      <AccordionFilter/>
     </View>
   )
 }
