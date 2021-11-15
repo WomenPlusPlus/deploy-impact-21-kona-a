@@ -11,17 +11,32 @@ const CONTENT = [
 {
   title: 'Gender',
   content:
-    [ 'Woman', 'Man', 'Non-binary', 'Other' ]
+    [
+      {key: 'Woman', value: false},
+      {key: 'Man', value: false},
+      {key: 'Non-binary', value: false},
+      {key: 'Other', value: false},
+    ],
+    // [ 'Woman', 'Man', 'Non-binary', 'Other' ]
 },
 {
   title: 'Age Group',
   content:
-    [ 'Children', 'Youth', 'Adult' ]
+    [
+      {key: 'Children', value: false},
+      {key: 'Youth', value: false},
+      {key: 'Adult', value: false},
+    ],
+    // [ 'Children', 'Youth', 'Adult' ]
 },
 {
   title: 'Location',
   content:
-    [ 'Country Side', 'City' ]
+    [
+      {key: 'Country', value: false},
+      {key: 'City', value: false},
+    ],
+    //[ 'Country Side', 'City' ]
 },
 ];
 
@@ -55,6 +70,7 @@ const AccordionFilter = () => {
   const renderContent = (section, _, isActive) => {
     //Accordion Content view
     const checkboxText = section.content
+    console.log(checkboxText)
     return (
       <Animatable.View
         duration={100}>
