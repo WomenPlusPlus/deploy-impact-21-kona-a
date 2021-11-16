@@ -3,6 +3,7 @@ import { Text, View, Image, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import BigButton from '../components/globals/BigButton';
 import Data from '../assets/kona_orgs.json';
+import IconImages from '../assets/iconImages';
 import SearchBar from '../components/globals/SearchBar';
 import SDGs from '../components/globals/SDGs'
 
@@ -84,22 +85,50 @@ const filteredOrgsSearch = Data.filter((org) => {
           <BigButton answer='Migrants' onPressWithParam={filterByTargetGroup} />
         </View>}
         <View>
-          <SDGs answer='No Poverty' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Health' onPressWithParam={filterBySDGs} />
-          <SDGs answer='No Hunger' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Education' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Gender Equality' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Water/Sanitation' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Clean Energy' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Justice / Institutions' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Work / Economic Growth' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Industry / Innovation / Infrastructure' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Inequalities' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Sustainable Communities' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Climate' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Life below Water' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Life on land' onPressWithParam={filterBySDGs} />
-          <SDGs answer='Partnership for the Goals' onPressWithParam={filterBySDGs} />
+          <SDGs source={IconImages.noPovertyIcon}
+          answer="No Poverty"
+          onPressWithParam={filterBySDGs}/>
+           <SDGs answer='No Hunger' 
+           source={IconImages.noHungerIcon}onPressWithParam={filterBySDGs} />
+          <SDGs 
+          source={IconImages.healthIcon}
+          answer='Health' onPressWithParam={filterBySDGs} />
+         
+          <SDGs answer='Education' 
+          source={IconImages.educationIcon}
+          onPressWithParam={filterBySDGs} />
+          <SDGs answer='Gender Equality' 
+          source={IconImages.genderEqualityIcon}
+          onPressWithParam={filterBySDGs} />
+          <SDGs answer='Water/Sanitation' 
+          source={IconImages.waterIcon}
+          onPressWithParam={filterBySDGs} />
+          <SDGs answer='Clean Energy' 
+          source={IconImages.cleanEnergyIcon}
+          onPressWithParam={filterBySDGs} />
+          <SDGs answer='Work / Economic Growth' 
+          source={IconImages.workIcon} 
+          onPressWithParam={filterBySDGs} />
+
+           <SDGs answer='Industry / Innovation / Infrastructure'
+           source={IconImages.industryIcon} onPressWithParam={filterBySDGs} />
+          <SDGs answer='Inequalities' 
+          source={IconImages.inequalitiesIcon}onPressWithParam={filterBySDGs} />
+          <SDGs answer='Sustainable Communities'
+           source={IconImages.sustainableComIcon} onPressWithParam={filterBySDGs} />
+          <SDGs answer='Responsible Consumption' 
+          source={IconImages.consumptionIcon} onPressWithParam={filterBySDGs} />
+          <SDGs answer='Climate'
+          source={IconImages.climateIcon}  onPressWithParam={filterBySDGs} />
+          <SDGs answer='Life below Water'
+          source={IconImages.belowWaterIcon} onPressWithParam={filterBySDGs} />
+          <SDGs answer='Life on land'
+          source={IconImages.onLandIcon} onPressWithParam={filterBySDGs} />
+         <SDGs answer='Justice / Institutions' 
+          source={IconImages.justiceIcon}
+          onPressWithParam={filterBySDGs} /> 
+          <SDGs answer='Partnership for the Goals' 
+          source={IconImages.justiceIcon}onPressWithParam={filterBySDGs} />
         </View>
       </ScrollView>
     )
