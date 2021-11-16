@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, Image, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
-import FlatButton from '../components/globals/Button';
 import BigButton from '../components/globals/BigButton';
 import Data from '../assets/new_json.json';
 import SearchBar from '../components/globals/SearchBar';
@@ -63,7 +62,7 @@ const filteredOrgsSearch = Data.filter((org) => {
           <Text style={[GlobalStyles.normalText, GlobalStyles.ptpb]}>
             What do you need help with?
           </Text>
-          
+
         </View>}
         <SearchBar data={Data} setSearchQuery={setSearchQuery} onSubmit={navigateToFilteredOrgs}/>
       </View>
