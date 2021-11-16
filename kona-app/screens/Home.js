@@ -4,6 +4,7 @@ import { GlobalStyles } from '../components/globals/GlobalStyles';
 import BigButton from '../components/globals/BigButton';
 import Data from '../assets/kona_orgs.json';
 import SearchBar from '../components/globals/SearchBar';
+import SDGs from '../components/globals/SDGs'
 
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -30,10 +31,13 @@ const filteredOrgsSearch = Data.filter((org) => {
 
         navigation.navigate('FilteredOrgs', {orgs: filteredOrgs, filter: keyword})
     };
+    
   
   const filterByMainCategory = (category) => filterBy('SubCategory', category);
 
   const filterByTargetGroup = (category) => filterBy('TargetGroup', category);
+
+  const filterBySDGs = (category) => filterBy('SDG(s)', category);
 
   // if (searchQuery) {
   //   return (
@@ -43,6 +47,7 @@ const filteredOrgsSearch = Data.filter((org) => {
   //     </View>
   //   );
   // }
+  console.log(filterBySDGs("No Poverty"))
   return (
     <ScrollView>
       <View style={searchQuery ? GlobalStyles.sbWhiteContainer : GlobalStyles.container}>
@@ -58,7 +63,7 @@ const filteredOrgsSearch = Data.filter((org) => {
           <Text style={[GlobalStyles.normalText, GlobalStyles.ptpb]}>
             What do you need help with?
           </Text>
-          
+
         </View>}
         <SearchBar data={Data} setSearchQuery={setSearchQuery} onSubmit={navigateToFilteredOrgs}/>
       </View>
@@ -79,6 +84,24 @@ const filteredOrgsSearch = Data.filter((org) => {
           <BigButton answer='LGBTQIA+' onPressWithParam={filterByTargetGroup} />
           <BigButton answer='Migrants' onPressWithParam={filterByTargetGroup} />
         </View>}
+        <View>
+          <SDGs answer='No Poverty' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Health' onPressWithParam={filterBySDGs} />
+          <SDGs answer='No Hunger' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Education' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Gender Equality' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Water/Sanitation' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Clean Energy' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Justice / Institutions' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Work / Economic Growth' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Industry / Innovation / Infrastructure' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Inequalities' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Sustainable Communities' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Climate' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Life below Water' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Life on land' onPressWithParam={filterBySDGs} />
+          <SDGs answer='Partnership for the Goals' onPressWithParam={filterBySDGs} />
+        </View>
       </ScrollView>
     )
   }

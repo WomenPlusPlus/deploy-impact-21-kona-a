@@ -8,7 +8,7 @@ import FilterButton from '../components/question/FilterButton';
 import ExpandSeeAll from '../components/question/Expand';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Data from '../assets/kona_orgs.json';
-
+import AccordionFilter from '../components/question/Accordion';
 
 export default function Filter({ filterKeyword, setFilteredOrgs }) {
   const initialKeywordSet = new Set();
@@ -84,6 +84,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
           </View>
         </View>
       </View>
+      <AccordionFilter/>
     </View>
   )
 }

@@ -9,10 +9,6 @@ import CheckButton from '../globals/CheckButton';
 const ExpandSeeAll = ({categories, onCheck, onUncheck}) => {
   // Collapsed condition for the single collapsible
   const [collapsed, setCollapsed] = useState(true);
-  // MultipleSelect is for the Multiple Expand allowed
-  // True: Expand multiple at a time
-  // False: One can be expand at a time
-  const [multipleSelect, setMultipleSelect] = useState(false);
 
   const toggleExpanded = () => {
     //Toggling the state of single Collapsible
