@@ -4,7 +4,7 @@ import { GlobalStyles } from '../components/globals/GlobalStyles';
 import BigButton from '../components/globals/BigButton';
 import CheckButton from '../components/globals/CheckButton';
 import { QuestionStyles } from '../components/question/QuestionStyles';
-import FilterButton from '../components/question/Filter';
+import FilterButton from '../components/question/FilterButton';
 import ExpandSeeAll from '../components/question/Expand';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Data from '../assets/kona_orgs.json';
@@ -66,10 +66,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
   return (
     <View>
 
-      <TouchableOpacity onPress = { () => filterByOneOfThreeCategories('Health') }><Text>Click here</Text></TouchableOpacity>
-
-      {/* { console.log(object) } */}
-      {/* { object.forEach(org => console.log(org["Name"])) } */}
+      {/* <TouchableOpacity onPress = { () => filterByOneOfThreeCategories('Health') }><Text>Click here</Text></TouchableOpacity> */}
       <View style={GlobalStyles.greyContainer}>
         <View style={GlobalStyles.whiteContainer}>
           <View style={GlobalStyles.topFilterSection}>
@@ -77,9 +74,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
             <FilterButton answer= "Filter"/>
           </View>
           <View style={QuestionStyles.flexDirectionColumn}>
-            <CheckButton answer={filterKeyword} onCheck={onCheckHandler} onUncheck={onUncheckHandler} initiallyChecked/>
-            
-            {/* <BigButton answer={filterKeyword} checked /> */}
+            <CheckButton answer={filterKeyword} onCheck={onCheckHandler} onUncheck={onUncheckHandler} initiallyChecked />
             <ExpandSeeAll categories={remainingMainCategories}  onCheck={onCheckHandler} onUncheck={onUncheckHandler}/>
           </View>
           <Text style={GlobalStyles.normalText}>I need help for:</Text>

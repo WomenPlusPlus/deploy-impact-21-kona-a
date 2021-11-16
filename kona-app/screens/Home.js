@@ -9,7 +9,8 @@ export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState('');
 
 const filteredOrgsSearch = Data.filter((org) => {
-  if (org['MainCategory'].toUpperCase().includes(searchQuery.toUpperCase())) {
+  if (org['MainCategory'].toUpperCase().includes(searchQuery.toUpperCase()) ||
+      org['SubCategory'].toUpperCase().includes(searchQuery.toUpperCase()) ) {
     return org
   }
 })
