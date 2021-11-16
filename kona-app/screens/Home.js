@@ -10,8 +10,7 @@ export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState('');
 
 const filteredOrgsSearch = Data.filter((org) => {
-  if (org['MainCategory'].toUpperCase().includes(searchQuery.toUpperCase()) ||
-      org['SubCategory'].toUpperCase().includes(searchQuery.toUpperCase()) ) {
+  if (org['MainCategory'].toUpperCase().includes(searchQuery.toUpperCase())) {
     return org
   }
 })
@@ -37,7 +36,7 @@ const filteredOrgsSearch = Data.filter((org) => {
 
   const filterByTargetGroup = (category) => filterBy('TargetGroup', category);
 
-  const filterBySDGs = (category) => filterBy('SDG(s)', category);
+  const filterBySDGs = (category) => filterBy('SDG', category);
 
   // if (searchQuery) {
   //   return (
