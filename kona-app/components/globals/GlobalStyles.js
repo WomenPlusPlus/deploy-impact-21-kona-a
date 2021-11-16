@@ -4,7 +4,7 @@ export const GlobalStyles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         padding: 24,
-        backgroundColor: 'rgb(242,240,240)'
+        backgroundColor: 'rgb(242,240,240)',
     },
     sbWhiteContainer: {
         flexDirection: 'column',
@@ -169,5 +169,25 @@ export const GlobalStyles = StyleSheet.create({
       paddingTop: 10,
       paddingBottom: 10,
     },
+    sdgTitle: {
+      color: '#6B6B6B',
+      fontWeight: 'bold',
+      fontSize: 14,
+      lineHeight: 24,
+    },
+
+    sdgGrid: {
+      paddingTop: 24,
+      flex: 1,
+      flexDirection: 'row',
+      flexWrap: "wrap",
+      alignContent: "space-between",
+    },
+
+    singleSDG: {
+      flexBasis: "33.33%",
+      paddingBottom: 10,
+      alignSelf: "center"
+    }
       
 })

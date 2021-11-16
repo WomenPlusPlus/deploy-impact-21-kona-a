@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Text, View, Image, ScrollView } from "react-native";
 import { GlobalStyles } from "../components/globals/GlobalStyles";
+import { QuestionStyles } from "../components/question/QuestionStyles";
 import BigButton from "../components/globals/BigButton";
 import Data from "../assets/kona_orgs.json";
 import IconImages from "../assets/iconImages";
@@ -113,7 +114,11 @@ export default function Home({ navigation }) {
           <BigButton answer="Migrants" onPressWithParam={filterByTargetGroup} />
         </View>
       )}
-      <View>
+      <View style={GlobalStyles.container}>
+      <Text style={ GlobalStyles.sdgTitle }>THE 17 GOALS</Text>
+      <Text style={QuestionStyles.questionText}>The NGOs we're partnering with contribute to the Sustainable Development Goals</Text>
+      <View >
+        <View style={GlobalStyles.sdgGrid}>
         <SDGs
           source={IconImages.noPovertyIcon}
           answer="No Poverty"
@@ -196,9 +201,11 @@ export default function Home({ navigation }) {
         />
         <SDGs
           answer="Partnership for the Goals"
-          source={IconImages.justiceIcon}
+          source={IconImages.partnershipIcon}
           onPressWithParam={filterBySDGs}
         />
+        </View>
+        </View>
       </View>
     </ScrollView>
   );
