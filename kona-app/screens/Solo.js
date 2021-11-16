@@ -26,7 +26,7 @@ export default function Solo ({route}) {
                     <Entypo name="old-mobile" size={24} color= '#6B6B6B' style={{marginRight: 4}} />
                     <Text style={ QuestionStyles.fieldText }>Phone</Text>
                 </View>
-                <Text style={QuestionStyles.questionText} >{item["Phone Number"]}</Text>
+                <Text style={QuestionStyles.questionText} >{item["Phone"]}</Text>
                 <View style={ QuestionStyles.field }>
                     <FontAwesome name="envelope" size={20} color='#6B6B6B' style={{marginRight: 4}} />
                     <Text style={ QuestionStyles.fieldText }>Email</Text>
@@ -36,7 +36,7 @@ export default function Solo ({route}) {
                     <SimpleLineIcons name="globe" size={20} color='#6B6B6B' style={{marginRight: 4}} />
                     <Text style={ QuestionStyles.fieldText }>Website</Text>
                 </View>
-                <Text style={ QuestionStyles.questionText }>{item["Web Address"]}</Text>
+                <Text style={ QuestionStyles.questionText }>{item["WebAddress"]}</Text>
                 <View style={ QuestionStyles.helpContainer}>
                     <Text style={ QuestionStyles.name}>
                         Help with:

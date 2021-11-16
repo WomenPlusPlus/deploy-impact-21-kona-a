@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Text, View, Image, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import BigButton from '../components/globals/BigButton';
-import Data from '../assets/new_json.json';
+import Data from '../assets/kona_orgs.json';
 import SearchBar from '../components/globals/SearchBar';
 import SDGs from '../components/globals/SDGs'
 
@@ -10,7 +10,8 @@ export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState('');
 
 const filteredOrgsSearch = Data.filter((org) => {
-  if (org['Main Category'].toUpperCase().includes(searchQuery.toUpperCase())) {
+  if (org['MainCategory'].toUpperCase().includes(searchQuery.toUpperCase()) ||
+      org['SubCategory'].toUpperCase().includes(searchQuery.toUpperCase()) ) {
     return org
   }
 })
@@ -32,9 +33,9 @@ const filteredOrgsSearch = Data.filter((org) => {
     };
     
   
-  const filterByMainCategory = (category) => filterBy('Main Category', category);
+  const filterByMainCategory = (category) => filterBy('SubCategory', category);
 
-  const filterByTargetGroup = (category) => filterBy('Target Group', category);
+  const filterByTargetGroup = (category) => filterBy('TargetGroup', category);
 
   const filterBySDGs = (category) => filterBy('SDG(s)', category);
 

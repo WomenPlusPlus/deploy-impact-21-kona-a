@@ -61,7 +61,7 @@ const OrgCard = ({item}) => {
                         <Entypo style={{marginLeft: -5}}name="old-mobile" size={24} color= '#6B6B6B' />
                         <Text style={ QuestionStyles.fieldText }>Phone</Text>
                     </View>
-                    <Text style={QuestionStyles.questionText} >{item["Phone Number"]}</Text>
+                    <Text style={QuestionStyles.questionText} >{item["Phone"]}</Text>
                     <View style={ QuestionStyles.field }>  
                         <FontAwesome 
                         style={{paddingRight: 5}}name="building" size={20} color='#6B6B6B' />
