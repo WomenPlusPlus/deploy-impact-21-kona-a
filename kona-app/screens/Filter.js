@@ -9,10 +9,13 @@ import ExpandSeeAll from '../components/question/Expand';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Data from '../assets/kona_orgs.json';
 import AccordionFilter from '../components/question/Accordion';
+import { useNavigation } from '@react-navigation/native';
 
-export default function Filter({ filterKeyword, setFilteredOrgs, navigateToAccordion }) {
+export default function Filter({ filterKeyword, setFilteredOrgs }) {
   const initialKeywordSet = new Set();
   initialKeywordSet.add(filterKeyword);
+
+  const navigation = useNavigation();
 
   const [selectedKeywords, setSelectedKeywords] = useState(initialKeywordSet);
 
@@ -60,6 +63,10 @@ export default function Filter({ filterKeyword, setFilteredOrgs, navigateToAccor
     filterByKeywords(newSelectedKeywords);
     setSelectedKeywords(newSelectedKeywords);
   }
+
+  const navigateToAccordion = () => {
+    navigation.navigate('Accordion', selectedKeywords )
+  };
 
   console.log(selectedKeywords);
 

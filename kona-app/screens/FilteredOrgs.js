@@ -10,9 +10,7 @@ export default function FilteredOrgs({ route, navigation }) {
 
     const filterKeyword = route.params.filter;
 
-    const pressHandler = () => {
-        navigation.navigate('Accordion')
-    }
+
 
     // let word = "Women";
     // const filteredOrgs2 = filteredOrgs.filter((ngo) => {
@@ -37,7 +35,7 @@ export default function FilteredOrgs({ route, navigation }) {
 
     return(
         <ScrollView>
-            <Filter filterKeyword = {filterKeyword} setFilteredOrgs={setFilteredOrgs} navigateToAccordion={pressHandler} />
+            <Filter filterKeyword = {filterKeyword} setFilteredOrgs={setFilteredOrgs} />
 
             <View>
                 <OrgList orgs={filteredOrgs}/>

@@ -8,6 +8,11 @@ import Data from '../assets/kona_orgs.json';
 import AccordionFilter from '../components/question/Accordion';
 
 export default function Accordion({ route, navigation }) {
+  
+  const receivedKeywords = route.params;
+  console.log("We received this from the Filtered Orgs:")
+  console.log(receivedKeywords);
+  
   const initialKeywordSet = new Set();
   initialKeywordSet.add('food');
 
