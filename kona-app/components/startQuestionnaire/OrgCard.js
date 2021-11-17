@@ -7,7 +7,6 @@ import { useState } from 'react';
 import { Storage } from 'expo-storage';
 import { useNavigation } from '@react-navigation/native';
 import logoImages from '../../assets/logoImages';
-import Data from '../../assets/kona_orgs.json';
 
 const OrgCard = ({item}) => {
 
@@ -50,9 +49,9 @@ const OrgCard = ({item}) => {
                         <Text style={QuestionStyles.questionText, {color: 'white'}}>Refugee</Text>
                     </View>
                     <View style={ QuestionStyles.imageContainer}>
-                        <Image source={logoImages[Data.Logo]} style={QuestionStyles.orgImage} resizeMode="contain"></Image>
+                        <Image source={logoImages['1']} style={QuestionStyles.orgImage} resizeMode="contain"></Image>
                         <Text>{item["Logo"]}</Text>
-                        {console.log(item["Logo"])}
+                        {console.log(item)}
                     </View>
                 </TouchableOpacity>
                 <View style={QuestionStyles.orgTextContainer}>

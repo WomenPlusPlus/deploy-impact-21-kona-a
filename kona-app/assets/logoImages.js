@@ -1,17 +1,6 @@
-const getLogo = (image) => {
-
-    switch (image) {
-        case "Liane":
-            return require('../../assets/logos')
-            break;
-        case "Association":
-            return require("2.png")
-            break;
-            
-        default:
-            return require("3.png");
-            break;
-    }
+const logoImages = {
+    "1": require('../assets/logos/1.png'),
+    "2": require('../assets/logos/2.png'),
 }
 
-export default getLogo;
+export default logoImages;
