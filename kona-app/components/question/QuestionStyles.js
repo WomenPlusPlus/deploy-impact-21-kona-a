@@ -170,4 +170,18 @@ export const QuestionStyles = StyleSheet.create({
     marginLeft: 10,
     marginTop: 5,
   },
+  resultsButton: {
+    backgroundColor: '#6b6b6b',
+    color: '#FFFFFF',
+    width: 323,
+    height: 50,
+  },
+  resultsButtonText: {
+    color: '#FFFFFF',
+    fontFamily: 'poppins-regular',
+    fontSize: 16,
+    lineHeight: 19,
+    textAlign: 'center',
+    paddingTop: 15,
+  }
 })
