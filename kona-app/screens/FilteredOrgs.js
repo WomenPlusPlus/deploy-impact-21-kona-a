@@ -10,7 +10,11 @@ export default function FilteredOrgs({ route, navigation }) {
 
     const filterKeyword = route.params.filter;
 
-    // let word = "Women"; 
+    const pressHandler = () => {
+        navigation.navigate('Accordion')
+    }
+
+    // let word = "Women";
     // const filteredOrgs2 = filteredOrgs.filter((ngo) => {
     //     if (ngo['TargetGroup'].includes(word)) {
     //         return ngo
@@ -26,14 +30,14 @@ export default function FilteredOrgs({ route, navigation }) {
     //             {console.log(filteredOrgs)}
     //             <View>
     //                 <OrgList orgs={filteredOrgs2}/>
-    //             </View>        
+    //             </View>
     //         </View>
     //     )
     // }
 
     return(
         <ScrollView>
-            <Filter filterKeyword = {filterKeyword} setFilteredOrgs={setFilteredOrgs} />
+            <Filter filterKeyword = {filterKeyword} setFilteredOrgs={setFilteredOrgs} navigateToAccordion={pressHandler} />
 
             <View>
                 <OrgList orgs={filteredOrgs}/>

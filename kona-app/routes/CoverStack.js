@@ -3,6 +3,7 @@ import Home from '../screens/Home';
 import Cover from '../screens/Cover';
 import Filter from '../screens/Filter';
 import FilteredOrgs from '../screens/FilteredOrgs';
+import Accordion from '../screens/Accordion';
 import StartQuestionnaire from '../screens/StartQuestionnaire';
 import DropdownQuestion from '../screens/DropdownQuestion';
 import QuestionWithButtons from '../screens/QuestionWithButtons';
@@ -28,6 +29,10 @@ const CoverStack = () => {
             <Stack.Screen
              name="FilteredOrgs"
              component={FilteredOrgs}
+            />
+            <Stack.Screen
+             name="Accordion"
+             component={Accordion}
             />
             <Stack.Screen
              name="Cover"
