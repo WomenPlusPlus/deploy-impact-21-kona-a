@@ -3,7 +3,7 @@ import { Text, View, Image, ScrollView } from "react-native";
 import { GlobalStyles } from "../components/globals/GlobalStyles";
 import { QuestionStyles } from "../components/question/QuestionStyles";
 import BigButton from "../components/globals/BigButton";
-import Data from "../assets/kona_orgs.json";
+import Data from "../assets/kona_orgs1.js";
 import IconImages from "../assets/iconImages";
 import SearchBar from "../components/globals/SearchBar";
 import SDGs from "../components/globals/SDGs";
