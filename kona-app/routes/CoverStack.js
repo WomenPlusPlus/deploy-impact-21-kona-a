@@ -35,6 +35,7 @@ const CoverStack = () => {
              name="Accordion"
              component={Accordion}
             />
+        <Stack.Screen
              name="FilteredBySDG"
              component={FilteredBySDG}
              />
@@ -59,7 +60,7 @@ const CoverStack = () => {
              name="Organization"
              component={Solo}
              />
-             
+
         </Stack.Navigator>
     </NavigationContainer>
     );
