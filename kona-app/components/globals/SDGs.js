@@ -5,14 +5,17 @@ import { Ionicons } from '@expo/vector-icons';
 
 const SDGs = ({answer, source, onPressWithParam, checked }) => {
     return (
-        <TouchableOpacity onPress={()=> onPressWithParam(answer)}>
+        <TouchableOpacity 
+        style={GlobalStyles.singleSDG}
+        onPress={()=> onPressWithParam(answer)}>
             <View>
                 {/* {checked && <Ionicons name="checkmark-sharp" size={20} color="black" style={{marginRight: 4}}/>} */}
                 {/* <Text style={GlobalStyles.normalText}>{ answer } </Text> */}
         <Image
             key = {answer}
             source={source}
-            style={{width: 50, height: 50,resizeMode : 'stretch' }}
+            style={{width: 91, 
+                    height: 91, }} resizeMode={'cover'}
           /> 
             </View>
         </TouchableOpacity>
