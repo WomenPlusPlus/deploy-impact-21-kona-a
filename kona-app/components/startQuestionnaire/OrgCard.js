@@ -37,8 +37,6 @@ const OrgCard = ({item}) => {
     const navigateToSolo =() => {
         navigation.navigate('Organization', item)
     }
-
-    
     
     return (
        <ScrollView style={ QuestionStyles.orgContainer }>
