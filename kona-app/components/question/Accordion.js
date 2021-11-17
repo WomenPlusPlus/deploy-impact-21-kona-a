@@ -12,7 +12,7 @@ const CONTENT = [
   title: 'Gender',
   content:
     [
-      {key: 'Woman', value: false},
+      {key: 'Woman', value: true},
       {key: 'Man', value: false},
       {key: 'Non-binary', value: false},
       {key: 'Other', value: false},
@@ -68,13 +68,6 @@ const AccordionFilter = () => {
     //Accordion Content view
     const checkboxText = section.content
 
-    // const [checked, setChecked] = useState(false);
-
-    // const pressCheckbox = () => {
-      //Toggling the state of single Collapsible
-      //setChecked(!checked);
-    //};
-
     return (
       <Animatable.View
         duration={100}>
@@ -82,9 +75,11 @@ const AccordionFilter = () => {
           animation={isActive ? 'fadeInDown' : undefined}>
           <View style={GlobalStyles.flexDirectionColumn}>
             { checkboxText.map((text) => (
-                <TouchableOpacity style={QuestionStyles.checkboxItems} /*onPress={pressCheckbox}*/>
-                  { text.value ? <Feather name="check-square" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
-                  <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
+                <TouchableOpacity /* onPress={pressCheckbox}*/ >
+                  <View style={QuestionStyles.checkboxItems}>
+                    { text.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
+                    <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
+                  </View>
                 </TouchableOpacity>
               ))
             }
