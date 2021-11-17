@@ -3,6 +3,7 @@ import Home from '../screens/Home';
 import Cover from '../screens/Cover';
 import Filter from '../screens/Filter';
 import FilteredOrgs from '../screens/FilteredOrgs';
+import Accordion from '../screens/Accordion';
 import FilteredBySDG from '../screens/FilteredBySDG';
 import StartQuestionnaire from '../screens/StartQuestionnaire';
 import DropdownQuestion from '../screens/DropdownQuestion';
@@ -31,6 +32,9 @@ const CoverStack = () => {
              component={FilteredOrgs}
             />
             <Stack.Screen
+             name="Accordion"
+             component={Accordion}
+            />
              name="FilteredBySDG"
              component={FilteredBySDG}
              />

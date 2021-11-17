@@ -10,6 +10,7 @@ export default function FilteredOrgs({ route, navigation }) {
 
     const filterKeyword = route.params.filter;
 
+
     // let word = "Women";
     // const filteredOrgs2 = filteredOrgs.filter((ngo) => {
     //     if (ngo['TargetGroup'].includes(word)) {

@@ -4,18 +4,17 @@ import { GlobalStyles } from '../components/globals/GlobalStyles';
 import BigButton from '../components/globals/BigButton';
 import CheckButton from '../components/globals/CheckButton';
 import { QuestionStyles } from '../components/question/QuestionStyles';
-import FilterButton from '../components/question/FilterButton';
-import ExpandSeeAll from '../components/question/Expand';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 import Data from '../assets/kona_orgs.json';
 import AccordionFilter from '../components/question/Accordion';
-import { useNavigation } from '@react-navigation/native';
 
-export default function Filter({ filterKeyword, setFilteredOrgs }) {
+export default function Accordion({ route, navigation }) {
+  
+  const receivedKeywords = route.params;
+  console.log("We received this from the Filtered Orgs:")
+  console.log(receivedKeywords);
+  
   const initialKeywordSet = new Set();
-  initialKeywordSet.add(filterKeyword);
-
-  const navigation = useNavigation();
+  initialKeywordSet.add('food');
 
   const [selectedKeywords, setSelectedKeywords] = useState(initialKeywordSet);
 
@@ -29,7 +28,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
     });
     return filteredCats
   };
-  const remainingMainCategories = filterBy(filterKeyword, mainCategories);
+  const remainingMainCategories = filterBy('food', mainCategories);
   const remainingTargetGroups = filterBy('Refugees', targetGroups);
 
   const filterByOneOfThreeCategories = (orgs, keyword) => {
@@ -64,33 +63,11 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
     setSelectedKeywords(newSelectedKeywords);
   }
 
-  const navigateToAccordion = () => {
-    navigation.navigate('Accordion', selectedKeywords )
-  };
-
-  console.log(selectedKeywords);
-
-  return (
-    <View>
-
-      {/* <TouchableOpacity onPress = { () => filterByOneOfThreeCategories('Health') }><Text>Click here</Text></TouchableOpacity> */}
-      <View style={GlobalStyles.greyContainer}>
-        <View style={GlobalStyles.whiteContainer}>
-          <View style={GlobalStyles.topFilterSection}>
-            <Text style={GlobalStyles.normalText}>I need help with:</Text>
-            <FilterButton answer= "Filter" onPress={navigateToAccordion} keyword={filterKeyword}/>
-          </View>
-          <View style={QuestionStyles.flexDirectionColumn}>
-            <CheckButton answer={filterKeyword} onCheck={onCheckHandler} onUncheck={onUncheckHandler} initiallyChecked />
-            <ExpandSeeAll categories={remainingMainCategories}  onCheck={onCheckHandler} onUncheck={onUncheckHandler}/>
-          </View>
-          <Text style={GlobalStyles.normalText}>I need help for:</Text>
-          <View style={QuestionStyles.flexDirectionColumn}>
-            <CheckButton answer='Refugees' onCheck={onCheckHandler} onUncheck={onUncheckHandler} />
-            <ExpandSeeAll categories={remainingTargetGroups} onCheck={onCheckHandler} onUncheck={onUncheckHandler} />
-          </View>
-        </View>
-      </View>
-    </View>
-  )
+    return(
+        <ScrollView>
+            <View>
+              <AccordionFilter onCheck={onCheckHandler} onUncheck={onUncheckHandler}/>
+            </View>
+      </ScrollView>
+    )
 }

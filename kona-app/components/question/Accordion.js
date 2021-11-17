@@ -4,15 +4,33 @@ import * as Animatable from 'react-native-animatable';
 import Accordion from 'react-native-collapsible/Accordion';
 import { GlobalStyles } from '../globals/GlobalStyles';
 import { QuestionStyles } from './QuestionStyles';
-import BigButton from '../globals/BigButton';
+import CheckButton from '../globals/CheckButton';
 import { AntDesign, Feather } from '@expo/vector-icons';
 
 const CONTENT = [
 {
+  title: 'I need help with',
+  content:
+    [
+      {key: 'Shelter', value: true},
+      {key: 'Food', value: false},
+      {key: 'Medical Help', value: false},
+    ]
+},
+{
+  title: 'I need help for',
+  content:
+    [
+      {key: 'Refugees', value: true},
+      {key: 'Homeless People', value: false},
+      {key: 'LGBTQIA+', value: false},
+    ]
+},
+{
   title: 'Gender',
   content:
     [
-      {key: 'Woman', value: false},
+      {key: 'Woman', value: true},
       {key: 'Man', value: false},
       {key: 'Non-binary', value: false},
       {key: 'Other', value: false},
@@ -37,7 +55,7 @@ const CONTENT = [
 },
 ];
 
-const AccordionFilter = () => {
+const AccordionFilter = (onCheck, onUncheck) => {
 
   // Ddefault active selector
   const [activeSections, setActiveSections] = useState([]);
@@ -68,25 +86,24 @@ const AccordionFilter = () => {
     //Accordion Content view
     const checkboxText = section.content
 
-    // const [checked, setChecked] = useState(false);
-
-    // const pressCheckbox = () => {
-      //Toggling the state of single Collapsible
-      //setChecked(!checked);
-    //};
-
     return (
       <Animatable.View
         duration={100}>
         <Animatable.Text
           animation={isActive ? 'fadeInDown' : undefined}>
           <View style={GlobalStyles.flexDirectionColumn}>
-            { checkboxText.map((text) => (
-                <TouchableOpacity style={QuestionStyles.checkboxItems} /*onPress={pressCheckbox}*/>
-                  { text.value ? <Feather name="check-square" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
-                  <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
-                </TouchableOpacity>
-              ))
+            {section.title == 'I need help with' || section.title == 'I need help for'
+              ? checkboxText.map((text) => (
+                  <CheckButton answer={text.key} onCheck={onCheck} onUncheck={onUncheck}/>
+                ))
+              : checkboxText.map((text) => (
+                  <TouchableOpacity /* onPress={pressCheckbox}*/ >
+                    <View style={QuestionStyles.checkboxItems}>
+                      { text.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
+                      <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
+                    </View>
+                  </TouchableOpacity>
+                ))
             }
           </View>
         </Animatable.Text>
