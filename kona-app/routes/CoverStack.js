@@ -3,6 +3,7 @@ import Home from '../screens/Home';
 import Cover from '../screens/Cover';
 import Filter from '../screens/Filter';
 import FilteredOrgs from '../screens/FilteredOrgs';
+import FilteredBySDG from '../screens/FilteredBySDG';
 import StartQuestionnaire from '../screens/StartQuestionnaire';
 import DropdownQuestion from '../screens/DropdownQuestion';
 import QuestionWithButtons from '../screens/QuestionWithButtons';
@@ -30,6 +31,10 @@ const CoverStack = () => {
              component={FilteredOrgs}
             />
             <Stack.Screen
+             name="FilteredBySDG"
+             component={FilteredBySDG}
+             />
+            <Stack.Screen
              name="Cover"
              component={Cover}
             //  options={{ title: 'Cover' }}
@@ -50,6 +55,7 @@ const CoverStack = () => {
              name="Organization"
              component={Solo}
              />
+             
         </Stack.Navigator>
     </NavigationContainer>
     );

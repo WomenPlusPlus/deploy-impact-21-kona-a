@@ -8,6 +8,7 @@ import IconImages from "../assets/iconImages";
 import SearchBar from "../components/globals/SearchBar";
 import SDGs from "../components/globals/SDGs";
 import iconImages from "../assets/iconImages";
+import FilteredBySDG from "./FilteredBySDG";
 
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -38,11 +39,23 @@ export default function Home({ navigation }) {
     });
   };
 
+  const filterBySDG = (field, keyword) => {
+    const FilteredBySDG = Data.filter((org) => {
+      if (org[field].includes(keyword)) {
+        return org;
+      }
+    });
+
+    navigation.navigate("FilteredBySDG", {
+      orgs: FilteredBySDG,
+    });
+  };
+
   const filterByMainCategory = (category) => filterBy("SubCategory", category);
 
   const filterByTargetGroup = (category) => filterBy("TargetGroup", category);
 
-  const filterBySDGs = (category) => filterBy("SDG", category);
+  const filterBySDGs = (category) => filterBySDG("SDG", category);
 
   // if (searchQuery) {
   //   return (
@@ -52,7 +65,7 @@ export default function Home({ navigation }) {
   //     </View>
   //   );
   // }
-  console.log(filterBySDGs("No Poverty"));
+ 
   return (
     <ScrollView>
       <View
