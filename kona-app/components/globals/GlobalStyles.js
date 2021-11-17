@@ -188,6 +188,10 @@ export const GlobalStyles = StyleSheet.create({
       flexBasis: "33.33%",
       paddingBottom: 10,
       alignSelf: "center"
+    },
+    flexCenter: {
+      flexDirection: 'column',
+      justifyContent: 'center'
     }
-      
+
 })

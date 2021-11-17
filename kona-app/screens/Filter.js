@@ -31,7 +31,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
 
   const filterByOneOfThreeCategories = (orgs, keyword) => {
     const keywordLowercase = keyword.toLowerCase();
-    const newOrgs = orgs.filter( (org) =>  
+    const newOrgs = orgs.filter( (org) =>
       org['MainCategory'].toLowerCase().includes(keywordLowercase) ||
       org['SubCategory'].toLowerCase().includes(keywordLowercase) ||
       org['TargetGroup'].toLowerCase().includes(keywordLowercase)
@@ -51,7 +51,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
     filterByKeywords(newSelectedKeywords);
     setSelectedKeywords(newSelectedKeywords);
 
-    
+
   }
 
   const onUncheckHandler = (answer) => {
