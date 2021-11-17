@@ -7,7 +7,7 @@ import { QuestionStyles } from '../components/question/QuestionStyles';
 import FilterButton from '../components/question/FilterButton';
 import ExpandSeeAll from '../components/question/Expand';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Data from '../assets/kona_orgs.json';
+import Data from '../assets/kona_orgs1.js';
 import AccordionFilter from '../components/question/Accordion';
 
 export default function Filter({ filterKeyword, setFilteredOrgs }) {

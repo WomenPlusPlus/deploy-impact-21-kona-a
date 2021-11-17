@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Text, View, Image, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import BigButton from '../components/globals/BigButton';
-import Data from '../assets/kona_orgs.json';
+import Data from '../assets/kona_orgs1.js';
 import SearchBar from '../components/globals/SearchBar';
-import SDGs from '../components/globals/SDGs'
+import SDGs from '../components/globals/SDGs';
 
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState('');

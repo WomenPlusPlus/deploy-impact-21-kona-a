@@ -6,7 +6,6 @@ import { Entypo } from '@expo/vector-icons';
 import { useState } from 'react';
 import { Storage } from 'expo-storage';
 import { useNavigation } from '@react-navigation/native';
-import logoImages from '../../assets/logoImages';
 
 const OrgCard = ({item}) => {
 
@@ -49,9 +48,7 @@ const OrgCard = ({item}) => {
                         <Text style={QuestionStyles.questionText, {color: 'white'}}>Refugee</Text>
                     </View>
                     <View style={ QuestionStyles.imageContainer}>
-                        <Image source={logoImages['1']} style={QuestionStyles.orgImage} resizeMode="contain"></Image>
-                        <Text>{item["Logo"]}</Text>
-                        {console.log(item)}
+                        <Image source={item.Logo} style={QuestionStyles.orgImage} resizeMode="contain"></Image>
                     </View>
                 </TouchableOpacity>
                 <View style={QuestionStyles.orgTextContainer}>

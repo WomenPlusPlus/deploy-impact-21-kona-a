@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import OrgList from '../components/startQuestionnaire/OrganizatonsList';
 import Filter from '../screens/Filter';
 import { View, ScrollView } from 'react-native';
-import Data from '../assets/kona_orgs.json';
+import Data from '../assets/kona_orgs1.js';
 
 export default function FilteredOrgs({ route, navigation }) {
 
