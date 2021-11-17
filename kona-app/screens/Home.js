@@ -7,6 +7,8 @@ import Data from "../assets/kona_orgs.json";
 import IconImages from "../assets/iconImages";
 import SearchBar from "../components/globals/SearchBar";
 import SDGs from "../components/globals/SDGs";
+import iconImages from "../assets/iconImages";
+import FilteredBySDG from "./FilteredBySDG";
 
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -37,11 +39,23 @@ export default function Home({ navigation }) {
     });
   };
 
+  const filterBySDG = (field, keyword) => {
+    const FilteredBySDG = Data.filter((org) => {
+      if (org[field].includes(keyword)) {
+        return org;
+      }
+    });
+
+    navigation.navigate("FilteredBySDG", {
+      orgs: FilteredBySDG,
+    });
+  };
+
   const filterByMainCategory = (category) => filterBy("SubCategory", category);
 
   const filterByTargetGroup = (category) => filterBy("TargetGroup", category);
 
-  const filterBySDGs = (category) => filterBy("SDG", category);
+  const filterBySDGs = (category) => filterBySDG("SDG", category);
 
   // if (searchQuery) {
   //   return (
@@ -51,7 +65,7 @@ export default function Home({ navigation }) {
   //     </View>
   //   );
   // }
-  console.log(filterBySDGs("No Poverty"));
+ 
   return (
     <ScrollView>
       <View
@@ -115,96 +129,22 @@ export default function Home({ navigation }) {
         </View>
       )}
       <View style={GlobalStyles.container}>
-      <Text style={ GlobalStyles.sdgTitle }>THE 17 GOALS</Text>
-      <Text style={QuestionStyles.questionText}>The NGOs we're partnering with contribute to the Sustainable Development Goals</Text>
-      <View >
-        <View style={GlobalStyles.sdgGrid}>
-        <SDGs
-          source={IconImages.noPovertyIcon}
-          answer="No Poverty"
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="No Hunger"
-          source={IconImages.noHungerIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          source={IconImages.healthIcon}
-          answer="Health"
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Education"
-          source={IconImages.educationIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Gender Equality"
-          source={IconImages.genderEqualityIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Water/Sanitation"
-          source={IconImages.waterIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Clean Energy"
-          source={IconImages.cleanEnergyIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Work / Economic Growth"
-          source={IconImages.workIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Industry / Innovation / Infrastructure"
-          source={IconImages.industryIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Inequalities"
-          source={IconImages.inequalitiesIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Sustainable Communities"
-          source={IconImages.sustainableComIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Responsible Consumption"
-          source={IconImages.consumptionIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Climate"
-          source={IconImages.climateIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Life below Water"
-          source={IconImages.belowWaterIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Life on land"
-          source={IconImages.onLandIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Justice / Institutions"
-          source={IconImages.justiceIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        <SDGs
-          answer="Partnership for the Goals"
-          source={IconImages.partnershipIcon}
-          onPressWithParam={filterBySDGs}
-        />
-        </View>
+        <Text style={GlobalStyles.sdgTitle}>THE 17 GOALS</Text>
+        <Text style={QuestionStyles.questionText}>
+          The NGOs we're partnering with contribute to the Sustainable
+          Development Goals
+        </Text>
+        <View>
+          <View style={GlobalStyles.sdgGrid}>
+            {IconImages.map((icon, i) => (
+              <SDGs
+                source={icon.image}
+                answer={icon.name}
+                key={i}
+                onPressWithParam={filterBySDGs}
+              />
+            ))}
+          </View>
         </View>
       </View>
     </ScrollView>
