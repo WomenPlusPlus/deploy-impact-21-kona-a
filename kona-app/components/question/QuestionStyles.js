@@ -193,5 +193,11 @@ export const QuestionStyles = StyleSheet.create({
     paddingTop: 15,
   },
   subCategories: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    paddingLeft: 30,
+  },
+  accordion: {
+    width: 90,
   }
 })

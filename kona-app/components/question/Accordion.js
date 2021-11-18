@@ -199,7 +199,7 @@ const AccordionMainCategories = (onCheck, onUncheck) => {
         duration={100}>
         <Animatable.Text
           animation={isActive ? 'fadeInDown' : undefined}>
-          <View style={GlobalStyles.flexDirectionColumn}>
+          <View>
             { mainCategoriesText.map((text) => (
               <TouchableOpacity /* onPress={pressCheckbox}*/ >
                 <View style={QuestionStyles.subCategories}>
@@ -232,6 +232,7 @@ const AccordionMainCategories = (onCheck, onUncheck) => {
           </View>
           {/*Code for Accordion/Expandable List starts here*/}
           <Accordion
+            style={QuestionStyles.accordion}
             activeSections={activeSections}
             //for any default active section
             sections={mainCategories}
@@ -301,7 +302,7 @@ const AccordionFilter = (onCheck, onUncheck) => {
             {section.title == 'Area of Support'
               ? <AccordionMainCategories/> // write the new accordion in here
               : checkboxText.map((text) => (
-                  <TouchableOpacity/* onPress={pressCheckbox}*/ >
+                  <TouchableOpacity /* onPress={pressCheckbox}*/ >
                     <View style={QuestionStyles.checkboxItems}>
                       { text.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
                       <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
