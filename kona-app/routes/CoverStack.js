@@ -35,7 +35,7 @@ const CoverStack = () => {
              name="Accordion"
              component={Accordion}
             />
-        <Stack.Screen
+            <Stack.Screen
              name="FilteredBySDG"
              component={FilteredBySDG}
              />
