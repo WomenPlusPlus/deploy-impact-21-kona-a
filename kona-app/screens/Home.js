@@ -51,9 +51,23 @@ export default function Home({ navigation }) {
     });
   };
 
-  const filterByMainCategory = (category) => filterBy("SubCategory", category);
+  const filterByCategory = (field, field2, keyword) => {
+    const filteredOrgs = Data.filter((org) => {
+      if ((org[field].includes(keyword)) || (org[field2].includes(keyword)))
+      {
+        return org;
+      }
+    });
+    navigation.navigate("FilteredOrgs", {
+      orgs: filteredOrgs,
+      filter: keyword,
+    });
+  }
 
-  const filterByTargetGroup = (category) => filterBy("TargetGroup", category);
+
+  const filterByMainOrSubCat = (category) => (filterByCategory("MainCategory", "SubCategory", category))
+
+  const filterByTargetGroup = (category) => filterBy("TargetGroup", category) 
 
   const filterBySDGs = (category) => filterBySDG("SDG", category);
 
@@ -96,16 +110,16 @@ export default function Home({ navigation }) {
       </View>
       <View style={GlobalStyles.whiteContainer}>
         <Text style={GlobalStyles.normalText}>I need help with:</Text>
-        <BigButton answer="Food" onPressWithParam={filterByMainCategory} />
-        <BigButton answer="Shelter" onPressWithParam={filterByMainCategory} />
-        <BigButton answer="Education" onPressWithParam={filterByMainCategory} />
+        <BigButton answer="Food" onPressWithParam={filterByMainOrSubCat} />
+        <BigButton answer="Shelter" onPressWithParam={filterByMainOrSubCat} />
+        <BigButton answer="Education" onPressWithParam={filterByMainOrSubCat} />
         <BigButton
-          answer="Agriculture"
-          onPressWithParam={filterByMainCategory}
+          answer="Health"
+          onPressWithParam={filterByMainOrSubCat}
         />
         <BigButton
-          answer="Social Protection"
-          onPressWithParam={filterByMainCategory}
+          answer="Employment"
+          onPressWithParam={filterByMainOrSubCat}
         />
       </View>
       {!searchQuery && (
