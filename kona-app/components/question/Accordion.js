@@ -6,6 +6,7 @@ import { GlobalStyles } from '../globals/GlobalStyles';
 import { QuestionStyles } from './QuestionStyles';
 import { AntDesign, Feather } from '@expo/vector-icons';
 import Collapsible from 'react-native-collapsible';
+import CheckBox from '../globals/CheckBox';
 
 const CONTENT = [
 {
@@ -15,7 +16,7 @@ const CONTENT = [
   title: 'People to Support',
   content:
     [
-      {key: 'Refugees', value: true},
+      {key: 'Refugees', value: false},
       {key: 'Homeless People', value: false},
       {key: 'LGBTQIA+', value: false},
     ],
@@ -25,7 +26,7 @@ const CONTENT = [
   title: 'Gender',
   content:
     [
-      {key: 'Woman', value: true},
+      {key: 'Woman', value: false},
       {key: 'Man', value: false},
       {key: 'Non-binary', value: false},
       {key: 'Other', value: false},
@@ -165,8 +166,7 @@ const mainCategories = [
   },
 ];
 
-const AccordionMainCategories = (onCheck, onUncheck) => {
-
+const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
   // Ddefault active selector
   const [activeSections, setActiveSections] = useState([]);
   // MultipleSelect is for the Multiple Expand allowed
@@ -192,9 +192,7 @@ const AccordionMainCategories = (onCheck, onUncheck) => {
         <View style={GlobalStyles.flexDirectionColumn}>
           <View style={QuestionStyles.topFilterCategories}>
             <View style={QuestionStyles.checkboxItems}>
-              { section.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
-              <Text style={QuestionStyles.checkboxText}>{section.title}</Text>
-              {console.log(section.title)}
+              <CheckBox answer = {section.title} initiallyChecked={selectedKeywords.has(section.title)} onCheck={onCheck} onUncheck={onUncheck} />
             </View>
             { isActive ? <AntDesign name="minus" size={24} color="#212121" /> : <AntDesign name="plus" size={24} color="#212121" /> }
           </View>
@@ -217,10 +215,7 @@ const AccordionMainCategories = (onCheck, onUncheck) => {
             { mainCategoriesText.map((text) => (
               <TouchableOpacity /* onPress={pressCheckbox}*/ >
                 <View style={QuestionStyles.subCategories}>
-                  { text.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
-                  <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
-                  {console.log(text.key)}
-                  {console.log(text.value)}
+                  <CheckBox answer={text.key} initiallyChecked={selectedKeywords.has(text.key)}/>
                 </View>
               </TouchableOpacity>
             ))
@@ -277,7 +272,7 @@ const AccordionMainCategories = (onCheck, onUncheck) => {
 };
 
 //MAIN ACCORDION
-const AccordionFilter = (onCheck, onUncheck) => {
+const AccordionFilter = ({onCheck, onUncheck, selectedKeywords}) => {
 
   // Ddefault active selector
   const [activeSections, setActiveSections] = useState([]);
@@ -315,7 +310,7 @@ const AccordionFilter = (onCheck, onUncheck) => {
           animation={isActive ? 'fadeInDown' : undefined}>
           <View style={GlobalStyles.flexDirectionColumn}>
             {section.title == 'Area of Support'
-              ? <AccordionMainCategories/> // write the new accordion in here
+              ? <AccordionMainCategories onCheck={onCheck} onUncheck={onUncheck} selectedKeywords={selectedKeywords}/> // write the new accordion in here
               : checkboxText.map((text) => (
                   <TouchableOpacity/* onPress={pressCheckbox}*/ >
                     <View style={QuestionStyles.checkboxItems}>

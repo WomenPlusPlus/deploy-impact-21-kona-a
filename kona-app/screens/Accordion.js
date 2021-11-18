@@ -3,7 +3,7 @@ import { Text, View, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import ResultsButton from '../components/question/ResultsButton';
 import { QuestionStyles } from '../components/question/QuestionStyles';
-import Data from '../assets/kona_orgs.json';
+import Data from '../assets/kona_orgs1.js';
 import AccordionFilter from '../components/question/Accordion';
 
 export default function Accordion({ route, navigation }) {
@@ -12,10 +12,10 @@ export default function Accordion({ route, navigation }) {
   console.log("We received this from the Filtered Orgs:")
   console.log(receivedKeywords);
 
-  const initialKeywordSet = new Set();
-  initialKeywordSet.add('food');
+  const [selectedKeywords, setSelectedKeywords] = useState(receivedKeywords);
 
-  const [selectedKeywords, setSelectedKeywords] = useState(initialKeywordSet);
+  console.log("Selected keywords:")
+  console.log(selectedKeywords);
 
   const targetGroups = ['Victims of domestic Violence', 'Refugees', 'Homeless People', 'Disabled People', 'LGBTQIA+', 'Migrants']
   const filterBy = (selectedCat, buttonNames) => {
@@ -42,13 +42,16 @@ export default function Accordion({ route, navigation }) {
   const filterByKeywords = (keywords) => {
     let filteredData = Data;
     keywords.forEach((keyword) => filteredData = filterByOneOfThreeCategories(filteredData, keyword) );
-    setFilteredOrgs(filteredData);
+    return filteredData;
+    //setFilteredOrgs(filteredData);
   }
+
+  const filteredBySelectedKeywords = filterByKeywords(selectedKeywords);
 
   const onCheckHandler = (answer) => {
     const newSelectedKeywords = new Set(selectedKeywords);
     newSelectedKeywords.add(answer);
-    filterByKeywords(newSelectedKeywords);
+    // filterByKeywords(newSelectedKeywords);
     setSelectedKeywords(newSelectedKeywords);
     console.log("test");
   }
@@ -56,7 +59,7 @@ export default function Accordion({ route, navigation }) {
   const onUncheckHandler = (answer) => {
     const newSelectedKeywords = new Set(selectedKeywords);
     newSelectedKeywords.delete(answer);
-    filterByKeywords(newSelectedKeywords);
+    // filterByKeywords(newSelectedKeywords);
     setSelectedKeywords(newSelectedKeywords);
     console.log("test2");
   }
@@ -64,8 +67,9 @@ export default function Accordion({ route, navigation }) {
     return(
         <ScrollView>
             <View>
-              <AccordionFilter onCheck={onCheckHandler} onUncheck={onUncheckHandler}/>
+              <AccordionFilter onCheck={onCheckHandler} onUncheck={onUncheckHandler} selectedKeywords={selectedKeywords}/>
             </View>
+            <Text>Number of orgs: {filteredBySelectedKeywords.length}</Text>
             {/*<ResultsButton filteredOrgs={}/>*/}
       </ScrollView>
     )
