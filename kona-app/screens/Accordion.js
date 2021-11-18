@@ -50,8 +50,7 @@ export default function Accordion({ route, navigation }) {
     newSelectedKeywords.add(answer);
     filterByKeywords(newSelectedKeywords);
     setSelectedKeywords(newSelectedKeywords);
-
-
+    console.log("test");
   }
 
   const onUncheckHandler = (answer) => {
@@ -59,6 +58,7 @@ export default function Accordion({ route, navigation }) {
     newSelectedKeywords.delete(answer);
     filterByKeywords(newSelectedKeywords);
     setSelectedKeywords(newSelectedKeywords);
+    console.log("test2");
   }
 
     return(
