@@ -9,16 +9,21 @@ import { AntDesign, Feather } from '@expo/vector-icons';
 
 const CONTENT = [
 {
-  title: 'I need help with',
+  title: 'Area of Support',
   content:
     [
-      {key: 'Shelter', value: true},
-      {key: 'Food', value: false},
-      {key: 'Medical Help', value: false},
+      {key: 'Health', value: ['Disable', 'Sex', 'Maternal', 'Disease', 'AIDS', 'Healthcare', 'Nutrition', 'Hygiene']},
+      {key: 'Education', value: ['Training',	'Financ',	'Facilities',	'AIDS',	'Entrepreneur']},
+      {key: 'Agriculture', value: ['Technology',	'Education',	'Seed', 'Donation',	'Financial',	'Agriculture', 'Development']},
+      {key: 'Social Services', value: ['Violence',	'Victim',	'Safety',	'Poverty',	'Sanitation',	'Water	Prison',	'Protection',	'LBGT']},
+      {key: 'Legal', value: ["Women's Rights",	"Children's Rights",	"Human Trafficking",	"Security",	"Child Protection",	"Reintegration",	"Political Justice",	"Discrimination",	"Advisory",	"Victim Advocacy",	"Victim"]},
+      {key: 'Migration', value: ['Refugee',	'Repatriation',	'Asylum',	'Integration',	'Citizenship']},
+      {key: 'Employment', value: ['Training',	'Entrepreneur',	'Technical',	'Partnerships',	'Financ',	'Apprenticeship']},
+      {key: 'Crisis', value: ['Humanitarian', 	'Emergencies',	'Disaster',	'Human Trafficking',	'War']},
     ]
 },
 {
-  title: 'I need help for',
+  title: 'People to Support',
   content:
     [
       {key: 'Refugees', value: true},
@@ -157,3 +162,16 @@ const AccordionFilter = (onCheck, onUncheck) => {
 };
 
 export default AccordionFilter;
+
+  // array with main categories
+  const mainCategories = ['Health', 'Education', 'Social Services', 'Agriculture', 'Legal', 'Migration', 'Employment', 'Crisis']
+  // arrays of sub categories
+  const healthSub = ['Disable', 'Sex', 'Maternal', 'Disease', 'AIDS', 'Healthcare', 'Nutrition', 'Hygiene']
+  const educationSub = ['Training',	'Financ',	'Facilities',	'AIDS',	'Entrepreneur']
+  const socialServicesSub = ['Violence',	'Victim',	'Safety',	'Poverty',	'Sanitation',	'Water	Prison',	'Protection',	'LBGT']
+  const agricultureSub = ['Technology',	'Education',	'Seed', 'Donation',	'Financial',	'Agriculture', 'Development']
+  const legalSub = ["Women's Rights",	"Children's Rights",	"Human Trafficking",	"Security",	"Child Protection",	"Reintegration",	"Political Justice",	"Discrimination",	"Advisory",	"Victim Advocacy",	"Victim"]
+  const migrationSub = ['Refugee',	'Repatriation',	'Asylum',	'Integration',	'Citizenship']
+  const employmentSub = ['Training',	'Entrepreneur',	'Technical',	'Partnerships',	'Financ',	'Apprenticeship']
+  const crisisSub = ['Humanitarian', 	'Emergencies',	'Disaster',	'Human Trafficking',	'War']
+  //
