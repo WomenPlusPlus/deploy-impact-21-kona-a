@@ -7,8 +7,6 @@ import { useState } from 'react';
 import { Storage } from 'expo-storage';
 import { useNavigation } from '@react-navigation/native';
 
-
-
 const OrgCard = ({item}) => {
 
     const storageKey = item.Name;
@@ -48,7 +46,7 @@ const OrgCard = ({item}) => {
                         <Text style={QuestionStyles.questionText, {color: 'white'}}>Refugee</Text>
                     </View>
                     <View style={ QuestionStyles.imageContainer}>
-                        <Image source={require('../../assets/unhcr.png')}  style={QuestionStyles.orgImage}resizeMode="contain"></Image>
+                        <Image source={item.Logo} style={QuestionStyles.orgImage} resizeMode="contain"></Image>
                     </View>
                 </TouchableOpacity>
                 <View style={QuestionStyles.orgTextContainer}>

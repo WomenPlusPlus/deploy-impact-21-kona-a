@@ -7,12 +7,15 @@ import { QuestionStyles } from '../components/question/QuestionStyles';
 import FilterButton from '../components/question/FilterButton';
 import ExpandSeeAll from '../components/question/Expand';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Data from '../assets/kona_orgs.json';
+import Data from '../assets/kona_orgs1.js';
 import AccordionFilter from '../components/question/Accordion';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Filter({ filterKeyword, setFilteredOrgs }) {
   const initialKeywordSet = new Set();
   initialKeywordSet.add(filterKeyword);
+
+  const navigation = useNavigation();
 
   const [selectedKeywords, setSelectedKeywords] = useState(initialKeywordSet);
 
@@ -31,7 +34,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
 
   const filterByOneOfThreeCategories = (orgs, keyword) => {
     const keywordLowercase = keyword.toLowerCase();
-    const newOrgs = orgs.filter( (org) =>  
+    const newOrgs = orgs.filter( (org) =>
       org['MainCategory'].toLowerCase().includes(keywordLowercase) ||
       org['SubCategory'].toLowerCase().includes(keywordLowercase) ||
       org['TargetGroup'].toLowerCase().includes(keywordLowercase)
@@ -51,7 +54,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
     filterByKeywords(newSelectedKeywords);
     setSelectedKeywords(newSelectedKeywords);
 
-    
+
   }
 
   const onUncheckHandler = (answer) => {
@@ -60,6 +63,10 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
     filterByKeywords(newSelectedKeywords);
     setSelectedKeywords(newSelectedKeywords);
   }
+
+  const navigateToAccordion = () => {
+    navigation.navigate('Accordion', selectedKeywords )
+  };
 
   console.log(selectedKeywords);
 
@@ -71,7 +78,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
         <View style={GlobalStyles.whiteContainer}>
           <View style={GlobalStyles.topFilterSection}>
             <Text style={GlobalStyles.normalText}>I need help with:</Text>
-            <FilterButton answer= "Filter"/>
+            <FilterButton answer= "Filter" onPress={navigateToAccordion} keyword={filterKeyword}/>
           </View>
           <View style={QuestionStyles.flexDirectionColumn}>
             <CheckButton answer={filterKeyword} onCheck={onCheckHandler} onUncheck={onUncheckHandler} initiallyChecked />
@@ -84,7 +91,6 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
           </View>
         </View>
       </View>
-      <AccordionFilter/>
     </View>
   )
 }

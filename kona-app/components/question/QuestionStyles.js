@@ -155,19 +155,43 @@ export const QuestionStyles = StyleSheet.create({
     borderBottomColor: '#212121',
     borderBottomWidth: 1,
   },
+  topFilterCategories: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    borderBottomColor: '#212121',
+  },
   accordionTextTitle: {
     fontFamily: 'poppins-medium',
     fontSize: 18,
     lineHeight: 27,
     color: '#212121',
-    marginVertical: 19,
+    marginVertical: 10,
   },
   checkboxItems: {
     flexDirection: 'row',
-    justifyContent: 'flex-start'
+    justifyContent: 'flex-start',
+  },
+  marginTop: {
+    marginTop: 20,
   },
   checkboxText: {
     marginLeft: 10,
     marginTop: 5,
   },
+  resultsButton: {
+    backgroundColor: '#6b6b6b',
+    color: '#FFFFFF',
+    width: 323,
+    height: 50,
+  },
+  resultsButtonText: {
+    color: '#FFFFFF',
+    fontFamily: 'poppins-regular',
+    fontSize: 16,
+    lineHeight: 19,
+    textAlign: 'center',
+    paddingTop: 15,
+  },
+  subCategories: {
+  }
 })
