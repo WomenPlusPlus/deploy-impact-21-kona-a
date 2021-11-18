@@ -173,24 +173,17 @@ const AccordionMainCategories = (onCheck, onUncheck) => {
 
   const renderHeader = (section, _, isActive) => {
     //Accordion Header view
-    const mainCategoriesText = section.content
-
     return (
       <Animatable.View
         duration={400}>
         <View style={GlobalStyles.flexDirectionColumn}>
-          {mainCategoriesText.map((text) => (
-                <TouchableOpacity /* onPress={pressCheckbox}*/ >
-                  <View style={QuestionStyles.topFilterCategories}>
-                    <View style={QuestionStyles.checkboxItems}>
-                      { text.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
-                      <Text style={QuestionStyles.checkboxText}>{text.title}</Text>
-                    </View>
-                    { isActive ? <AntDesign name="minus" size={24} color="#212121" /> : <AntDesign name="plus" size={24} color="#212121" /> }
-                  </View>
-                </TouchableOpacity>
-              ))
-          }
+          <View style={QuestionStyles.topFilterCategories}>
+            <View style={QuestionStyles.checkboxItems}>
+              { section.title ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
+              <Text style={QuestionStyles.checkboxText}>{section.title}</Text>
+            </View>
+            { isActive ? <AntDesign name="minus" size={24} color="#212121" /> : <AntDesign name="plus" size={24} color="#212121" /> }
+          </View>
         </View>
       </Animatable.View>
     );
@@ -199,6 +192,7 @@ const AccordionMainCategories = (onCheck, onUncheck) => {
   const renderContent = (section, _, isActive) => {
     //Accordion Content view
     const mainCategoriesText = section.content
+    console.log(mainCategoriesText)
 
     return (
       <Animatable.View
@@ -206,14 +200,14 @@ const AccordionMainCategories = (onCheck, onUncheck) => {
         <Animatable.Text
           animation={isActive ? 'fadeInDown' : undefined}>
           <View style={GlobalStyles.flexDirectionColumn}>
-            {mainCategoriesText.map((text) => (
-                  <TouchableOpacity /* onPress={pressCheckbox}*/ >
-                    <View style={QuestionStyles.checkboxItems}>
-                      { text.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
-                      <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
-                    </View>
-                  </TouchableOpacity>
-                ))
+            { mainCategoriesText.map((text) => (
+              <TouchableOpacity /* onPress={pressCheckbox}*/ >
+                <View style={QuestionStyles.subCategories}>
+                  { text.key ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
+                  <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
+                </View>
+              </TouchableOpacity>
+            ))
             }
           </View>
         </Animatable.Text>
@@ -307,7 +301,7 @@ const AccordionFilter = (onCheck, onUncheck) => {
             {section.title == 'Area of Support'
               ? <AccordionMainCategories/> // write the new accordion in here
               : checkboxText.map((text) => (
-                  <TouchableOpacity /* onPress={pressCheckbox}*/ >
+                  <TouchableOpacity/* onPress={pressCheckbox}*/ >
                     <View style={QuestionStyles.checkboxItems}>
                       { text.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
                       <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
