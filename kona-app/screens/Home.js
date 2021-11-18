@@ -10,6 +10,7 @@ import SDGs from "../components/globals/SDGs";
 import iconImages from "../assets/iconImages";
 import FilteredBySDG from "./FilteredBySDG";
 
+
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -109,18 +110,32 @@ export default function Home({ navigation }) {
         />
       </View>
       <View style={GlobalStyles.whiteContainer}>
-        <Text style={GlobalStyles.normalText}>I need help with:</Text>
-        <BigButton answer="Food" onPressWithParam={filterByMainOrSubCat} />
-        <BigButton answer="Shelter" onPressWithParam={filterByMainOrSubCat} />
-        <BigButton answer="Education" onPressWithParam={filterByMainOrSubCat} />
+        <View style={GlobalStyles.homeButtonsGrid}>
+        <BigButton 
+          answer="Food"
+          iconName="food-variant"
+          style={GlobalStyles.singleCatButton}
+          onPressWithParam={filterByMainOrSubCat} 
+          style={GlobalStyles.singleCatButton}/>
+        <BigButton 
+          answer="Shelter"
+          iconName="home-heart" 
+          onPressWithParam={filterByMainOrSubCat} />
+        <BigButton 
+          answer="Education" 
+          iconName="book-open-page-variant"
+          onPressWithParam={filterByMainOrSubCat} />
         <BigButton
           answer="Health"
+          iconName="medical-bag"
           onPressWithParam={filterByMainOrSubCat}
         />
         <BigButton
           answer="Employment"
+          iconName="account-hard-hat"
           onPressWithParam={filterByMainOrSubCat}
         />
+        </View>
       </View>
       {!searchQuery && (
         <View style={GlobalStyles.whiteContainer}>
