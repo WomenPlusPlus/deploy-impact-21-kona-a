@@ -154,11 +154,12 @@ export const QuestionStyles = StyleSheet.create({
     justifyContent: 'space-between',
     borderBottomColor: '#212121',
     borderBottomWidth: 1,
+    marginBottom: 10,
   },
   topFilterCategories: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    borderBottomColor: '#212121',
+    marginBottom: 5,
   },
   accordionTextTitle: {
     fontFamily: 'poppins-medium',
@@ -193,5 +194,12 @@ export const QuestionStyles = StyleSheet.create({
     paddingTop: 15,
   },
   subCategories: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    paddingLeft: 30,
+    marginBottom: 1,
+  },
+  accordion: {
+    width: 300,
   }
 })
