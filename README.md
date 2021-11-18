@@ -45,28 +45,108 @@ Download Expo Go on your mobile device
 
 In order to keep the app light-weight, we decided to use a JSON to store the data infrastruture. 
 
-
-
-## Help
-
-Any advise for common problems or issues.
+## Directory Structure
+ 
 ```
-command to run if program contains helper info
+kona-app
+│   README.md
+│   .gitignore
+|   .App.js
+|   .app.json
+│
+└───.expo-shared
+│   │   file011.txt
+│   │   file012.txt
+│         
+└───assets 
+│    │   
+│    └───images
+│       │ logos
+│       │     
+│       └───fonts
+│       │   file111.txt
+│       │   file112.txt
+│       │    
+│       └───SGD
+│       │   icons
+│           
+└───components
+|   │   globals
+|   │   quetion
+|   |   startQuestionaire      
+│   
+└───routes
+|    │   coverstack.js
+|      
+└───screens
+|   │   Accordian.js
+|   │   Cover.js
+|   │   DropdownQuestion.js
+│   │   Filter.js
+|   |   FilteredBySGD.js
+|   |   FilteredOrgs.js
+|   |   Home.js
+|   |   QuestionWithButtons.js
+|   |   Solo.js
+|   |   StartQuestionnaire.js
+│   
+└─── data
+    │   raw_data.csv
+    │   kona_orgs.json
+    |   modified_orgs.gs
+└─── docs
+    │   technical_specification.md
+
 ```
 
-## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+<h2> :floppy_disk: Project Folder Description</h2>
+
+<p>This Project includes directories:</p>
+<h4>assets:</h4>
+<ul>
+  <li></b>  This directory contains all of the images and fonts .</li>
+</ul>
+
+<h4>components:</h4>
+<ul>
+  <li></b>  This folder contains the global stying for the components used for the app </li>
+</ul>
+
+<h4>routes:</h4>
+<ul>
+  <li><b>CoverStack.js</b> - What does this one do? </li>
+</ul>
+
+<h4>screens:</h4>
+<ul>
+  <li><b>Accordian.js</b> - Lets talk about what files to add here :) </li>
+  <li><b>FilteredOrgs.js</b> - Lets talk about what files to add here :)</li>
+  <li><b>StartQuestionnaire.js</b> - Lets talk about what files to add here :)</li>
+</ul>
+
+<h4>data:</h4>
+<ul>
+  <li><b>raw_org_data.csv</b> - Data that was provided by Kona.</li>
+  <li><b>process_data.json</b> - Filtered and cleansed data that was preformed in pandas </li>
+  <li><b>modified_data.gs</b> - Output data used by the app </li>
+</ul>
+<h4>docs:</h4>
+<ul>
+  <li><b>technical_specifications.csv</b> - Contains information about the tech stack, decision making process, features, data structure, and future work.</li>
+</ul>
+
 
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
 * [discord-hackathon](https://github.com/campus-experts/discord-hackathon-template/blob/main/README.md)
+* [Spam-Detector](https://github.com/ma-shamshiri/Spam-Detector/blob/master/README.md)
 
 
 
-   
+  
 <table>
 <tr>
     <td align="center">
@@ -83,13 +163,8 @@ Inspiration, code snippets, etc.
     </td> 
 </table>
 
-
-
 ## Authors
 Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
 
 <!-- readme: collaborators,contributors -start -->    
 <table>
