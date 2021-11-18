@@ -26,8 +26,8 @@ export default function Accordion({ route, navigation }) {
     });
     return filteredCats
   };
-  const remainingMainCategories = filterBy('food', mainCategories);
-  const remainingTargetGroups = filterBy('Refugees', targetGroups);
+  //const remainingMainCategories = filterBy('food', mainCategories);
+  // const remainingTargetGroups = filterBy('Refugees', targetGroups);
 
   const filterByOneOfThreeCategories = (orgs, keyword) => {
     const keywordLowercase = keyword.toLowerCase();

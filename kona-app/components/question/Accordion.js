@@ -4,23 +4,12 @@ import * as Animatable from 'react-native-animatable';
 import Accordion from 'react-native-collapsible/Accordion';
 import { GlobalStyles } from '../globals/GlobalStyles';
 import { QuestionStyles } from './QuestionStyles';
-import CheckButton from '../globals/CheckButton';
 import { AntDesign, Feather } from '@expo/vector-icons';
+import Collapsible from 'react-native-collapsible';
 
 const CONTENT = [
 {
-  title: 'Area of Support',
-  content:
-    [
-      {key: 'Health', value: ['Disable', 'Sex', 'Maternal', 'Disease', 'AIDS', 'Healthcare', 'Nutrition', 'Hygiene']},
-      {key: 'Education', value: ['Training',	'Financ',	'Facilities',	'AIDS',	'Entrepreneur']},
-      {key: 'Agriculture', value: ['Technology',	'Education',	'Seed', 'Donation',	'Financial',	'Agriculture', 'Development']},
-      {key: 'Social Services', value: ['Violence',	'Victim',	'Safety',	'Poverty',	'Sanitation',	'Water	Prison',	'Protection',	'LBGT']},
-      {key: 'Legal', value: ["Women's Rights",	"Children's Rights",	"Human Trafficking",	"Security",	"Child Protection",	"Reintegration",	"Political Justice",	"Discrimination",	"Advisory",	"Victim Advocacy",	"Victim"]},
-      {key: 'Migration', value: ['Refugee',	'Repatriation',	'Asylum',	'Integration',	'Citizenship']},
-      {key: 'Employment', value: ['Training',	'Entrepreneur',	'Technical',	'Partnerships',	'Financ',	'Apprenticeship']},
-      {key: 'Crisis', value: ['Humanitarian', 	'Emergencies',	'Disaster',	'Human Trafficking',	'War']},
-    ]
+  title: 'Area of Support'
 },
 {
   title: 'People to Support',
@@ -60,6 +49,220 @@ const CONTENT = [
 },
 ];
 
+const mainCategories = [
+  {
+  title: 'Health',
+  content:
+    [
+      {key: 'Disable'},
+      {key: 'Sex'},
+      {key: 'Maternal'},
+      {key: 'Disease'},
+      {key: 'Healthcare'},
+      {key: 'Nutrition'},
+      {key: 'Hygiene'},
+    ]
+  },
+  {
+  title: 'Education',
+  content:
+    [
+      {key: 'Training'},
+      {key: 'Financ'},
+      {key: 'Facilities'},
+      {key: 'AIDS'},
+      {key: 'Entrepreneur'},
+    ]
+  },
+  {
+  title: 'Social Services',
+  content:
+    [
+      {key: 'Violence'},
+      {key: 'Victim'},
+      {key: 'Safety'},
+      {key: 'Poverty'},
+      {key: 'Sanitation'},
+      {key: 'Water'},
+      {key: 'Prison'},
+      {key: 'Protection'},
+      {key: 'LBGT'},
+    ]
+  },
+  {
+  title: 'Agriculture',
+  content:
+    [
+      {key: 'Technology'},
+      {key: 'Education'},
+      {key: 'Seed Donation'},
+      {key: 'Financial'},
+      {key: 'Agriculture Development'},
+    ]
+  },
+  {
+  title: 'Legal',
+  content:
+    [
+      {key: "Women's Rights"},
+      {key: "Children's Rights"},
+      {key: "Human Trafficking"},
+      {key: "Security"},
+      {key: "Child Protection"},
+      {key: "Reintegration"},
+      {key: "Political Justice"},
+      {key: "Discrimination"},
+      {key: "Advisory"},
+      {key: "Victim Advocacy"},
+      {key: "Victim"},
+    ]
+  },
+  {
+  title: 'Migration',
+  content:
+    [
+      {key: 'Refugee'},
+      {key: 'Repatriation'},
+      {key: 'Asylum'},
+      {key: 'Integration'},
+      {key: 'Citizenship'},
+    ]
+  },
+  {
+  title: 'Employment',
+  content:
+    [
+      {key: 'Training'},
+      {key: 'Entrepreneur'},
+      {key: 'Technical'},
+      {key: 'Partnerships'},
+      {key: 'Financ'},
+      {key: 'Apprenticeship'},
+    ]
+  },
+  {
+  title: 'Crisis',
+  content:
+    [
+      {key: 'Humanitarian' },
+      {key: 'Emergencies'},
+      {key: 'Disaster'},
+      {key: 'Human Trafficking'},
+      {key: 'War'},
+    ]
+  },
+];
+
+const AccordionMainCategories = (onCheck, onUncheck) => {
+
+  // Ddefault active selector
+  const [activeSections, setActiveSections] = useState([]);
+  // MultipleSelect is for the Multiple Expand allowed
+  // True: Expand multiple at a time
+  // False: One can be expand at a time
+  const [multipleSelect, setMultipleSelect] = useState(false);
+
+  const setSections = (sections) => {
+    //setting up a active section state
+    setActiveSections(sections.includes(undefined) ? [] : sections);
+  };
+
+  const renderHeader = (section, _, isActive) => {
+    //Accordion Header view
+    const mainCategoriesText = section.content
+
+    return (
+      <Animatable.View
+        duration={400}>
+        <View style={GlobalStyles.flexDirectionColumn}>
+          {mainCategoriesText.map((text) => (
+                <TouchableOpacity /* onPress={pressCheckbox}*/ >
+                  <View style={QuestionStyles.topFilterCategories}>
+                    <View style={QuestionStyles.checkboxItems}>
+                      { text.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
+                      <Text style={QuestionStyles.checkboxText}>{text.title}</Text>
+                    </View>
+                    { isActive ? <AntDesign name="minus" size={24} color="#212121" /> : <AntDesign name="plus" size={24} color="#212121" /> }
+                  </View>
+                </TouchableOpacity>
+              ))
+          }
+        </View>
+      </Animatable.View>
+    );
+  };
+
+  const renderContent = (section, _, isActive) => {
+    //Accordion Content view
+    const mainCategoriesText = section.content
+
+    return (
+      <Animatable.View
+        duration={100}>
+        <Animatable.Text
+          animation={isActive ? 'fadeInDown' : undefined}>
+          <View style={GlobalStyles.flexDirectionColumn}>
+            {mainCategoriesText.map((text) => (
+                  <TouchableOpacity /* onPress={pressCheckbox}*/ >
+                    <View style={QuestionStyles.checkboxItems}>
+                      { text.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
+                      <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
+                    </View>
+                  </TouchableOpacity>
+                ))
+            }
+          </View>
+        </Animatable.Text>
+      </Animatable.View>
+    );
+  };
+
+  return (
+    <SafeAreaView>
+      <View style={GlobalStyles.whiteContainer}>
+        <ScrollView>
+          <View>
+            <Text style={GlobalStyles.normalText}>
+              Multiple Expand Allowed?
+            </Text>
+            <Switch
+              value={multipleSelect}
+              onValueChange={(multipleSelect) =>
+                setMultipleSelect(multipleSelect)
+              }
+            />
+          </View>
+          {/*Code for Accordion/Expandable List starts here*/}
+          <Accordion
+            activeSections={activeSections}
+            //for any default active section
+            sections={mainCategories}
+            //title and content of accordion
+            touchableComponent={TouchableOpacity}
+            //which type of touchable component you want
+            //It can be the following Touchables
+            //TouchableHighlight, TouchableNativeFeedback
+            //TouchableOpacity , TouchableWithoutFeedback
+            expandMultiple={multipleSelect}
+            //Do you want to expand mutiple at a time or single at a time
+            renderHeader={renderHeader}
+            //Header Component(View) to render
+            renderContent={renderContent}
+            //Content Component(View) to render
+            duration={400}
+            //Duration for Collapse and expand
+            onChange={setSections}
+            //setting the state of active sections
+          />
+          {/*Code for Accordion/Expandable List ends here*/}
+        </ScrollView>
+      </View>
+    </SafeAreaView>
+
+  );
+};
+
+//MAIN ACCORDION
 const AccordionFilter = (onCheck, onUncheck) => {
 
   // Ddefault active selector
@@ -97,10 +300,8 @@ const AccordionFilter = (onCheck, onUncheck) => {
         <Animatable.Text
           animation={isActive ? 'fadeInDown' : undefined}>
           <View style={GlobalStyles.flexDirectionColumn}>
-            {section.title == 'I need help with' || section.title == 'I need help for'
-              ? checkboxText.map((text) => (
-                  <CheckButton answer={text.key} onCheck={onCheck} onUncheck={onUncheck}/>
-                ))
+            {section.title == 'Area of Support'
+              ? <AccordionMainCategories/> // write the new accordion in here
               : checkboxText.map((text) => (
                   <TouchableOpacity /* onPress={pressCheckbox}*/ >
                     <View style={QuestionStyles.checkboxItems}>
@@ -162,16 +363,3 @@ const AccordionFilter = (onCheck, onUncheck) => {
 };
 
 export default AccordionFilter;
-
-  // array with main categories
-  const mainCategories = ['Health', 'Education', 'Social Services', 'Agriculture', 'Legal', 'Migration', 'Employment', 'Crisis']
-  // arrays of sub categories
-  const healthSub = ['Disable', 'Sex', 'Maternal', 'Disease', 'AIDS', 'Healthcare', 'Nutrition', 'Hygiene']
-  const educationSub = ['Training',	'Financ',	'Facilities',	'AIDS',	'Entrepreneur']
-  const socialServicesSub = ['Violence',	'Victim',	'Safety',	'Poverty',	'Sanitation',	'Water	Prison',	'Protection',	'LBGT']
-  const agricultureSub = ['Technology',	'Education',	'Seed', 'Donation',	'Financial',	'Agriculture', 'Development']
-  const legalSub = ["Women's Rights",	"Children's Rights",	"Human Trafficking",	"Security",	"Child Protection",	"Reintegration",	"Political Justice",	"Discrimination",	"Advisory",	"Victim Advocacy",	"Victim"]
-  const migrationSub = ['Refugee',	'Repatriation',	'Asylum',	'Integration',	'Citizenship']
-  const employmentSub = ['Training',	'Entrepreneur',	'Technical',	'Partnerships',	'Financ',	'Apprenticeship']
-  const crisisSub = ['Humanitarian', 	'Emergencies',	'Disaster',	'Human Trafficking',	'War']
-  //
