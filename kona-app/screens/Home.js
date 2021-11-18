@@ -10,6 +10,7 @@ import SDGs from "../components/globals/SDGs";
 import iconImages from "../assets/iconImages";
 import FilteredBySDG from "./FilteredBySDG";
 
+
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -51,9 +52,23 @@ export default function Home({ navigation }) {
     });
   };
 
-  const filterByMainCategory = (category) => filterBy("SubCategory", category);
+  const filterByCategory = (field, field2, keyword) => {
+    const filteredOrgs = Data.filter((org) => {
+      if ((org[field].includes(keyword)) || (org[field2].includes(keyword)))
+      {
+        return org;
+      }
+    });
+    navigation.navigate("FilteredOrgs", {
+      orgs: filteredOrgs,
+      filter: keyword,
+    });
+  }
 
-  const filterByTargetGroup = (category) => filterBy("TargetGroup", category);
+
+  const filterByMainOrSubCat = (category) => (filterByCategory("MainCategory", "SubCategory", category))
+
+  const filterByTargetGroup = (category) => filterBy("TargetGroup", category) 
 
   const filterBySDGs = (category) => filterBySDG("SDG", category);
 
@@ -95,18 +110,32 @@ export default function Home({ navigation }) {
         />
       </View>
       <View style={GlobalStyles.whiteContainer}>
-        <Text style={GlobalStyles.normalText}>I need help with:</Text>
-        <BigButton answer="Food" onPressWithParam={filterByMainCategory} />
-        <BigButton answer="Shelter" onPressWithParam={filterByMainCategory} />
-        <BigButton answer="Education" onPressWithParam={filterByMainCategory} />
+        <View style={GlobalStyles.homeButtonsGrid}>
+        <BigButton 
+          answer="Food"
+          iconName="food-variant"
+          style={GlobalStyles.singleCatButton}
+          onPressWithParam={filterByMainOrSubCat} 
+          style={GlobalStyles.singleCatButton}/>
+        <BigButton 
+          answer="Shelter"
+          iconName="home-heart" 
+          onPressWithParam={filterByMainOrSubCat} />
+        <BigButton 
+          answer="Education" 
+          iconName="book-open-page-variant"
+          onPressWithParam={filterByMainOrSubCat} />
         <BigButton
-          answer="Agriculture"
-          onPressWithParam={filterByMainCategory}
+          answer="Health"
+          iconName="medical-bag"
+          onPressWithParam={filterByMainOrSubCat}
         />
         <BigButton
-          answer="Social Protection"
-          onPressWithParam={filterByMainCategory}
+          answer="Employment"
+          iconName="account-hard-hat"
+          onPressWithParam={filterByMainOrSubCat}
         />
+        </View>
       </View>
       {!searchQuery && (
         <View style={GlobalStyles.whiteContainer}>

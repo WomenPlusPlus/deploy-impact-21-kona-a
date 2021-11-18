@@ -76,7 +76,8 @@ export const GlobalStyles = StyleSheet.create({
       paddingVertical: 15,
       paddingHorizontal: 20,
       alignSelf: 'flex-start',
-      flexDirection: 'row'
+      flexDirection: 'row',
+      marginRight: 40,
     },
     cardsContainer: {
       flexDirection: 'row',
@@ -192,6 +193,12 @@ export const GlobalStyles = StyleSheet.create({
     flexCenter: {
       flexDirection: 'column',
       justifyContent: 'center'
-    }
-
+    },
+    homeButtonsGrid: {
+      flex: 1,
+      flexDirection: 'row',
+      flexWrap: "wrap",
+      alignContent: "space-between",
+      marginTop: -50,
+    },
 })
