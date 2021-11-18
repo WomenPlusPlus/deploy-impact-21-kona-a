@@ -68,7 +68,7 @@ const mainCategories = [
   content:
     [
       {key: 'Training'},
-      {key: 'Financ'},
+      {key: 'Finance'},
       {key: 'Facilities'},
       {key: 'AIDS'},
       {key: 'Entrepreneur'},
@@ -166,6 +166,10 @@ const AccordionMainCategories = (onCheck, onUncheck) => {
     //setting up a active section state
     setActiveSections(sections.includes(undefined) ? [] : sections);
   };
+
+  CONTENT[1].content[2].value = true;
+
+  console.log(CONTENT[1].content[2].value)
 
   const renderHeader = (section, _, isActive) => {
     //Accordion Header view
