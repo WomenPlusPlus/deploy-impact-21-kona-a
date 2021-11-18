@@ -17,19 +17,6 @@ export default function Accordion({ route, navigation }) {
 
   const [selectedKeywords, setSelectedKeywords] = useState(initialKeywordSet);
 
-  // array with main categories
-  const mainCategories = ['Health', 'Education', 'Social Services', 'Agriculture', 'Legal', 'Migration', 'Employment', 'Crisis']
-  // arrays of sub categories
-  const healthSub = ['Disable', 'Sex', 'Maternal', 'Disease', '%AIDS%', 'Healthcare', 'Nutrition', 'Hygiene']
-  const educationSub = ['Training',	'Financ%',	'Facilities',	'%AIDS%',	'Entrepreneur']
-  const socialServicesSub = ['%Violence%',	'%Victim%',	'Safety',	'Poverty',	'Sanitation',	'Water	Prison',	'Protection',	'LBGT']
-  const agricultureSub = ['Technology',	'Education',	'Seed', 'Donation',	'Financial',	'Agriculture', 'Development']
-  const legalSub = ["Women's Rights",	"Children's Rights",	"Human Trafficking",	"Security",	"Child Protection",	"Reintegration",	"Political Justice",	"Discrimination",	"Advisory",	"Victim Advocacy",	"Victim"]
-  const migrationSub = ['Refugee',	'Repatriation',	'Asylum',	'%Integration%',	'Citizenship']
-  const employmentSub = ['Training%',	'Entrepreneur%',	'Technical%',	'Partnerships',	'Financ%',	'Apprenticeship']
-  const crisisSub = ['Humanitarian', 	'Emergencies',	'Disaster',	'Human Trafficking',	'War']
-  //
-
   const targetGroups = ['Victims of domestic Violence', 'Refugees', 'Homeless People', 'Disabled People', 'LGBTQIA+', 'Migrants']
   const filterBy = (selectedCat, buttonNames) => {
     const filteredCats = buttonNames.filter((cat) => {
@@ -39,8 +26,8 @@ export default function Accordion({ route, navigation }) {
     });
     return filteredCats
   };
-  const remainingMainCategories = filterBy('food', mainCategories);
-  const remainingTargetGroups = filterBy('Refugees', targetGroups);
+  //const remainingMainCategories = filterBy('food', mainCategories);
+  // const remainingTargetGroups = filterBy('Refugees', targetGroups);
 
   const filterByOneOfThreeCategories = (orgs, keyword) => {
     const keywordLowercase = keyword.toLowerCase();
@@ -79,7 +66,7 @@ export default function Accordion({ route, navigation }) {
             <View>
               <AccordionFilter onCheck={onCheckHandler} onUncheck={onUncheckHandler}/>
             </View>
-            <ResultsButton filteredOrgs={}/>
+            {/*<ResultsButton filteredOrgs={}/>*/}
       </ScrollView>
     )
 }

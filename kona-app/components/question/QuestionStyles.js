@@ -155,6 +155,11 @@ export const QuestionStyles = StyleSheet.create({
     borderBottomColor: '#212121',
     borderBottomWidth: 1,
   },
+  topFilterCategories: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    borderBottomColor: '#212121',
+  },
   accordionTextTitle: {
     fontFamily: 'poppins-medium',
     fontSize: 18,
