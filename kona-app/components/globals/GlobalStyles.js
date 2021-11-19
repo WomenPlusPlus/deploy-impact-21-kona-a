@@ -16,7 +16,7 @@ export const GlobalStyles = StyleSheet.create({
     },
     greyContainer: {
         backgroundColor: '#EAEAEA',
-        
+
     },
     topFilterSection: {
       flexDirection: 'row',
@@ -193,7 +193,7 @@ export const GlobalStyles = StyleSheet.create({
     },
     flexCenter: {
       flexDirection: 'column',
-      justifyContent: 'center'
+      alignSelf: 'center'
     },
     homeButtonsGrid: {
       flex: 1,

@@ -69,7 +69,9 @@ export default function Accordion({ route, navigation }) {
             <View>
               <AccordionFilter onCheck={onCheckHandler} onUncheck={onUncheckHandler} selectedKeywords={selectedKeywords}/>
             </View>
-            <ResultsButton filteredOrgs={filteredBySelectedKeywords} selectedKeywords={selectedKeywords} />
+            <View style={GlobalStyles.flexCenter}>
+              <ResultsButton filteredOrgs={filteredBySelectedKeywords} selectedKeywords={selectedKeywords} />
+            </View>
       </ScrollView>
     )
 }
