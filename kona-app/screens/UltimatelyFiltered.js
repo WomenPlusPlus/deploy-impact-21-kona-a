@@ -4,6 +4,7 @@ import { View, ScrollView } from 'react-native';
 import { Text } from 'react-native';
 import SearchedFor from '../components/question/SearchedFor';
 import {QuestionStyles} from '../components/question/QuestionStyles';
+import {GlobalStyles} from '../components/globals/GlobalStyles';
 import CheckButton from '../components/globals/CheckButton';
 
 export default function UltimatelyFiltered ({ route, navigation }) {
@@ -16,14 +17,16 @@ export default function UltimatelyFiltered ({ route, navigation }) {
 
     return(
         <ScrollView>
-            <SearchedFor />
-            { selectedArray.map((word) => (
+            <View style={GlobalStyles.greyContainer}>
+                <SearchedFor />
+                { selectedArray.map((word) => (
 
-                <View style={QuestionStyles.subCategories}>
-                  <CheckButton answer={word} initiallyChecked />
-                </View>
+                    <View style={QuestionStyles.subCategories}>
+                        <CheckButton answer={word} initiallyChecked />
+                    </View>
             ))
             }
+            </View>
             <View>
                 <OrgList orgs={organizations}/>
             </View>
