@@ -215,7 +215,7 @@ const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
             { mainCategoriesText.map((text) => (
               <TouchableOpacity /* onPress={pressCheckbox}*/ >
                 <View style={QuestionStyles.subCategories}>
-                  <CheckBox answer={text.key} initiallyChecked={selectedKeywords.has(text.key)}/>
+                  <CheckBox answer={text.key} initiallyChecked={selectedKeywords.has(text.key)} onCheck={onCheck} onUncheck={onUncheck} />
                 </View>
               </TouchableOpacity>
             ))
@@ -314,8 +314,7 @@ const AccordionFilter = ({onCheck, onUncheck, selectedKeywords}) => {
               : checkboxText.map((text) => (
                   <TouchableOpacity/* onPress={pressCheckbox}*/ >
                     <View style={QuestionStyles.checkboxItems}>
-                      { text.value ? <AntDesign name="checksquare" size={24} color="#212121" /> : <Feather name="square" size={24} color="#212121" /> }
-                      <Text style={QuestionStyles.checkboxText}>{text.key}</Text>
+                      <CheckBox answer={text.key} onCheck={onCheck} onUncheck={onUncheck} />
                     </View>
                   </TouchableOpacity>
                 ))
