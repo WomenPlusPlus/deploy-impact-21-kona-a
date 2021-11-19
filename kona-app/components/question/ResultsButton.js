@@ -5,8 +5,9 @@ import { QuestionStyles } from "./QuestionStyles";
 import { Ionicons } from '@expo/vector-icons';
 import Collapsible from 'react-native-collapsible';
 import OrgList from "../startQuestionnaire/OrganizatonsList";
+import { useNavigation } from '@react-navigation/native';
 
-const ResultsButton = ({filteredOrgs}) => {
+const ResultsButton = ({filteredOrgs, selectedKeywords}) => {
   const [collapsed, setCollapsed] = useState(true);
 
   const toggleExpanded = () => {
@@ -14,13 +15,23 @@ const ResultsButton = ({filteredOrgs}) => {
     setCollapsed(!collapsed);
   };
 
-  const results = filteredOrgs
+  const results = filteredOrgs;
+  const selected = selectedKeywords;
+
+  const navigation = useNavigation();
+
+  const navigateToUltimate = () => {
+    navigation.navigate("UltimatelyFiltered", {results:results, selectedKeywords:selectedKeywords});
+  };
+
+
+  
 
   return (
     <ScrollView>
       {/*Code for Single Collapsible Start*/}
       <View style={GlobalStyles.flexCenter}>
-        <TouchableOpacity style={QuestionStyles.resultsButton} onPress={toggleExpanded}>
+        <TouchableOpacity style={QuestionStyles.resultsButton} onPress={navigateToUltimate}>
           <View>
             <Text style={QuestionStyles.resultsButtonText}>See {results.length} results</Text>
             {/*Heading of Single Collapsible*/}

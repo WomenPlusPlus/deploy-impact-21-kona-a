@@ -12,6 +12,7 @@ import Solo from '../screens/Solo';
 import MyTheme from '../components/globals/MyTheme'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import UltimatelyFiltered from '../screens/UltimatelyFiltered';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,10 @@ const CoverStack = () => {
              name="Accordion"
              component={Accordion}
             />
+            <Stack.Screen
+             name="UltimatelyFiltered"
+             component={UltimatelyFiltered}
+             />
             <Stack.Screen
              name="FilteredBySDG"
              component={FilteredBySDG}
