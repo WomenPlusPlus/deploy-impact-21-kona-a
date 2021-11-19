@@ -4,13 +4,14 @@
    
    <h2 align="center">Dots: The alternative legal aid tech connecting individuals to the right organisations</h2>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
-   [![Build Status](https://travis-ci.org/anfederico/clairvoyant.svg?branch=master)](https://travis-ci.org/anfederico/clairvoyant)
-   ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
-   [![GitHub Issues](https://img.shields.io/github/issues/anfederico/clairvoyant.svg)](https://github.com/anfederico/clairvoyant/issues)
-   ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
-   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+<div align="center"> 
+   
+  ![test](https://img.shields.io/badge/Deploy-(impact)-red?style=flat&logo=appveyor)
+  ![test2](https://img.shields.io/badge/expo-4.12.12-blue=flat&logo=appveyor&labelColor=blue)
+  ![test3](https://img.shields.io/badge/reactnative-reactnative-blue=expo&logoColor=expo)
+
+</div>  
+
 
 ---
 
@@ -22,12 +23,14 @@ guide its users, whilst simultaneously reducing aid agencies’ staggering workl
 
 This has been a 6 week volunteer project in collaboration with Kona-Connect and Women++. The team's goal is to develop an application that will connect Sengalese people to various NGO's and organizations that can provide assistance for specific needs.
 
-### Dependencies
+
+## 🔺 Dependencies
 
 The fastest way to get up and running is to use the Expo Go app on your iOS or Android device. Expo Go allows you to open up apps that are being served through Expo CLI.
 ```
 npm install --global expo-cli
 ```
+
 
 Download Expo Go on your mobile device
 
@@ -37,7 +40,17 @@ Download Expo Go on your mobile device
 <a href="https://apps.apple.com/us/app/expo-go/id982107779">🍎 iOS App Store - iOS 11 and greater</a>
 
 
-### Application Design
+
+## ☎️ Using the Dots App
+
+In command line, in the project root run
+
+```
+expo start
+```
+This will produce a QR code in terminal which can be scanned by the Expo app on your mobile phone. Scan this app to start the application on your mobile device.
+
+## 🔩 Application Design
 
 * React-Native
 * Expo
@@ -45,7 +58,7 @@ Download Expo Go on your mobile device
 
 In order to keep the app light-weight, we decided to use a JSON to store the data infrastruture. 
 
-## Directory Structure
+## :octocat:  Directory Structure
  
 ```
 kona-app
@@ -137,12 +150,13 @@ kona-app
 </ul>
 
 
-## Acknowledgments
+##  🙏 Acknowledgments
 
 Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
 * [discord-hackathon](https://github.com/campus-experts/discord-hackathon-template/blob/main/README.md)
 * [Spam-Detector](https://github.com/ma-shamshiri/Spam-Detector/blob/master/README.md)
+* [Markdown-Badges](https://ileriayo.github.io/markdown-badges/)
 
 
 
@@ -163,8 +177,7 @@ Inspiration, code snippets, etc.
     </td> 
 </table>
 
-## Authors
-Contributors names and contact info
+## 👏 Authors
 
 <!-- readme: collaborators,contributors -start -->    
 <table>
@@ -177,24 +190,24 @@ Contributors names and contact info
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/TCarrPGH">
-            <img src="https://avatars.githubusercontent.com/u/15948247?v=4" width="100;" alt="TC"/>
+        <a href="https://github.com/ymik0410">
+            <img src="https://avatars.githubusercontent.com/u/78605063?v=4" width="100;" alt="TC"/>
             <br />
-            <sub><b>Foo</b></sub>
+            <sub><b>Yulia Mikhaylova</b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/TCarrPGH">
-            <img src="https://avatars.githubusercontent.com/u/15948247?v=4" width="100;" alt="TC"/>
+        <a href="https://github.com/Alexboedtker">
+            <img src="https://avatars.githubusercontent.com/u/71139736?v=4" width="100;" alt="TC"/>
             <br />
-            <sub><b>Bar</b></sub>
+            <sub><b>Alexandra Bödtker </b></sub>
         </a>
     </td>
     <td align="center">
-        <a href="https://github.com/TCarrPGH">
-            <img src="https://avatars.githubusercontent.com/u/15948247?v=4" width="100;" alt="TC"/>
+        <a href="https://github.com/katkava">
+            <img src="https://avatars.githubusercontent.com/u/68730265?v=4" width="100;" alt="TC"/>
             <br />
-            <sub><b>Blam</b></sub>
+            <sub><b>Kat Kavaliova</b></sub>
         </a>
     </td>
   </tr>
