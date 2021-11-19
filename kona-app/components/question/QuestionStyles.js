@@ -184,6 +184,7 @@ export const QuestionStyles = StyleSheet.create({
     color: '#FFFFFF',
     width: 323,
     height: 50,
+    marginBottom: 200,
   },
   resultsButtonText: {
     color: '#FFFFFF',
