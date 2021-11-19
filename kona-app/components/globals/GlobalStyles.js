@@ -16,6 +16,7 @@ export const GlobalStyles = StyleSheet.create({
     },
     greyContainer: {
         backgroundColor: '#EAEAEA',
+        
     },
     topFilterSection: {
       flexDirection: 'row',
@@ -200,5 +201,13 @@ export const GlobalStyles = StyleSheet.create({
       flexWrap: "wrap",
       alignContent: "space-between",
       marginTop: -50,
+    },
+    helpText: {
+      fontFamily: 'poppins-regular',
+      fontSize: 18,
+      lineHeight: 28,
+      color: '#212121',
+      fontWeight: '400',
+      paddingVertical: 19,
     },
 })
