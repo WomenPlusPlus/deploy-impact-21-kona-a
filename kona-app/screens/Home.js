@@ -7,7 +7,7 @@ import Data from "../assets/kona_orgs1.js";
 import IconImages from "../assets/iconImages";
 import SearchBar from "../components/globals/SearchBar";
 import SDGs from "../components/globals/SDGs";
-import iconImages from "../assets/iconImages";
+import { MaterialIcons } from '@expo/vector-icons'; 
 import FilteredBySDG from "./FilteredBySDG";
 
 
@@ -114,9 +114,7 @@ export default function Home({ navigation }) {
         <BigButton 
           answer="Food"
           iconName="food-variant"
-          style={GlobalStyles.singleCatButton}
-          onPressWithParam={filterByMainOrSubCat} 
-          style={GlobalStyles.singleCatButton}/>
+          onPressWithParam={filterByMainOrSubCat} />
         <BigButton 
           answer="Shelter"
           iconName="home-heart" 
@@ -138,8 +136,12 @@ export default function Home({ navigation }) {
         </View>
       </View>
       {!searchQuery && (
-        <View style={GlobalStyles.whiteContainer}>
-          <Text style={GlobalStyles.normalText}>I need help for:</Text>
+        <View style={GlobalStyles.greyContainer}>
+          <View style={GlobalStyles.sbWhiteContainer}>
+          <MaterialIcons name="groups" size={44} color="#C4C4C4" />
+          <Text style={GlobalStyles.sdgTitle}>WHO NEEDS HELP:</Text>
+          <Text style={GlobalStyles.helpText}>The help needed is meant to help a person that is a ...</Text>
+
           <BigButton
             answer="Victims of domestic violence"
             onPressWithParam={filterByTargetGroup}
@@ -155,6 +157,7 @@ export default function Home({ navigation }) {
           />
           <BigButton answer="LGBTQIA+" onPressWithParam={filterByTargetGroup} />
           <BigButton answer="Migrants" onPressWithParam={filterByTargetGroup} />
+          </View>
         </View>
       )}
       <View style={GlobalStyles.container}>
