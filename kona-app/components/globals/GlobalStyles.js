@@ -209,5 +209,5 @@ export const GlobalStyles = StyleSheet.create({
       color: '#212121',
       fontWeight: '400',
       paddingVertical: 19,
-    },
+    }
 })
