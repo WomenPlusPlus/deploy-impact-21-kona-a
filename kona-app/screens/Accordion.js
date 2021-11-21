@@ -48,26 +48,57 @@ export default function Accordion({ route, navigation }) {
 
   const filteredBySelectedKeywords = filterByKeywords(selectedKeywords);
 
+  const onCheckSubHandler = (category, subCategoryTitle) => {
+    const newSelectedKeywords = new Set(selectedKeywords);
+    newSelectedKeywords.add(subCategoryTitle);
+
+    if (category.content.every((subCategory) => newSelectedKeywords.has(subCategory.key))) {
+      category.content.forEach((subCategory) => newSelectedKeywords.delete(subCategory.key));
+      newSelectedKeywords.add(category.title);
+    }
+    setSelectedKeywords(newSelectedKeywords);
+    console.log("test");
+  }
+
+  const onCheckMainHandler = (category) => {
+    const newSelectedKeywords = new Set(selectedKeywords);
+    newSelectedKeywords.add(category.title);
+    category.content.forEach((subCategory) => {newSelectedKeywords.delete(subCategory.key)});
+    setSelectedKeywords(newSelectedKeywords);
+  }
+
+  const onUncheckSubHandler = (category, subCategoryTitle) => {
+    const newSelectedKeywords = new Set(selectedKeywords);
+    if (selectedKeywords.has(category.title)) {
+      newSelectedKeywords.delete(category.title);
+      category.content.forEach((subCategory) => newSelectedKeywords.add(subCategory.key));
+    }
+    newSelectedKeywords.delete(subCategoryTitle);
+    setSelectedKeywords(newSelectedKeywords);
+  }
+
+  const onUncheckMainHandler = (answer) => {
+    const newSelectedKeywords = new Set(selectedKeywords);
+    newSelectedKeywords.delete(answer);
+    setSelectedKeywords(newSelectedKeywords);
+  }
+
   const onCheckHandler = (answer) => {
     const newSelectedKeywords = new Set(selectedKeywords);
     newSelectedKeywords.add(answer);
-    // filterByKeywords(newSelectedKeywords);
     setSelectedKeywords(newSelectedKeywords);
-    console.log("test");
   }
 
   const onUncheckHandler = (answer) => {
     const newSelectedKeywords = new Set(selectedKeywords);
     newSelectedKeywords.delete(answer);
-    // filterByKeywords(newSelectedKeywords);
     setSelectedKeywords(newSelectedKeywords);
-    console.log("test2");
   }
 
     return(
         <ScrollView>
             <View>
-              <AccordionFilter onCheck={onCheckHandler} onUncheck={onUncheckHandler} selectedKeywords={selectedKeywords}/>
+              <AccordionFilter onCheckMain={onCheckMainHandler} onCheckSub={onCheckSubHandler} onUncheckMain={onUncheckMainHandler} onUncheckSub={onUncheckSubHandler} onCheck={onCheckHandler} onUncheck={onUncheckHandler} selectedKeywords={selectedKeywords}/>
             </View>
             <ResultsButton filteredOrgs={filteredBySelectedKeywords} selectedKeywords={selectedKeywords} />
       </ScrollView>

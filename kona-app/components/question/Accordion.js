@@ -166,7 +166,7 @@ const mainCategories = [
   },
 ];
 
-const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
+const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, selectedKeywords}) => {
   // Ddefault active selector
   const [activeSections, setActiveSections] = useState([]);
   // MultipleSelect is for the Multiple Expand allowed
@@ -179,10 +179,14 @@ const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
     setActiveSections(sections.includes(undefined) ? [] : sections);
   };
 
-  CONTENT[1].content[2].value = true;
+  const initiallyCheckedMain = (category) => {
+    return selectedKeywords.has(category.title) || category.content.every((subCategory) => selectedKeywords.has(subCategory.key))
+  }
 
-  console.log(CONTENT[1].content[2].value)
-
+  // const onCheckMain = (category) => {
+  //   console.log('onCheckMain');
+  //   category.content.forEach((subCategory) => {console.log("onCheck with key: " + subCategory.key); onCheck(subCategory.key)});
+  // }
 
   const renderHeader = (section, _, isActive) => {
     //Accordion Header view
@@ -192,7 +196,10 @@ const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
         <View style={GlobalStyles.flexDirectionColumn}>
           <View style={QuestionStyles.topFilterCategories}>
             <View style={QuestionStyles.checkboxItems}>
-              <CheckBox answer = {section.title} initiallyChecked={selectedKeywords.has(section.title)} onCheck={onCheck} onUncheck={onUncheck} />
+              <CheckBox answer = {section.title} 
+              onCheck={(answer) => onCheckMain(section)}
+              // onCheck={onCheckSub}
+               onUncheck={onUncheckMain} initiallyChecked={initiallyCheckedMain(section)}/>
             </View>
             { isActive ? <AntDesign name="minus" size={24} color="#212121" /> : <AntDesign name="plus" size={24} color="#212121" /> }
           </View>
@@ -212,10 +219,10 @@ const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
         <Animatable.Text
           animation={isActive ? 'fadeInDown' : undefined}>
           <View>
-            { mainCategoriesText.map((text) => (
+            { mainCategoriesText.map((subCategory) => (
               <TouchableOpacity /* onPress={pressCheckbox}*/ >
                 <View style={QuestionStyles.subCategories}>
-                  <CheckBox answer={text.key} initiallyChecked={selectedKeywords.has(text.key)} onCheck={onCheck} onUncheck={onUncheck} />
+                  <CheckBox answer={subCategory.key} initiallyChecked={selectedKeywords.has(section.title) || selectedKeywords.has(subCategory.key)} onCheck={() => onCheckSub(section,subCategory.key)} onUncheck={() => onUncheckSub(section,subCategory.key)} />
                 </View>
               </TouchableOpacity>
             ))
@@ -273,7 +280,7 @@ const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
 };
 
 //MAIN ACCORDION
-const AccordionFilter = ({onCheck, onUncheck, selectedKeywords}) => {
+const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, onCheck, onUncheck, selectedKeywords}) => {
 
   // Ddefault active selector
   const [activeSections, setActiveSections] = useState([]);
@@ -311,11 +318,11 @@ const AccordionFilter = ({onCheck, onUncheck, selectedKeywords}) => {
           animation={isActive ? 'fadeInDown' : undefined}>
           <View style={GlobalStyles.flexDirectionColumn}>
             {section.title == 'Area of Support'
-              ? <AccordionMainCategories onCheck={onCheck} onUncheck={onUncheck} selectedKeywords={selectedKeywords}/> // write the new accordion in here
+              ? <AccordionMainCategories onCheckMain={onCheckMain} onCheckSub={onCheckSub} onUncheckMain={onUncheckMain} onUncheckSub={onUncheckSub} selectedKeywords={selectedKeywords}/> // write the new accordion in here
               : checkboxText.map((text) => (
                   <TouchableOpacity /* onPress={pressCheckbox}*/ >
                     <View style={QuestionStyles.checkboxItems}>
-                      <CheckBox answer={text.key} onCheck={onCheck} onUncheck={onUncheck} />
+                      <CheckBox answer={text.key} onCheck={onCheck} onUncheck={onUncheck} initiallyChecked={selectedKeywords.has(text.key)} />
                     </View>
                   </TouchableOpacity>
                 ))
