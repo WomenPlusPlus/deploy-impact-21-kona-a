@@ -8,7 +8,7 @@
    
   ![test](https://img.shields.io/badge/Deploy-(impact)-red?style=flat&logo=appveyor)
   ![test2](https://img.shields.io/badge/expo-4.12.12-blue=flat&logo=appveyor&labelColor=blue)
-  ![test3](https://img.shields.io/badge/reactnative-reactnative-blue=expo&logoColor=expo)
+  ![test3](https://img.shields.io/badge/created_by-reactnative-blue=expo&logoColor=expo)
 
 </div>  
 
@@ -143,10 +143,12 @@ kona-app
   <li><b>raw_org_data.csv</b> - Data that was provided by Kona.</li>
   <li><b>process_data.json</b> - Filtered and cleansed data that was preformed in pandas </li>
   <li><b>modified_data.gs</b> - Output data used by the app </li>
+
 </ul>
 <h4>docs:</h4>
 <ul>
-  <li><b>technical_specifications.csv</b> - Contains information about the tech stack, decision making process, features, data structure, and future work.</li>
+   <li><a href="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/technical_requirements.md
+">technical_specifications.md</a> Contains information about the tech stack, decision making process, features, data structure, and future work </li>
 </ul>
 
 
@@ -158,24 +160,24 @@ Inspiration, code snippets, etc.
 * [Spam-Detector](https://github.com/ma-shamshiri/Spam-Detector/blob/master/README.md)
 * [Markdown-Badges](https://ileriayo.github.io/markdown-badges/)
 
-
-
-  
 <table>
 <tr>
     <td align="center">
-        <img src = "https://static.wixstatic.com/media/e7fcfa_b0822451075045dea0abc7f2389d0938~mv2.jpg/v1/fill/w_1200,h_627,al_c/e7fcfa_b0822451075045dea0abc7f2389d0938~mv2.jpg"
-  width = "300"
-   />
-    <br />
+        <a href="https://www.womenplusplus.ch/deploy-impact">
+            <img src="https://static.wixstatic.com/media/e7fcfa_b0822451075045dea0abc7f2389d0938~mv2.jpg/v1/fill/w_1200,h_627,al_c/e7fcfa_b0822451075045dea0abc7f2389d0938~mv2.jpg"" width="300;" alt="Deploy(impact)"/>
+            <br />
+        </a>
     </td>
-        <td align="center">
-        <img src = "https://static.wixstatic.com/media/e7fcfa_ae690222c29f481cacd154a8cecccbfd~mv2.png/v1/fill/w_234,h_104,al_c,q_85,usm_0.66_1.00_0.01/women%2B%2B%20logo%20purple-2021.web"/>
-    <br />
+    <td align="center">
+        <a href="https://www.womenplusplus.ch/">
+            <img src="https://static.wixstatic.com/media/e7fcfa_ae690222c29f481cacd154a8cecccbfd~mv2.png/v1/fill/w_234,h_104,al_c,q_85,usm_0.66_1.00_0.01/women%2B%2B%20logo%20purple-2021.web" width="300;" alt="Women++"/>
+            <br />
+        </a>
     </td>
-  </tr>
-    </td> 
-</table>
+   </tr>
+   </table>
+
+
 
 ## 👏 Authors
 
@@ -212,4 +214,11 @@ Inspiration, code snippets, etc.
     </td>
   </tr>
 </table>
+
+## License
+<a href = "https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/LICENSE"> License </a>                     
+                                                                                                 
+                                                                                                 
 <!-- readme: collaborators,contributors -end -->
+                                                                                                 
+                                        
