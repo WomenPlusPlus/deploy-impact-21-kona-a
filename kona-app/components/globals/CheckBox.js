@@ -5,6 +5,7 @@ import { AntDesign, Feather } from '@expo/vector-icons';
 
 const CheckBox = ({answer, onCheck, onUncheck, initiallyChecked }) => {
   const [checked, setChecked] = useState(initiallyChecked);
+  if (checked !== initiallyChecked) setChecked(initiallyChecked);
   const pressHandler = (e) => {
       if (checked && onUncheck)
         onUncheck(answer);

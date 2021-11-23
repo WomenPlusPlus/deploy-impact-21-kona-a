@@ -16,20 +16,19 @@ const CONTENT = [
   title: 'People to Support',
   content:
     [
-      {key: 'Refugees', value: false},
-      {key: 'Homeless People', value: false},
-      {key: 'LGBTQIA+', value: false},
-    ],
-    value: false
+      {key: 'Refugees'},
+      {key: 'Homeless People'},
+      {key: 'LGBTQIA+'},
+    ]
 },
 {
   title: 'Gender',
   content:
     [
-      {key: 'Woman', value: false},
-      {key: 'Man', value: false},
-      {key: 'Non-binary', value: false},
-      {key: 'Other', value: false},
+      {key: 'Woman'},
+      {key: 'Man'},
+      {key: 'Non-binary'},
+      {key: 'Other'},
     ],
     value: false
 },
@@ -37,9 +36,9 @@ const CONTENT = [
   title: 'Age Group',
   content:
     [
-      {key: 'Children', value: false},
-      {key: 'Youth', value: false},
-      {key: 'Adult', value: false},
+      {key: 'Children'},
+      {key: 'Youth'},
+      {key: 'Adult'},
     ],
     value: false
 },
@@ -47,8 +46,8 @@ const CONTENT = [
   title: 'Location',
   content:
     [
-      {key: 'Country', value: false},
-      {key: 'City', value: false},
+      {key: 'Country'},
+      {key: 'City'},
     ],
     value: false
 },
@@ -59,13 +58,13 @@ const mainCategories = [
   title: 'Health',
   content:
     [
-      {key: 'Disable', value: false},
-      {key: 'Sex', value: false},
-      {key: 'Maternal', value: false},
-      {key: 'Disease', value: false},
-      {key: 'Healthcare', value: false},
-      {key: 'Nutrition', value: false},
-      {key: 'Hygiene', value: false},
+      {key: 'Disable'},
+      {key: 'Sex'},
+      {key: 'Maternal'},
+      {key: 'Disease'},
+      {key: 'Healthcare'},
+      {key: 'Nutrition'},
+      {key: 'Hygiene'},
     ],
     value: false
   },
@@ -73,11 +72,11 @@ const mainCategories = [
   title: 'Education',
   content:
     [
-      {key: 'Training', value: false},
-      {key: 'Finance', value: false},
-      {key: 'Facilities', value: false},
-      {key: 'AIDS', value: false},
-      {key: 'Entrepreneur', value: false},
+      {key: 'Training'},
+      {key: 'Finance'},
+      {key: 'Facilities'},
+      {key: 'AIDS'},
+      {key: 'Entrepreneur'},
     ],
     value: false
   },
@@ -85,15 +84,15 @@ const mainCategories = [
   title: 'Social Services',
   content:
     [
-      {key: 'Violence', value: false},
-      {key: 'Victim', value: false},
-      {key: 'Safety', value: false},
-      {key: 'Poverty', value: false},
-      {key: 'Sanitation', value: false},
-      {key: 'Water', value: false},
-      {key: 'Prison', value: false},
-      {key: 'Protection', value: false},
-      {key: 'LBGT', value: false},
+      {key: 'Violence'},
+      {key: 'Victim'},
+      {key: 'Safety'},
+      {key: 'Poverty'},
+      {key: 'Sanitation'},
+      {key: 'Water'},
+      {key: 'Prison'},
+      {key: 'Protection'},
+      {key: 'LBGT'},
     ],
     value: false
   },
@@ -101,11 +100,11 @@ const mainCategories = [
   title: 'Agriculture',
   content:
     [
-      {key: 'Technology', value: false},
-      {key: 'Education', value: false},
-      {key: 'Seed Donation', value: false},
-      {key: 'Financial', value: false},
-      {key: 'Agriculture Development', value: false},
+      {key: 'Technology'},
+      {key: 'Education'},
+      {key: 'Seed Donation'},
+      {key: 'Financial'},
+      {key: 'Agriculture Development'},
     ],
     value: false
   },
@@ -113,17 +112,17 @@ const mainCategories = [
   title: 'Legal',
   content:
     [
-      {key: "Women's Rights", value: false},
-      {key: "Children's Rights", value: false},
-      {key: "Human Trafficking", value: false},
-      {key: "Security", value: false},
-      {key: "Child Protection", value: false},
-      {key: "Reintegration", value: false},
-      {key: "Political Justice", value: false},
-      {key: "Discrimination", value: false},
-      {key: "Advisory", value: false},
-      {key: "Victim Advocacy", value: false},
-      {key: "Victim", value: false},
+      {key: "Women's Rights"},
+      {key: "Children's Rights"},
+      {key: "Human Trafficking"},
+      {key: "Security"},
+      {key: "Child Protection"},
+      {key: "Reintegration"},
+      {key: "Political Justice"},
+      {key: "Discrimination"},
+      {key: "Advisory"},
+      {key: "Victim Advocacy"},
+      {key: "Victim"},
     ],
     value: false
   },
@@ -131,11 +130,11 @@ const mainCategories = [
   title: 'Migration',
   content:
     [
-      {key: 'Refugee', value: false},
-      {key: 'Repatriation', value: true},
-      {key: 'Asylum', value: false},
-      {key: 'Integration', value: false},
-      {key: 'Citizenship', value: false},
+      {key: 'Refugee'},
+      {key: 'Repatriation'},
+      {key: 'Asylum'},
+      {key: 'Integration'},
+      {key: 'Citizenship'},
     ],
     value: true
   },
@@ -143,12 +142,12 @@ const mainCategories = [
   title: 'Employment',
   content:
     [
-      {key: 'Training', value: false},
-      {key: 'Entrepreneur', value: false},
-      {key: 'Technical', value: false},
-      {key: 'Partnerships', value: false},
-      {key: 'Finance', value: false},
-      {key: 'Apprenticeship', value: false},
+      {key: 'Training'},
+      {key: 'Entrepreneur'},
+      {key: 'Technical'},
+      {key: 'Partnerships'},
+      {key: 'Finance'},
+      {key: 'Apprenticeship'},
     ],
     value: false
   },
@@ -156,18 +155,18 @@ const mainCategories = [
   title: 'Crisis',
   content:
     [
-      {key: 'Humanitarian', value: false },
-      {key: 'Emergencies', value: false},
-      {key: 'Disaster', value: false},
-      {key: 'Human Trafficking', value: false},
-      {key: 'War', value: false},
+      {key: 'Humanitarian' },
+      {key: 'Emergencies'},
+      {key: 'Disaster'},
+      {key: 'Human Trafficking'},
+      {key: 'War'},
     ],
     value: false
   },
 ];
 
-const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
-  // Ddefault active selector
+const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, selectedKeywords}) => {
+  // Default active selector
   const [activeSections, setActiveSections] = useState([]);
   // MultipleSelect is for the Multiple Expand allowed
   // True: Expand multiple at a time
@@ -179,10 +178,9 @@ const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
     setActiveSections(sections.includes(undefined) ? [] : sections);
   };
 
-  CONTENT[1].content[2].value = true;
-
-  console.log(CONTENT[1].content[2].value)
-
+  const initiallyCheckedMain = (category) => {
+    return selectedKeywords.has(category.title) || category.content.every((subCategory) => selectedKeywords.has(subCategory.key))
+  }
 
   const renderHeader = (section, _, isActive) => {
     //Accordion Header view
@@ -192,7 +190,9 @@ const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
         <View style={GlobalStyles.flexDirectionColumn}>
           <View style={QuestionStyles.topFilterCategories}>
             <View style={QuestionStyles.checkboxItems}>
-              <CheckBox answer = {section.title} initiallyChecked={selectedKeywords.has(section.title)} onCheck={onCheck} onUncheck={onUncheck} />
+              <CheckBox answer = {section.title} 
+              onCheck={(answer) => onCheckMain(section)}
+              onUncheck={onUncheckMain} initiallyChecked={initiallyCheckedMain(section)}/>
             </View>
             { isActive ? <AntDesign name="minus" size={24} color="#212121" /> : <AntDesign name="plus" size={24} color="#212121" /> }
           </View>
@@ -202,9 +202,7 @@ const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
   };
 
   const renderContent = (section, _, isActive) => {
-    //Accordion Content view
     const mainCategoriesText = section.content
-    // console.log(mainCategoriesText)
 
     return (
       <Animatable.View
@@ -212,10 +210,10 @@ const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
         <Animatable.Text
           animation={isActive ? 'fadeInDown' : undefined}>
           <View>
-            { mainCategoriesText.map((text) => (
-              <TouchableOpacity /* onPress={pressCheckbox}*/ >
+            { mainCategoriesText.map((subCategory) => (
+              <TouchableOpacity >
                 <View style={QuestionStyles.subCategories}>
-                  <CheckBox answer={text.key} initiallyChecked={selectedKeywords.has(text.key)} onCheck={onCheck} onUncheck={onUncheck} />
+                  <CheckBox answer={subCategory.key} initiallyChecked={selectedKeywords.has(section.title) || selectedKeywords.has(subCategory.key)} onCheck={() => onCheckSub(section,subCategory.key)} onUncheck={() => onUncheckSub(section,subCategory.key)} />
                 </View>
               </TouchableOpacity>
             ))
@@ -273,7 +271,7 @@ const AccordionMainCategories = ({onCheck, onUncheck, selectedKeywords}) => {
 };
 
 //MAIN ACCORDION
-const AccordionFilter = ({onCheck, onUncheck, selectedKeywords}) => {
+const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, onCheck, onUncheck, selectedKeywords}) => {
 
   // Ddefault active selector
   const [activeSections, setActiveSections] = useState([]);
@@ -311,11 +309,11 @@ const AccordionFilter = ({onCheck, onUncheck, selectedKeywords}) => {
           animation={isActive ? 'fadeInDown' : undefined}>
           <View style={GlobalStyles.flexDirectionColumn}>
             {section.title == 'Area of Support'
-              ? <AccordionMainCategories onCheck={onCheck} onUncheck={onUncheck} selectedKeywords={selectedKeywords}/> // write the new accordion in here
+              ? <AccordionMainCategories onCheckMain={onCheckMain} onCheckSub={onCheckSub} onUncheckMain={onUncheckMain} onUncheckSub={onUncheckSub} selectedKeywords={selectedKeywords}/> // write the new accordion in here
               : checkboxText.map((text) => (
-                  <TouchableOpacity /* onPress={pressCheckbox}*/ >
+                  <TouchableOpacity >
                     <View style={QuestionStyles.checkboxItems}>
-                      <CheckBox answer={text.key} onCheck={onCheck} onUncheck={onUncheck} />
+                      <CheckBox answer={text.key} onCheck={onCheck} onUncheck={onUncheck} initiallyChecked={selectedKeywords.has(text.key)} />
                     </View>
                   </TouchableOpacity>
                 ))
