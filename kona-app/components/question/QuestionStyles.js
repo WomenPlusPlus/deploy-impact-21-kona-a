@@ -33,6 +33,7 @@ export const QuestionStyles = StyleSheet.create({
     lineHeight: 24,
     color: '#212121',
     fontWeight: '400',
+    paddingLeft: 20
   },
   dropdownContainer: {
   },
@@ -138,7 +139,7 @@ export const QuestionStyles = StyleSheet.create({
   },
   label: {
     width: 123,
-    backgroundColor: '#212121',
+    backgroundColor: 'rgba(109, 190, 109, 1)',
     borderBottomRightRadius:10,
     borderTopLeftRadius:10,
     padding: 10,
