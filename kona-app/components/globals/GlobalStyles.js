@@ -1,3 +1,4 @@
+import { Inter_400Regular } from '@expo-google-fonts/inter';
 import { StyleSheet } from 'react-native';
 
 export const GlobalStyles = StyleSheet.create({
@@ -210,4 +211,5 @@ export const GlobalStyles = StyleSheet.create({
       fontWeight: '400',
       paddingVertical: 19,
     },
+
 })

@@ -10,8 +10,6 @@ const OrgList = ({orgs}) => {
 
     return (
         <SafeAreaView style={GlobalStyles.pt}>
-            <Text style={ GlobalStyles.h2 }>{(orgs.length)} organizations found</Text>
-            
             <View style={ GlobalStyles.cardsContainerLeft }>
                 <FlatList
                     data={orgs}

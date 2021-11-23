@@ -202,5 +202,33 @@ export const QuestionStyles = StyleSheet.create({
   },
   accordion: {
     width: 300,
+  },
+  allFiltersButton: {
+    backgroundColor: '#453748',
+    padding: 10,
+    width: '50%',
+    borderTopLeftRadius: 10,
+    position: 'absolute',
+    right: 0,
+    bottom: 0
+  },
+  allOrgsContainer: {
+    backgroundColor: '#F5DEDE',
+    width: '80%',
+    paddingLeft: 20,
+    paddingVertical: 50,
+    position: 'relative'
+  },
+  allOrgsText: {
+    fontFamily: 'poppins-medium',
+    fontSize: 22,
+    color: '#212121',
+    paddingVertical: 16,
+  },
+  allFiltersText: {
+    color: 'white',
+    fontFamily: 'poppins-medium',
+    fontSize: 16,
+    paddingLeft: 6
   }
 })

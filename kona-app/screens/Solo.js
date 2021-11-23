@@ -42,7 +42,7 @@ export default function Solo ({route}) {
                         Help with:
                     </Text>
                     <Text style={ QuestionStyles.questionText } >
-                        {item.Services}
+                        {item["MainCategory"].split(', ').join('\n')}
                     </Text>
                 </View>
                 <View style={ QuestionStyles.helpContainer}>    
@@ -50,7 +50,7 @@ export default function Solo ({route}) {
                         Help for:
                     </Text>
                     <Text style={ QuestionStyles.questionText } >
-                        {item["Target Group"]}
+                        {item["TargetGroup"].split(', ').join('\n')}
                     </Text>
                 </View>
                 <View style={ QuestionStyles.helpContainer}>    
