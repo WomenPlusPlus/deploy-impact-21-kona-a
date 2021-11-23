@@ -78,7 +78,7 @@ export const QuestionStyles = StyleSheet.create({
   cardStyle: {
     width: '100%',
     borderRadius: 10,
-    borderColor: '#212121',
+    borderColor: 'rgba(69, 55, 72, 0.4)',
     borderWidth: 1,
     borderStyle: 'solid'
   },
@@ -90,7 +90,7 @@ export const QuestionStyles = StyleSheet.create({
     width: '100%',
     borderTopEndRadius: 10,
     borderTopStartRadius: 10,
-    backgroundColor: ('rgb(232,232,232)'),
+    backgroundColor: 'rgba(250, 238, 238, 0.7)',
   },
   soloImageContainer: {
     width: '100%',
@@ -222,7 +222,7 @@ export const QuestionStyles = StyleSheet.create({
   allOrgsText: {
     fontFamily: 'poppins-medium',
     fontSize: 22,
-    color: '#212121',
+    color: '#453748',
     paddingVertical: 16,
   },
   allFiltersText: {
