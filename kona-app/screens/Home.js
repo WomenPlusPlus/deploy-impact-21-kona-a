@@ -9,14 +9,19 @@ import SearchBar from "../components/globals/SearchBar";
 import HomeFooter from "../components/globals/HomeFooter";
 import SDGs from "../components/globals/SDGs";
 import { MaterialIcons } from '@expo/vector-icons'; 
+import OrgList from '../components/startQuestionnaire/OrganizatonsList';
 import FilteredBySDG from "./FilteredBySDG";
+import { Button } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { color } from "react-native-elements/dist/helpers";
 
 
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredOrgsSearch = Data.filter((org) => {
-    if (org["MainCategory"].toUpperCase().includes(searchQuery.toUpperCase())) {
+    if (org["MainCategory"].toUpperCase().includes(searchQuery.toUpperCase()) ||
+        org["SubCategory"].toUpperCase().includes(searchQuery.toUpperCase())) {
       return org;
     }
   });
@@ -55,17 +60,16 @@ export default function Home({ navigation }) {
 
   const filterByCategory = (field, field2, keyword) => {
     const filteredOrgs = Data.filter((org) => {
-      if ((org[field].includes(keyword)) || (org[field2].includes(keyword)))
-      {
+      if ((org[field].toUpperCase().includes((keyword).toUpperCase())) || (org[field2].toUpperCase().includes((keyword).toUpperCase()))) {
         return org;
       }
     });
+
     navigation.navigate("FilteredOrgs", {
       orgs: filteredOrgs,
       filter: keyword,
     });
   }
-
 
   const filterByMainOrSubCat = (category) => (filterByCategory("MainCategory", "SubCategory", category))
 
@@ -73,15 +77,15 @@ export default function Home({ navigation }) {
 
   const filterBySDGs = (category) => filterBySDG("SDG", category);
 
-  // if (searchQuery) {
-  //   return (
-  //     <View style={GlobalStyles.container}>
-  //       <SearchBar initialValue={searchQuery} setSearchQuery={setSearchQuery} />
-  //       <FlatButton text="Search" onPress={pressSearchHandler} />
-  //     </View>
-  //   );
-  // }
+  const ThreeOrgs = Data.slice(0,3);
+
+  const Arrow = '\u2192';
  
+  const NoFilter = new Set();
+  const navigateToAccordion = () => {
+    navigation.navigate('Accordion', NoFilter )
+  };
+
   return (
     <ScrollView>
       <View
@@ -161,6 +165,14 @@ export default function Home({ navigation }) {
           </View>
         </View>
       )}
+      <View style={QuestionStyles.allOrgsContainer}>
+        <Text style={QuestionStyles.allOrgsText}>All organizations</Text>
+        <TouchableOpacity style={QuestionStyles.allFiltersButton} onPress = {navigateToAccordion}>
+          <Text style={ QuestionStyles.allFiltersText }>See all filters {Arrow}</Text>
+        </TouchableOpacity>
+      </View> 
+      <OrgList orgs={ThreeOrgs}/>
+       {!searchQuery && (
       <View style={GlobalStyles.container}>
         <Text style={GlobalStyles.sdgTitle}>THE 17 GOALS</Text>
         <Text style={QuestionStyles.questionText}>
@@ -180,6 +192,7 @@ export default function Home({ navigation }) {
           </View>
         </View>
       </View>
+       )}
       <View style={GlobalStyles.homeFooter}>
         <HomeFooter />
       </View>

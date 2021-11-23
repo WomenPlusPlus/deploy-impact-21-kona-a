@@ -1,3 +1,4 @@
+import { Inter_400Regular } from '@expo-google-fonts/inter';
 import { StyleSheet } from 'react-native';
 
 export const GlobalStyles = StyleSheet.create({
@@ -216,7 +217,6 @@ export const GlobalStyles = StyleSheet.create({
       paddingTop: 54,
       paddingBottom: 27,
     },
-
     homeFooterText: {
       fontFamily: 'poppins-regular',
       fontSize: 12,
@@ -224,7 +224,6 @@ export const GlobalStyles = StyleSheet.create({
       color: 'white',
       fontWeight: '400',
     },
-
     homeFooterLinks: {
       fontFamily: 'poppins-regular',
       fontSize: 12,
@@ -232,7 +231,6 @@ export const GlobalStyles = StyleSheet.create({
       color: 'white',
       fontWeight: '500',
     },
-
     homeFooterCopyright: {
       fontFamily: 'poppins-regular',
       fontSize: 12,
