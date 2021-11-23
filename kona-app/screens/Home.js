@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, Image, ScrollView } from "react-native";
+import { Text, View, Image, ScrollView, TouchableOpacity } from "react-native";
 import { GlobalStyles } from "../components/globals/GlobalStyles";
 import { QuestionStyles } from "../components/question/QuestionStyles";
 import BigButton from "../components/globals/BigButton";
@@ -11,8 +11,6 @@ import SDGs from "../components/globals/SDGs";
 import { MaterialIcons } from '@expo/vector-icons'; 
 import OrgList from '../components/startQuestionnaire/OrganizatonsList';
 import FilteredBySDG from "./FilteredBySDG";
-import { Button } from "react-native";
-import { TouchableOpacity } from "react-native";
 import { color } from "react-native-elements/dist/helpers";
 
 
@@ -165,13 +163,15 @@ export default function Home({ navigation }) {
           </View>
         </View>
       )}
-      <View style={QuestionStyles.allOrgsContainer}>
-        <Text style={QuestionStyles.allOrgsText}>All organizations</Text>
-        <TouchableOpacity style={QuestionStyles.allFiltersButton} onPress = {navigateToAccordion}>
-          <Text style={ QuestionStyles.allFiltersText }>See all filters {Arrow}</Text>
-        </TouchableOpacity>
-      </View> 
-      <OrgList orgs={ThreeOrgs}/>
+      <View style={{backgroundColor: 'white'}}>
+        <View style={QuestionStyles.allOrgsContainer}>
+          <Text style={QuestionStyles.allOrgsText}>All organizations</Text>
+          <TouchableOpacity style={QuestionStyles.allFiltersButton} onPress = {navigateToAccordion}>
+            <Text style={ QuestionStyles.allFiltersText }>See all filters {Arrow}</Text>
+          </TouchableOpacity>
+        </View> 
+        <OrgList orgs={ThreeOrgs}/>
+      </View>  
        {!searchQuery && (
       <View style={GlobalStyles.container}>
         <Text style={GlobalStyles.sdgTitle}>THE 17 GOALS</Text>

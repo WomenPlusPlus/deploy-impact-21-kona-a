@@ -43,7 +43,7 @@ const OrgCard = ({item}) => {
            <View style={QuestionStyles.cardStyle}>
                 <TouchableOpacity style= {QuestionStyles.imageContainer} onPress={navigateToSolo} >
                     <View style={QuestionStyles.label}>
-                        <Text style={QuestionStyles.questionText, {color: 'white'}}>Refugee</Text>
+                        <Text style={QuestionStyles.questionText, {color: 'white'}}>Refugees</Text>
                     </View>
                     <View style={ QuestionStyles.imageContainer}>
                         <Image source={item.Logo} style={QuestionStyles.orgImage} resizeMode="contain"></Image>
