@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import OrgList from '../components/startQuestionnaire/OrganizatonsList';
 import { View, ScrollView } from 'react-native';
+import Footer from "../components/globals/Footer";
 
 
 export default function FilteredBySDG({ route }) {
@@ -13,6 +14,7 @@ export default function FilteredBySDG({ route }) {
             <View>
                 <OrgList orgs={filteredOrgs}/>
             </View>
+            <Footer/>
       </ScrollView>
     )
 }

@@ -5,6 +5,7 @@ import ResultsButton from '../components/question/ResultsButton';
 import { QuestionStyles } from '../components/question/QuestionStyles';
 import Data from '../assets/kona_orgs1.js';
 import AccordionFilter from '../components/question/Accordion';
+import Footer from "../components/globals/Footer";
 
 export default function Accordion({ route, navigation }) {
 
@@ -103,6 +104,7 @@ export default function Accordion({ route, navigation }) {
             <View style={GlobalStyles.flexCenter}>
               <ResultsButton filteredOrgs={filteredBySelectedKeywords} selectedKeywords={selectedKeywords} />
             </View>
+            <Footer/>
       </ScrollView>
     )
 }
