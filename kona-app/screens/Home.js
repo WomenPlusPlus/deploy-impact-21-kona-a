@@ -6,6 +6,7 @@ import BigButton from "../components/globals/BigButton";
 import Data from "../assets/kona_orgs1.js";
 import IconImages from "../assets/iconImages";
 import SearchBar from "../components/globals/SearchBar";
+import HomeFooter from "../components/globals/HomeFooter";
 import SDGs from "../components/globals/SDGs";
 import { MaterialIcons } from '@expo/vector-icons'; 
 import FilteredBySDG from "./FilteredBySDG";
@@ -178,6 +179,9 @@ export default function Home({ navigation }) {
             ))}
           </View>
         </View>
+      </View>
+      <View style={GlobalStyles.homeFooter}>
+        <HomeFooter />
       </View>
     </ScrollView>
   );

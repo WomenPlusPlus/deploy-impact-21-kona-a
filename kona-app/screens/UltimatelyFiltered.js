@@ -6,6 +6,7 @@ import SearchedFor from '../components/question/SearchedFor';
 import {QuestionStyles} from '../components/question/QuestionStyles';
 import {GlobalStyles} from '../components/globals/GlobalStyles';
 import CheckButton from '../components/globals/CheckButton';
+import Footer from "../components/globals/Footer";
 
 export default function UltimatelyFiltered ({ route, navigation }) {
 
@@ -30,6 +31,7 @@ export default function UltimatelyFiltered ({ route, navigation }) {
             <View>
                 <OrgList orgs={organizations}/>
             </View>
+            <Footer/>
       </ScrollView>
     )
 }
