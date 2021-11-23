@@ -86,7 +86,7 @@ const CoverStack = () => {
                 ),
             }}
              />
-            <Stack.Screen
+            {/* <Stack.Screen
              name="Cover"
              component={Cover}
              options={{
@@ -96,8 +96,8 @@ const CoverStack = () => {
                     />
                 ),
             }}
-            />
-            <Stack.Screen
+            /> */}
+            {/* <Stack.Screen
              name="StartQuestionnaire"
              component={StartQuestionnaire}
              options={{
@@ -107,8 +107,8 @@ const CoverStack = () => {
                     />
                 ),
             }}
-            />
-            <Stack.Screen
+            /> */}
+            {/* <Stack.Screen
              name="DropdownQuestion"
              component={DropdownQuestion}
              options={{
@@ -118,8 +118,8 @@ const CoverStack = () => {
                     />
                 ),
             }}
-            />
-            <Stack.Screen
+            /> */}
+            {/* <Stack.Screen
              name="QuestionWithButtons"
              component={QuestionWithButtons}
              options={{
@@ -129,7 +129,7 @@ const CoverStack = () => {
                     />
                 ),
             }}
-             />
+             /> */}
             <Stack.Screen
              name="Organization"
              component={Solo}

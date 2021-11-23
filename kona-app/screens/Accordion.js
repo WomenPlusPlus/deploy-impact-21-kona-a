@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
-import ResultsButton from '../components/question/ResultsButton';
-import { QuestionStyles } from '../components/question/QuestionStyles';
+import ResultsButton from '../components/locals/ResultsButton';
+import { QuestionStyles } from '../components/locals/QuestionStyles';
 import Data from '../assets/kona_orgs1.js';
-import AccordionFilter from '../components/question/Accordion';
+import AccordionFilter from '../components/locals/Accordion';
 import Footer from "../components/globals/Footer";
 
 export default function Accordion({ route, navigation }) {

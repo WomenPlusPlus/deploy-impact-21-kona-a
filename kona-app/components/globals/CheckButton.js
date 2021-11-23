@@ -15,7 +15,7 @@ const CheckButton = ({answer, onCheck, onUncheck, initiallyChecked }) => {
 
   return (
       <TouchableOpacity onPress={pressHandler}>
-          <View style={GlobalStyles.bigButton}>
+          <View style={GlobalStyles.mainButton}>
               {checked && <Ionicons name="checkmark-sharp" size={20} color="black" style={{marginRight: 4}}/>}
               <Text style={GlobalStyles.normalText}>{ answer } </Text>
           </View>

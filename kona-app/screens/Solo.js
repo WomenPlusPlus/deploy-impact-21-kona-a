@@ -3,7 +3,7 @@ import { ScrollView, View, Text, Image } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
-import { QuestionStyles } from '../components/question/QuestionStyles';
+import { QuestionStyles } from '../components/locals/QuestionStyles';
 import Footer from "../components/globals/Footer";
 
 export default function Solo ({route}) {

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
-import BigButton from '../components/globals/BigButton';
+import MainButton from '../components/globals/MainButton';
 import CheckButton from '../components/globals/CheckButton';
-import { QuestionStyles } from '../components/question/QuestionStyles';
-import FilterButton from '../components/question/FilterButton';
-import ExpandSeeAll from '../components/question/Expand';
+import { QuestionStyles } from '../components/locals/QuestionStyles';
+import FilterButton from '../components/locals/FilterButton';
+import ExpandSeeAll from '../components/locals/Expand';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Data from '../assets/kona_orgs1.js';
-import AccordionFilter from '../components/question/Accordion';
+import AccordionFilter from '../components/locals/Accordion';
 import { useNavigation } from '@react-navigation/native';
 
 export default function Filter({ filterKeyword, setFilteredOrgs }) {

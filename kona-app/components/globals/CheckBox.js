@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, TouchableOpacity, View } from "react-native";
-import { QuestionStyles } from '../question/QuestionStyles';
+import { QuestionStyles } from '../locals/QuestionStyles';
 import { AntDesign, Feather } from '@expo/vector-icons';
 
 const CheckBox = ({answer, onCheck, onUncheck, initiallyChecked }) => {

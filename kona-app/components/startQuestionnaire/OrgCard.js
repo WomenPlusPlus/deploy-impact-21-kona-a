@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Text, View, TouchableOpacity, ScrollView } from 'react-native';
-import { QuestionStyles } from '../question/QuestionStyles';
+import { QuestionStyles } from '../locals/QuestionStyles';
 import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { useState } from 'react';
