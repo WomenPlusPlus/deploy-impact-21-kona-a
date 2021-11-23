@@ -211,5 +211,31 @@ export const GlobalStyles = StyleSheet.create({
       fontWeight: '400',
       paddingVertical: 19,
     },
-
+    homeFooter: {
+      backgroundColor: 'gray',
+      paddingHorizontal: 24,
+      paddingTop: 54,
+      paddingBottom: 27,
+    },
+    homeFooterText: {
+      fontFamily: 'poppins-regular',
+      fontSize: 12,
+      lineHeight: 18,
+      color: 'white',
+      fontWeight: '400',
+    },
+    homeFooterLinks: {
+      fontFamily: 'poppins-regular',
+      fontSize: 12,
+      lineHeight: 18,
+      color: 'white',
+      fontWeight: '500',
+    },
+    homeFooterCopyright: {
+      fontFamily: 'poppins-regular',
+      fontSize: 12,
+      lineHeight: 18,
+      color: 'rgba(255, 255, 255, 0.45)',
+      textAlign: 'center',
+    }
 })

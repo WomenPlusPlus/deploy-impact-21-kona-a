@@ -4,6 +4,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { QuestionStyles } from '../components/question/QuestionStyles';
+import Footer from "../components/globals/Footer";
 
 export default function Solo ({route}) {
     console.log(route.params)
@@ -62,6 +63,7 @@ export default function Solo ({route}) {
                     </Text>
                 </View>
             </View>
+            <Footer/>
         </ScrollView>
     )
 
