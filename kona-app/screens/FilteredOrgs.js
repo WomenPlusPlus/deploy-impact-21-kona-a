@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import OrgList from '../components/startQuestionnaire/OrganizatonsList';
+import OrgList from '../components/organizations/OrganizatonsList';
 import Filter from '../screens/Filter';
 import { View, ScrollView } from 'react-native';
 import Data from '../assets/kona_orgs1.js';

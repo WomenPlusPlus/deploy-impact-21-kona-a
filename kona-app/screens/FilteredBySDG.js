@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import OrgList from '../components/startQuestionnaire/OrganizatonsList';
+import OrgList from '../components/organizations/OrganizatonsList';
 import { View, ScrollView } from 'react-native';
 import Footer from "../components/globals/Footer";
 

@@ -9,7 +9,7 @@ import SearchBar from "../components/globals/SearchBar";
 import HomeFooter from "../components/globals/HomeFooter";
 import SDGs from "../components/globals/SDGs";
 import { MaterialIcons } from '@expo/vector-icons'; 
-import OrgList from '../components/startQuestionnaire/OrganizatonsList';
+import OrgList from '../components/organizations/OrganizatonsList';
 import FilteredBySDG from "./FilteredBySDG";
 import { color } from "react-native-elements/dist/helpers";
 import { LinearGradient } from 'expo-linear-gradient';
