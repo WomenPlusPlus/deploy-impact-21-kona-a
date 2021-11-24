@@ -260,5 +260,11 @@ export const GlobalStyles = StyleSheet.create({
       lineHeight: 18,
       color: 'rgba(255, 255, 255, 0.45)',
       textAlign: 'center',
+    },
+    soloWhite: {
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+      paddingHorizontal: 20,
+      paddingTop: 20,
+      paddingBottom: 40
     }
 })

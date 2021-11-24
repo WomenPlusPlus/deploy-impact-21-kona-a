@@ -97,7 +97,7 @@ export const QuestionStyles = StyleSheet.create({
   soloImageContainer: {
     width: '100%',
     height: 195,
-    backgroundColor: ('rgb(232,232,232)')
+    backgroundColor: 'rgba(250, 238, 238, 0.7)'
   },
   image: {
     flex: 1,
@@ -125,7 +125,7 @@ export const QuestionStyles = StyleSheet.create({
     alignSelf: 'center',
     color: '#6B6B6B',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 14,
     lineHeight: 24,
   },
   orgContainer: {
@@ -235,5 +235,6 @@ export const QuestionStyles = StyleSheet.create({
     fontFamily: 'poppins-medium',
     fontSize: 16,
     paddingLeft: 6
-  }
+  },
+
 })
