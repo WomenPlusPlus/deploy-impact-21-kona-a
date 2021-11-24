@@ -41,24 +41,26 @@ export default function Solo ({route}) {
                     </View>
                     <Text style={ QuestionStyles.questionText }>{item["WebAddress"]}</Text>
                 </View>
-                <LinearGradient colors={['rgb(239,236,232)', 'rgb(255,255,255)']} style={{padding:20}}>
-                    <View style={ QuestionStyles.helpContainer}>
-                        <Text style={ QuestionStyles.name}>
-                            Areas of support
-                        </Text>
-                        <Text style={ QuestionStyles.questionText } >
-                            {item["MainCategory"].split(', ').join('\n')}
-                        </Text>
-                    </View>
-                    <View style={ QuestionStyles.helpContainer}>    
-                        <Text style={ QuestionStyles.name}>
-                            Target group
-                        </Text>
-                        <Text style={ QuestionStyles.questionText } >
-                            {item["TargetGroup"].split(', ').join('\n')}
-                        </Text>
-                    </View>
-                    <View style={ QuestionStyles.helpContainer}>    
+                <View style={{backgroundColor: 'rgba(255, 255, 255, 1)'}}>
+                    <LinearGradient colors={['rgb(239,236,232)', 'rgb(255,255,255)']} style={{padding:20}}>
+                        <View style={ QuestionStyles.helpContainer}>
+                            <Text style={ QuestionStyles.name}>
+                                Areas of support
+                            </Text>
+                            <Text style={ QuestionStyles.questionText } >
+                                {item["MainCategory"].split(', ').join('\n')}
+                            </Text>
+                        </View>
+                        <View style={ QuestionStyles.helpContainer}>    
+                            <Text style={ QuestionStyles.name}>
+                                Target group
+                            </Text>
+                            <Text style={ QuestionStyles.questionText } >
+                                {item["TargetGroup"].split(', ').join('\n')}
+                            </Text>
+                        </View>
+                    </LinearGradient>
+                    <View style={ GlobalStyles.soloWhite}>    
                         <Text style={ QuestionStyles.name}>
                             Description
                         </Text>
@@ -66,7 +68,7 @@ export default function Solo ({route}) {
                             {item["Objective"]}
                         </Text>
                     </View>
-                </LinearGradient>
+                </View>
             <Footer/>
         </ScrollView>
     )
