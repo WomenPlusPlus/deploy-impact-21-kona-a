@@ -91,7 +91,7 @@ export const QuestionStyles = StyleSheet.create({
     width: '100%',
     borderTopEndRadius: 10,
     borderTopStartRadius: 10,
-    backgroundColor: 'rgba(250, 238, 238, 0.5)',
+    backgroundColor: 'rgba(250, 238, 238, 0.7)',
     position: 'relative'
   },
   soloImageContainer: {
