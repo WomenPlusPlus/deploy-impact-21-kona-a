@@ -91,7 +91,8 @@ export const QuestionStyles = StyleSheet.create({
     width: '100%',
     borderTopEndRadius: 10,
     borderTopStartRadius: 10,
-    backgroundColor: 'rgba(250, 238, 238, 0.7)',
+    backgroundColor: 'rgba(250, 238, 238, 0.5)',
+    position: 'relative'
   },
   soloImageContainer: {
     width: '100%',
@@ -138,12 +139,15 @@ export const QuestionStyles = StyleSheet.create({
     paddingVertical: 20
   },
   label: {
-    width: 123,
-    backgroundColor: 'rgba(109, 190, 109, 1)',
-    borderBottomRightRadius:10,
-    borderTopLeftRadius:10,
-    padding: 10,
-    textAlign: 'center'
+    width: 96,
+    backgroundColor: 'rgb(109, 190, 109)',
+    top: 8,
+    paddingVertical: 7,
+    paddingHorizontal: 15,
+    textAlign: 'center',
+    position: 'absolute',
+    zIndex: 1,
+    elevation: 1
   },
   orgImage: {
     height: 130,

@@ -10,6 +10,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import Data from '../assets/kona_orgs1.js';
 import AccordionFilter from '../components/locals/Accordion';
 import { useNavigation } from '@react-navigation/native';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function Filter({ filterKeyword, setFilteredOrgs }) {
   const initialKeywordSet = new Set();
@@ -74,20 +75,24 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
     <View>
 
       {/* <TouchableOpacity onPress = { () => filterByOneOfThreeCategories('Health') }><Text>Click here</Text></TouchableOpacity> */}
-      <View style={GlobalStyles.greyContainer}>
+      <View style={GlobalStyles.roseContainer}>
         <View style={GlobalStyles.whiteContainer}>
           <View style={GlobalStyles.topFilterSection}>
-            <Text style={GlobalStyles.normalText}>I need help with:</Text>
-            <FilterButton answer= "Filter" onPress={navigateToAccordion} keyword={filterKeyword}/>
+            <Text style={GlobalStyles.searchResText}>You searched for:</Text>            
           </View>
           <View style={QuestionStyles.flexDirectionColumn}>
             <CheckButton answer={filterKeyword} onCheck={onCheckHandler} onUncheck={onUncheckHandler} initiallyChecked />
-            <ExpandSeeAll categories={remainingMainCategories}  onCheck={onCheckHandler} onUncheck={onUncheckHandler}/>
+            {/* <ExpandSeeAll categories={remainingMainCategories}  onCheck={onCheckHandler} onUncheck={onUncheckHandler}/> */}
           </View>
-          <Text style={GlobalStyles.normalText}>I need help for:</Text>
+          <Text style={GlobalStyles.searchResText}>Add more filters to narrow down the results:</Text>
           <View style={QuestionStyles.flexDirectionColumn}>
             <CheckButton answer='Refugees' onCheck={onCheckHandler} onUncheck={onUncheckHandler} />
-            <ExpandSeeAll categories={remainingTargetGroups} onCheck={onCheckHandler} onUncheck={onUncheckHandler} />
+            <CheckButton answer='Homeless People' onCheck={onCheckHandler} onUncheck={onUncheckHandler} />
+            {/* <ExpandSeeAll categories={remainingTargetGroups} onCheck={onCheckHandler} onUncheck={onUncheckHandler} /> */}
+            <TouchableOpacity style={GlobalStyles.seeAllSection} onPress={navigateToAccordion} >
+              <FilterButton answer= "See all filters"  keyword={filterKeyword}/>
+              <MaterialIcons name="arrow-right-alt" size={24} color="black" />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
