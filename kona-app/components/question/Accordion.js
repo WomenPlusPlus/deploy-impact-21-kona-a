@@ -64,7 +64,6 @@ const mainCategories = [
       {key: 'Disease'},
       {key: 'Healthcare'},
       {key: 'Nutrition'},
-      {key: 'Hygiene'},
     ],
     value: false
   },
@@ -90,7 +89,6 @@ const mainCategories = [
       {key: 'Poverty'},
       {key: 'Sanitation'},
       {key: 'Water'},
-      {key: 'Prison'},
       {key: 'Protection'},
       {key: 'LBGT'},
     ],
@@ -103,7 +101,6 @@ const mainCategories = [
       {key: 'Technology'},
       {key: 'Education'},
       {key: 'Seed Donation'},
-      {key: 'Financial'},
       {key: 'Agriculture Development'},
     ],
     value: false
@@ -118,7 +115,6 @@ const mainCategories = [
       {key: "Security"},
       {key: "Child Protection"},
       {key: "Reintegration"},
-      {key: "Political Justice"},
       {key: "Discrimination"},
       {key: "Advisory"},
       {key: "Victim Advocacy"},
@@ -131,7 +127,6 @@ const mainCategories = [
   content:
     [
       {key: 'Refugee'},
-      {key: 'Repatriation'},
       {key: 'Asylum'},
       {key: 'Integration'},
       {key: 'Citizenship'},
@@ -142,7 +137,6 @@ const mainCategories = [
   title: 'Employment',
   content:
     [
-      {key: 'Training'},
       {key: 'Entrepreneur'},
       {key: 'Technical'},
       {key: 'Partnerships'},
