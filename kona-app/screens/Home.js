@@ -18,69 +18,33 @@ import { LinearGradient } from 'expo-linear-gradient';
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredOrgsSearch = Data.filter((org) => {
-    if (org["MainCategory"].toUpperCase().includes(searchQuery.toUpperCase()) ||
-        org["SubCategory"].toUpperCase().includes(searchQuery.toUpperCase())) {
-      return org;
-    }
-  });
-
-  const navigateToFilteredOrgs = () => {
-    navigation.navigate("FilteredOrgs", {
-      orgs: filteredOrgsSearch,
-      filter: searchQuery,
-    });
-  };
-
-  const filterBy = (field, keyword) => {
+  const filterByFieldsAndNavigate = (fields, screen, keyword) => {
     const filteredOrgs = Data.filter((org) => {
-      if (org[field].includes(keyword)) {
+      if (fields.find( (field) => org[field].toUpperCase().includes((keyword).toUpperCase()))) {
         return org;
       }
     });
 
-    navigation.navigate("FilteredOrgs", {
-      orgs: filteredOrgs,
-      filter: keyword,
-    });
-  };
-
-  const filterBySDG = (field, keyword) => {
-    const FilteredBySDG = Data.filter((org) => {
-      if (org[field].includes(keyword)) {
-        return org;
-      }
-    });
-
-    navigation.navigate("FilteredBySDG", {
-      orgs: FilteredBySDG,
-    });
-  };
-
-  const filterByCategory = (field, field2, keyword) => {
-    const filteredOrgs = Data.filter((org) => {
-      if ((org[field].toUpperCase().includes((keyword).toUpperCase())) || (org[field2].toUpperCase().includes((keyword).toUpperCase()))) {
-        return org;
-      }
-    });
-
-    navigation.navigate("FilteredOrgs", {
+    navigation.navigate(screen, {
       orgs: filteredOrgs,
       filter: keyword,
     });
   }
 
-  const filterByMainOrSubCat = (category) => (filterByCategory("MainCategory", "SubCategory", category))
+  const filterByMainOrSubCat = (category) => (filterByFieldsAndNavigate(["MainCategory", "SubCategory"], "FilteredOrgs", category));
 
-  const filterByTargetGroup = (category) => filterBy("TargetGroup", category) 
+  const navigateToFilteredOrgs = () => filterByFieldsAndNavigate(["MainCategory", "SubCategory"], "FilteredOrgs", searchQuery) 
 
-  const filterBySDGs = (category) => filterBySDG("SDG", category);
+  const filterByTargetGroup = (category) => filterByFieldsAndNavigate(["TargetGroup", "SubTargetGroup"], "FilteredOrgs", category) 
+
+  const filterBySDGs = (category) =>  filterByFieldsAndNavigate(["SDG"], "FilteredBySDG", category);
 
   const ThreeOrgs = Data.slice(0,3);
 
   const Arrow = '\u2192';
  
   const NoFilter = new Set();
+  
   const navigateToAccordion = () => {
     navigation.navigate('Accordion', NoFilter )
   };

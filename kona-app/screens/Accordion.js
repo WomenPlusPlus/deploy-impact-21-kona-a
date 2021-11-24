@@ -53,8 +53,8 @@ export default function Accordion({ route, navigation }) {
     const newSelectedKeywords = new Set(selectedKeywords);
     newSelectedKeywords.add(subCategoryTitle);
 
-    if (category.content.every((subCategory) => newSelectedKeywords.has(subCategory.key))) {
-      category.content.forEach((subCategory) => newSelectedKeywords.delete(subCategory.key));
+    if (category.content.every((subCategory) => newSelectedKeywords.has(subCategory))) {
+      category.content.forEach((subCategory) => newSelectedKeywords.delete(subCategory));
       newSelectedKeywords.add(category.title);
     }
     setSelectedKeywords(newSelectedKeywords);
@@ -64,7 +64,7 @@ export default function Accordion({ route, navigation }) {
   const onCheckMainHandler = (category) => {
     const newSelectedKeywords = new Set(selectedKeywords);
     newSelectedKeywords.add(category.title);
-    category.content.forEach((subCategory) => {newSelectedKeywords.delete(subCategory.key)});
+    category.content.forEach((subCategory) => {newSelectedKeywords.delete(subCategory)});
     setSelectedKeywords(newSelectedKeywords);
   }
 
@@ -72,7 +72,7 @@ export default function Accordion({ route, navigation }) {
     const newSelectedKeywords = new Set(selectedKeywords);
     if (selectedKeywords.has(category.title)) {
       newSelectedKeywords.delete(category.title);
-      category.content.forEach((subCategory) => newSelectedKeywords.add(subCategory.key));
+      category.content.forEach((subCategory) => newSelectedKeywords.add(subCategory));
     }
     newSelectedKeywords.delete(subCategoryTitle);
     setSelectedKeywords(newSelectedKeywords);

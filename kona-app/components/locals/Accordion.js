@@ -9,6 +9,18 @@ import Collapsible from 'react-native-collapsible';
 import CheckBox from '../globals/CheckBox';
 
 const CONTENT = [
+  {
+    title: 'Area of Support'
+  },
+  {
+    title: 'People to Support',
+    content:
+      [
+        'Refugees', 'Homeless People', 'LGBTQIA+'
+      ]
+  }];
+
+const CONTENT2 = [
 {
   title: 'Area of Support'
 },
@@ -54,6 +66,19 @@ const CONTENT = [
 ];
 
 const mainCategories = [
+  {
+  title: 'Health',
+  content:
+    ['Disable',
+     'Sex',
+     'Maternal',
+     'Disease',
+     'Healthcare',
+     'Nutrition',
+    ],
+  }];
+
+const mainCategories2 = [
   {
   title: 'Health',
   content:
@@ -173,7 +198,7 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
   };
 
   const initiallyCheckedMain = (category) => {
-    return selectedKeywords.has(category.title) || category.content.every((subCategory) => selectedKeywords.has(subCategory.key))
+    return selectedKeywords.has(category.title) || category.content.every((subCategory) => selectedKeywords.has(subCategory))
   }
 
   const renderHeader = (section, _, isActive) => {
@@ -207,7 +232,7 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
             { mainCategoriesText.map((subCategory) => (
               <TouchableOpacity >
                 <View style={QuestionStyles.subCategories}>
-                  <CheckBox answer={subCategory.key} initiallyChecked={selectedKeywords.has(section.title) || selectedKeywords.has(subCategory.key)} onCheck={() => onCheckSub(section,subCategory.key)} onUncheck={() => onUncheckSub(section,subCategory.key)} />
+                  <CheckBox answer={subCategory} initiallyChecked={selectedKeywords.has(section.title) || selectedKeywords.has(subCategory)} onCheck={() => onCheckSub(section,subCategory)} onUncheck={() => onUncheckSub(section,subCategory)} />
                 </View>
               </TouchableOpacity>
             ))
@@ -305,7 +330,7 @@ const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, 
               : checkboxText.map((text) => (
                   <TouchableOpacity >
                     <View style={QuestionStyles.checkboxItems}>
-                      <CheckBox answer={text.key} onCheck={onCheck} onUncheck={onUncheck} initiallyChecked={selectedKeywords.has(text.key)} />
+                      <CheckBox answer={text} onCheck={onCheck} onUncheck={onUncheck} initiallyChecked={selectedKeywords.has(text)} />
                     </View>
                   </TouchableOpacity>
                 ))
