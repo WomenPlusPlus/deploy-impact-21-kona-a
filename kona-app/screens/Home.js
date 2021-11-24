@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Text, View, Image, ScrollView, TouchableOpacity } from "react-native";
 import { GlobalStyles } from "../components/globals/GlobalStyles";
-import { QuestionStyles } from "../components/question/QuestionStyles";
-import BigButton from "../components/globals/BigButton";
+import { QuestionStyles } from "../components/locals/QuestionStyles";
+import MainButton from "../components/globals/MainButton";
 import Data from "../assets/kona_orgs1.js";
 import IconImages from "../assets/iconImages";
 import SearchBar from "../components/globals/SearchBar";
@@ -114,24 +114,24 @@ export default function Home({ navigation }) {
       </View>
       <View style={GlobalStyles.whiteContainer}>
         <View style={GlobalStyles.homeButtonsGrid}>
-        <BigButton 
+        <MainButton 
           answer="Food"
           iconName="food-variant"
           onPressWithParam={filterByMainOrSubCat} />
-        <BigButton 
+        <MainButton 
           answer="Shelter"
           iconName="home-heart" 
           onPressWithParam={filterByMainOrSubCat} />
-        <BigButton 
+        <MainButton 
           answer="Education" 
           iconName="book-open-page-variant"
           onPressWithParam={filterByMainOrSubCat} />
-        <BigButton
+        <MainButton
           answer="Health"
           iconName="medical-bag"
           onPressWithParam={filterByMainOrSubCat}
         />
-        <BigButton
+        <MainButton
           answer="Employment"
           iconName="account-hard-hat"
           onPressWithParam={filterByMainOrSubCat}
@@ -145,24 +145,25 @@ export default function Home({ navigation }) {
           <Text style={GlobalStyles.sdgTitle}>WHO NEEDS HELP:</Text>
           <Text style={GlobalStyles.helpText}>The help needed is meant to help a person that is a ...</Text>
 
-          <BigButton
+          <MainButton
             answer="Victims of domestic violence"
             onPressWithParam={filterByTargetGroup}
           />
-          <BigButton answer="Refugees" onPressWithParam={filterByTargetGroup} />
-          <BigButton
+          <MainButton answer="Refugees" onPressWithParam={filterByTargetGroup} />
+          <MainButton
             answer="Homeless People"
             onPressWithParam={filterByTargetGroup}
           />
-          <BigButton
+          <MainButton
             answer="Disabled People"
             onPressWithParam={filterByTargetGroup}
           />
-          <BigButton answer="LGBTQIA+" onPressWithParam={filterByTargetGroup} />
-          <BigButton answer="Migrants" onPressWithParam={filterByTargetGroup} />
+          <MainButton answer="LGBTQIA+" onPressWithParam={filterByTargetGroup} />
+          <MainButton answer="Migrants" onPressWithParam={filterByTargetGroup} />
           </View>
         </View>
       )}
+      {!searchQuery && (
       <View style={{backgroundColor: 'white'}}>
         <View style={QuestionStyles.allOrgsContainer}>
           <Text style={QuestionStyles.allOrgsText}>All organizations</Text>
@@ -171,7 +172,8 @@ export default function Home({ navigation }) {
           </TouchableOpacity>
         </View> 
         <OrgList orgs={ThreeOrgs}/>
-      </View>  
+      </View>
+      )}  
        {!searchQuery && (
       <View style={GlobalStyles.container}>
         <Text style={GlobalStyles.sdgTitle}>THE 17 GOALS</Text>

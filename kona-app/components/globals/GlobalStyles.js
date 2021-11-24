@@ -70,7 +70,7 @@ export const GlobalStyles = StyleSheet.create({
         textAlign: 'right',
         fontWeight: 'bold'
     },
-    bigButton: {
+    mainButton: {
       backgroundColor: '#F5F5F5',
       height: 54,
       borderRadius: 10,

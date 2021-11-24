@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import FlatButton from '../globals/Button';
 import { GlobalStyles} from '../globals/GlobalStyles';
-import { QuestionStyles } from '../question/QuestionStyles';
+import { QuestionStyles } from '../locals/QuestionStyles';
 
 const Header = () => {
     return (

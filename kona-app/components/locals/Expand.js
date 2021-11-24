@@ -3,7 +3,7 @@ import { ScrollView, Text, View, TouchableOpacity, SafeAreaView, } from 'react-n
 import Collapsible from 'react-native-collapsible';
 import { GlobalStyles } from '../globals/GlobalStyles';
 import { QuestionStyles } from './QuestionStyles';
-import BigButton from '../globals/BigButton';
+import MainButton from '../globals/MainButton';
 import CheckButton from '../globals/CheckButton';
 
 const ExpandSeeAll = ({categories, onCheck, onUncheck}) => {
