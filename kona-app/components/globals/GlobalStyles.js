@@ -266,7 +266,12 @@ export const GlobalStyles = StyleSheet.create({
       color: 'rgba(255, 255, 255, 0.45)',
       textAlign: 'center',
     },
-
+    soloWhite: {
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+      paddingHorizontal: 20,
+      paddingTop: 20,
+      paddingBottom: 40,
+    },
     background: {
       position: 'absolute',
       left: 0,
@@ -275,7 +280,6 @@ export const GlobalStyles = StyleSheet.create({
       height: 900,
       margin: -15,
     },
-
     sdgContainer: {
         flexDirection: 'column',
         paddingTop: 24,
