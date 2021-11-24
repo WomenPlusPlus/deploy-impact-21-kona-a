@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableOpacity, View, Image } from "react-native";
 import { GlobalStyles } from "./GlobalStyles";
 
-const SDGs = ({ answer, source, onPressWithParam, checked }) => {
+const SDGs = ({ answer, source, onPressWithParam }) => {
   return (
     <TouchableOpacity
       style={GlobalStyles.singleSDG}

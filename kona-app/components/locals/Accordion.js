@@ -160,7 +160,7 @@ const mainCategories = [
 ];
 
 const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, selectedKeywords}) => {
-  // Default active selector
+
   const [activeSections, setActiveSections] = useState([]);
   // MultipleSelect is for the Multiple Expand allowed
   // True: Expand multiple at a time
@@ -267,7 +267,7 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
 //MAIN ACCORDION
 const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, onCheck, onUncheck, selectedKeywords}) => {
 
-  // Ddefault active selector
+
   const [activeSections, setActiveSections] = useState([]);
   // MultipleSelect is for the Multiple Expand allowed
   // True: Expand multiple at a time
@@ -280,7 +280,6 @@ const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, 
   };
 
   const renderHeader = (section, _, isActive) => {
-    //Accordion Header view
     return (
       <Animatable.View
         duration={400}>
@@ -293,7 +292,6 @@ const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, 
   };
 
   const renderContent = (section, _, isActive) => {
-    //Accordion Content view
     const checkboxText = section.content
 
     return (
@@ -333,29 +331,17 @@ const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, 
               }
             />
           </View>
-          {/*Code for Accordion/Expandable List starts here*/}
+
           <Accordion
             activeSections={activeSections}
-            //for any default active section
             sections={CONTENT}
-            //title and content of accordion
             touchableComponent={TouchableOpacity}
-            //which type of touchable component you want
-            //It can be the following Touchables
-            //TouchableHighlight, TouchableNativeFeedback
-            //TouchableOpacity , TouchableWithoutFeedback
-            expandMultiple={multipleSelect}
-            //Do you want to expand mutiple at a time or single at a time
+            // expandMultiple={multipleSelect}
             renderHeader={renderHeader}
-            //Header Component(View) to render
             renderContent={renderContent}
-            //Content Component(View) to render
             duration={400}
-            //Duration for Collapse and expand
             onChange={setSections}
-            //setting the state of active sections
           />
-          {/*Code for Accordion/Expandable List ends here*/}
         </ScrollView>
       </View>
     </SafeAreaView>
