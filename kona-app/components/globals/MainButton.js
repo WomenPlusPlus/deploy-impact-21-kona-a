@@ -9,7 +9,7 @@ const MainButton = ({answer, iconName, onPressWithParam, checked }) => {
         <TouchableOpacity onPress={()=> onPressWithParam(answer)}>
             <View style={GlobalStyles.mainButton }>
                 {checked && <Ionicons name="checkmark-sharp" size={20} color="black" style={{marginRight: 4}}/>}
-                <MaterialCommunityIcons name={ iconName } size={24} color="#6B6B6B" style={{paddingRight: 10}}/>
+                <MaterialCommunityIcons name={ iconName } size={24} color="rgba(69, 55, 72, 1)" style={{paddingRight: 10}}/>
                 <Text style={GlobalStyles.normalText}>{ answer } </Text>
             </View>
         </TouchableOpacity>

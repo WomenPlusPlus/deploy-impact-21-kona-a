@@ -4,8 +4,10 @@ import { StyleSheet } from 'react-native';
 export const GlobalStyles = StyleSheet.create({
     container: {
         flexDirection: 'column',
-        padding: 24,
-        backgroundColor: 'rgb(242,240,240)',
+        paddingTop: 24,
+        paddingHorizontal: 24,
+        marginBottom: 15,
+        backgroundColor: '#F5DEDE',
     },
     sbWhiteContainer: {
         flexDirection: 'column',
@@ -13,7 +15,8 @@ export const GlobalStyles = StyleSheet.create({
     },
     whiteContainer: {
         flexDirection: 'column',
-        margin: 20,
+        marginHorizontal: 24,
+        marginBottom: 20, 
     },
     roseContainer: {
         backgroundColor: '#F5DEDE',
@@ -52,7 +55,7 @@ export const GlobalStyles = StyleSheet.create({
       fontFamily: 'poppins-medium',
       fontSize: 16,
       lineHeight: 24,
-      color: '#212121',
+      color: 'rgba(69, 55, 72, 1)',
     },
     card: {
         width: 100,
@@ -81,15 +84,17 @@ export const GlobalStyles = StyleSheet.create({
         fontWeight: 'bold'
     },
     mainButton: {
-      backgroundColor: '#F5F5F5',
+      backgroundColor: 'rgba(255, 246, 246, 1)',
       height: 54,
-      borderRadius: 10,
+      borderRadius: 15,
       marginVertical: 5,
       paddingVertical: 15,
       paddingHorizontal: 20,
       alignSelf: 'flex-start',
       flexDirection: 'row',
-      marginRight: 40,
+      marginRight: 10,
+      borderColor: 'rgba(66, 47, 70, 1)',
+      borderWidth: 1,
     },
     cardsContainer: {
       flexDirection: 'row',
@@ -136,11 +141,12 @@ export const GlobalStyles = StyleSheet.create({
       },
     bannerText: {
       fontFamily: 'poppins-medium',
-      fontSize: 24,
-      lineHeight: 36,
-      color: '#6B6B6B',
+      fontSize: 34,
+      lineHeight: 51,
+      color: 'rgba(69, 55, 72, 1)',
       paddingRight: 20,
-      paddingVertical: 100
+      paddingBottom: 20,
+      paddingTop: 80,
     },
     homepageContainer: {
       position: 'relative',
@@ -173,14 +179,13 @@ export const GlobalStyles = StyleSheet.create({
       paddingTop: 12
     },
     searchContainer: {
-      backgroundColor: "white",
+      backgroundColor: "#F5DEDE",
       padding: 10,
-      borderRadius: 10,
+      borderRadius: 41,
       flex: 1,
       flexDirection: "row",
       borderWidth: 1,
       borderColor: "#6B6B6B",
-      height: 52,
     },
     input: {
       width: "100%",
@@ -196,7 +201,7 @@ export const GlobalStyles = StyleSheet.create({
       paddingBottom: 10,
     },
     sdgTitle: {
-      color: '#6B6B6B',
+      color: 'rgba(69, 55, 72, 1)',
       fontWeight: 'bold',
       fontSize: 14,
       lineHeight: 24,
@@ -224,18 +229,18 @@ export const GlobalStyles = StyleSheet.create({
       flexDirection: 'row',
       flexWrap: "wrap",
       alignContent: "space-between",
-      marginTop: -50,
+      marginTop: -45,
     },
     helpText: {
       fontFamily: 'poppins-regular',
       fontSize: 18,
       lineHeight: 28,
-      color: '#212121',
+      color: 'rgba(69, 55, 72, 0.63)',
       fontWeight: '400',
       paddingVertical: 19,
     },
     homeFooter: {
-      backgroundColor: 'gray',
+      backgroundColor: 'rgba(69, 55, 72, 1)',
       paddingHorizontal: 24,
       paddingTop: 54,
       paddingBottom: 27,
@@ -260,5 +265,31 @@ export const GlobalStyles = StyleSheet.create({
       lineHeight: 18,
       color: 'rgba(255, 255, 255, 0.45)',
       textAlign: 'center',
+    },
+
+    background: {
+      position: 'absolute',
+      left: 0,
+      right: 0,
+      top: 0,
+      height: 900,
+      margin: -15,
+    },
+
+    sdgContainer: {
+        flexDirection: 'column',
+        paddingTop: 24,
+        paddingHorizontal: 24,
+        marginBottom: 15,
+        backgroundColor: 'rgba(239, 236, 232, 0.7)',
+        paddingBottom: 50,
+        marginBottom: -15,  
+    },
+    sdgText : {
+        fontFamily: 'poppins-regular',
+        fontSize: 16,
+        lineHeight: 24,
+        color: '#212121',
+        fontWeight: '400',
     }
 })
