@@ -244,7 +244,6 @@ export const GlobalStyles = StyleSheet.create({
       paddingHorizontal: 24,
       paddingTop: 54,
       paddingBottom: 27,
-      height: 500,
     },
     homeFooterText: {
       fontFamily: 'poppins-regular',
