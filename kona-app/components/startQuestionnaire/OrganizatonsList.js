@@ -9,7 +9,7 @@ const OrgList = ({orgs}) => {
     );
 
     return (
-        <SafeAreaView style={GlobalStyles.pt}>
+        <SafeAreaView>
             <View style={ GlobalStyles.cardsContainerLeft }>
                 <FlatList
                     data={orgs}

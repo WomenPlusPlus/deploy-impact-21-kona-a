@@ -18,9 +18,19 @@ export const GlobalStyles = StyleSheet.create({
         marginHorizontal: 24,
         marginBottom: 20, 
     },
-    greyContainer: {
-        backgroundColor: '#EAEAEA',
-
+    roseContainer: {
+        backgroundColor: '#F5DEDE',
+    },
+    bgWhite: {
+      backgroundColor: 'rgba(255, 255, 255, 1)',
+      padding: 10
+    },
+    count: {
+      fontFamily: 'poppins-regular',
+      fontSize: 14,
+      color: 'rgba(69, 55, 72, 0.5)',
+      paddingTop: 30,
+      paddingLeft: 24
     },
     topFilterSection: {
       flexDirection: 'row',
@@ -154,6 +164,19 @@ export const GlobalStyles = StyleSheet.create({
       fontSize: 16,
       lineHeight: 24,
       color: "#6B6B6B",
+    },
+    searchResText: {
+      fontFamily: "poppins-regular",
+      fontSize: 16,
+      lineHeight: 24,
+      color: "#453748",
+      paddingBottom: 8,
+      paddingTop:8
+    },
+    seeAllSection: {
+      display: 'flex',
+      flexDirection: 'row',
+      paddingTop: 12
     },
     searchContainer: {
       backgroundColor: "#F5DEDE",
