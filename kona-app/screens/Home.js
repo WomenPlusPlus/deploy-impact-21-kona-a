@@ -12,6 +12,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import OrgList from '../components/startQuestionnaire/OrganizatonsList';
 import FilteredBySDG from "./FilteredBySDG";
 import { color } from "react-native-elements/dist/helpers";
+import { LinearGradient } from 'expo-linear-gradient';
 
 
 export default function Home({ navigation }) {
@@ -112,6 +113,14 @@ export default function Home({ navigation }) {
           onSubmit={navigateToFilteredOrgs}
         />
       </View>
+      <View >
+      <LinearGradient
+        // Background Linear Gradient
+        colors={['rgba(255, 255, 255, 1)',
+          'rgba(255, 249, 243, 0.63)',
+          'rgba(248, 208, 171, 0.5)' ]}
+        style={GlobalStyles.background}
+      />
       <View style={GlobalStyles.whiteContainer}>
         <View style={GlobalStyles.homeButtonsGrid}>
         <MainButton 
@@ -138,10 +147,11 @@ export default function Home({ navigation }) {
         />
         </View>
       </View>
+      <View>
       {!searchQuery && (
-        <View style={GlobalStyles.greyContainer}>
           <View style={GlobalStyles.sbWhiteContainer}>
-          <MaterialIcons name="groups" size={44} color="#C4C4C4" />
+          <MaterialIcons name="groups" size={44} color="
+          rgba(69, 55, 72, 1)" />
           <Text style={GlobalStyles.sdgTitle}>WHO NEEDS HELP:</Text>
           <Text style={GlobalStyles.helpText}>The help needed is meant to help a person that is a ...</Text>
 
@@ -161,8 +171,12 @@ export default function Home({ navigation }) {
           <MainButton answer="LGBTQIA+" onPressWithParam={filterByTargetGroup} />
           <MainButton answer="Migrants" onPressWithParam={filterByTargetGroup} />
           </View>
-        </View>
+          
+          
+       
       )}
+      </View>
+      </View>
       {!searchQuery && (
       <View style={{backgroundColor: 'white'}}>
         <View style={QuestionStyles.allOrgsContainer}>
@@ -175,9 +189,10 @@ export default function Home({ navigation }) {
       </View>
       )}  
        {!searchQuery && (
-      <View style={GlobalStyles.container}>
+      <View style={GlobalStyles.sdgContainer}>
+        
         <Text style={GlobalStyles.sdgTitle}>THE 17 GOALS</Text>
-        <Text style={QuestionStyles.questionText}>
+        <Text style={GlobalStyles.sdgText}>
           The NGOs we're partnering with contribute to the Sustainable
           Development Goals
         </Text>

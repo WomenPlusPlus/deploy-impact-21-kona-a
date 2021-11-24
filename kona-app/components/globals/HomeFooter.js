@@ -9,7 +9,7 @@ const HomeFooter = () => {
             <Image  resizeMode="contain"
             style={{ width: 120, height: 50 }}
         
-            source={require('../../assets/logo_DOTS.svg')}
+            source={require('../../assets/white_logo_dots.svg')}
             />
         </View>
         <View style={GlobalStyles.ptpb}>
