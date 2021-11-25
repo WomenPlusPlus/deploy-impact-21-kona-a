@@ -23,6 +23,11 @@ const CoverStack = () => {
              component={Home}
              options={{ 
                  headerTitleAlign: 'center',
+                 headerStyle: {
+                    backgroundColor: '#F5DEDE',
+                 },
+                 headerShadowVisible: false, // applied here
+                 headerBackTitleVisible: false,
                  headerTitle: (props) => <Logo {...props} /> }}
             />
             <Stack.Screen
