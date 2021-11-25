@@ -28,6 +28,9 @@ export default function Home({ navigation }) {
     });
   }
 
+  const navigateToSearchPage = () => {
+    navigation.navigate("SearchPage")
+  }
   const filterByMainOrSubCat = (category) => (filterByFieldsAndNavigate(["MainCategory", "SubCategory"], "FilteredOrgs", category));
 
   const navigateToFilteredOrgs = () => filterByFieldsAndNavigate(["MainCategory", "SubCategory"], "FilteredOrgs", searchQuery) 
@@ -52,8 +55,9 @@ export default function Home({ navigation }) {
         style={
           searchQuery ? GlobalStyles.sbWhiteContainer : GlobalStyles.container
         }
-      >
-        {!searchQuery && (
+      > 
+  
+        
           <View style={GlobalStyles.homepageContainer}>
             <Image
               style={GlobalStyles.handImage}
@@ -67,14 +71,15 @@ export default function Home({ navigation }) {
               What do you need help with?
             </Text>
           </View>
-        )}
+    
         <SearchBar
           data={Data}
           setSearchQuery={setSearchQuery}
           onSubmit={navigateToFilteredOrgs}
+          // onPress={navigateToSearchPage}
         />
       </View>
-      <View >
+      <View>
       <LinearGradient
         // Background Linear Gradient
         colors={['rgba(255, 255, 255, 1)',
@@ -109,7 +114,7 @@ export default function Home({ navigation }) {
         </View>
       </View>
       <View>
-      {!searchQuery && (
+      
           <View style={GlobalStyles.sbWhiteContainer}>
           <MaterialIcons name="groups" size={44} color="
           rgba(69, 55, 72, 1)" />
@@ -132,10 +137,10 @@ export default function Home({ navigation }) {
           <MainButton answer="LGBTI" onPressWithParam={filterByTargetGroup} />
           <MainButton answer="Migrants" onPressWithParam={filterByTargetGroup} />
           </View>
-      )}
+     
       </View>
       </View>
-      {!searchQuery && (
+    
       <View style={{backgroundColor: 'white'}}>
         <View style={QuestionStyles.allOrgsContainer}>
           <Text style={QuestionStyles.allOrgsText}>All organizations</Text>
@@ -145,8 +150,8 @@ export default function Home({ navigation }) {
         </View> 
         <OrgList orgs={ThreeOrgs}/>
       </View>
-      )}  
-       {!searchQuery && (
+     
+      
       <View style={GlobalStyles.sdgContainer}>
         
         <Text style={GlobalStyles.sdgTitle}>THE 17 GOALS</Text>
@@ -167,7 +172,7 @@ export default function Home({ navigation }) {
           </View>
         </View>
       </View>
-       )}
+       
       <View style={GlobalStyles.homeFooter}>
         <HomeFooter />
       </View>
