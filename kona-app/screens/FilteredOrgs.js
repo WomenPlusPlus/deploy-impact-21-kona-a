@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import OrgList from '../components/organizations/OrganizatonsList';
 import Filter from '../screens/Filter';
 import { View, ScrollView } from 'react-native';
-import Data from '../assets/kona_orgs1.js';
 import NumberOrgs from '../components/locals/NumberOrgs';
 import Footer from "../components/globals/Footer";
 import { GlobalStyles } from '../components/globals/GlobalStyles';

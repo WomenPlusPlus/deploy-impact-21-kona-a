@@ -3,7 +3,7 @@ import { Text, View, Image, ScrollView, TouchableOpacity } from "react-native";
 import { GlobalStyles } from "../components/globals/GlobalStyles";
 import { QuestionStyles } from "../components/locals/QuestionStyles";
 import MainButton from "../components/globals/MainButton";
-import Data from "../assets/kona_orgs1.js";
+import Data from "../assets/kona_orgs.json";
 import IconImages from "../assets/iconImages";
 import SearchBar from "../components/globals/SearchBar";
 import HomeFooter from "../components/globals/HomeFooter";
@@ -13,74 +13,35 @@ import OrgList from '../components/organizations/OrganizatonsList';
 import FilteredBySDG from "./FilteredBySDG";
 import { color } from "react-native-elements/dist/helpers";
 import { LinearGradient } from 'expo-linear-gradient';
+import { filterByKeywordInAnyField } from "../components/globals/FilterUtils";
 
 
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredOrgsSearch = Data.filter((org) => {
-    if (org["MainCategory"].toUpperCase().includes(searchQuery.toUpperCase()) ||
-        org["SubCategory"].toUpperCase().includes(searchQuery.toUpperCase())) {
-      return org;
-    }
-  });
+  const filterByFieldsAndNavigate = (fields, screen, keyword) => {
+    const filteredOrgs = filterByKeywordInAnyField(Data, fields, keyword);
 
-  const navigateToFilteredOrgs = () => {
-    navigation.navigate("FilteredOrgs", {
-      orgs: filteredOrgsSearch,
-      filter: searchQuery,
-    });
-  };
-
-  const filterBy = (field, keyword) => {
-    const filteredOrgs = Data.filter((org) => {
-      if (org[field].includes(keyword)) {
-        return org;
-      }
-    });
-
-    navigation.navigate("FilteredOrgs", {
-      orgs: filteredOrgs,
-      filter: keyword,
-    });
-  };
-
-  const filterBySDG = (field, keyword) => {
-    const FilteredBySDG = Data.filter((org) => {
-      if (org[field].includes(keyword)) {
-        return org;
-      }
-    });
-
-    navigation.navigate("FilteredBySDG", {
-      orgs: FilteredBySDG,
-    });
-  };
-
-  const filterByCategory = (field, field2, keyword) => {
-    const filteredOrgs = Data.filter((org) => {
-      if ((org[field].toUpperCase().includes((keyword).toUpperCase())) || (org[field2].toUpperCase().includes((keyword).toUpperCase()))) {
-        return org;
-      }
-    });
-
-    navigation.navigate("FilteredOrgs", {
+    navigation.navigate(screen, {
       orgs: filteredOrgs,
       filter: keyword,
     });
   }
 
-  const filterByMainOrSubCat = (category) => (filterByCategory("MainCategory", "SubCategory", category))
+  const filterByMainOrSubCat = (category) => (filterByFieldsAndNavigate(["MainCategory", "SubCategory"], "FilteredOrgs", category));
 
-  const filterByTargetGroup = (category) => filterBy("TargetGroup", category) 
+  const navigateToFilteredOrgs = () => filterByFieldsAndNavigate(["MainCategory", "SubCategory"], "FilteredOrgs", searchQuery) 
 
-  const filterBySDGs = (category) => filterBySDG("SDG", category);
+  const filterByTargetGroup = (category) => filterByFieldsAndNavigate(["TargetGroup", "SubTargetGroup"], "FilteredOrgs", category) 
+
+  const filterBySDGs = (category) =>  filterByFieldsAndNavigate(["SDG"], "FilteredBySDG", category);
 
   const ThreeOrgs = Data.slice(0,3);
 
   const Arrow = '\u2192';
  
   const NoFilter = new Set();
+  
   const navigateToAccordion = () => {
     navigation.navigate('Accordion', NoFilter )
   };
@@ -168,12 +129,9 @@ export default function Home({ navigation }) {
             answer="Disabled People"
             onPressWithParam={filterByTargetGroup}
           />
-          <MainButton answer="LGBTQIA+" onPressWithParam={filterByTargetGroup} />
+          <MainButton answer="LGBTI" onPressWithParam={filterByTargetGroup} />
           <MainButton answer="Migrants" onPressWithParam={filterByTargetGroup} />
           </View>
-          
-          
-       
       )}
       </View>
       </View>

@@ -7,10 +7,11 @@ import { QuestionStyles } from '../components/locals/QuestionStyles';
 import FilterButton from '../components/locals/FilterButton';
 import ExpandSeeAll from '../components/locals/Expand';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Data from '../assets/kona_orgs1.js';
+import Data from '../assets/kona_orgs.json';
 import AccordionFilter from '../components/locals/Accordion';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons } from '@expo/vector-icons';
+import { filterByKeywordInAnyField } from '../components/globals/FilterUtils';
 
 export default function Filter({ filterKeyword, setFilteredOrgs }) {
   const initialKeywordSet = new Set();
@@ -33,19 +34,9 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
   const remainingMainCategories = filterBy(filterKeyword, mainCategories);
   const remainingTargetGroups = filterBy('Refugees', targetGroups);
 
-  const filterByOneOfThreeCategories = (orgs, keyword) => {
-    const keywordLowercase = keyword.toLowerCase();
-    const newOrgs = orgs.filter( (org) =>
-      org['MainCategory'].toLowerCase().includes(keywordLowercase) ||
-      org['SubCategory'].toLowerCase().includes(keywordLowercase) ||
-      org['TargetGroup'].toLowerCase().includes(keywordLowercase)
-    );
-    return newOrgs;
-  }
-
   const filterByKeywords = (keywords) => {
     let filteredData = Data;
-    keywords.forEach((keyword) => filteredData = filterByOneOfThreeCategories(filteredData, keyword) );
+    keywords.forEach((keyword) => filteredData = filterByKeywordInAnyField(filteredData,['MainCategory', 'SubCategory', 'TargetGroup','SubTargetGroup'], keyword) );
     setFilteredOrgs(filteredData);
   }
 

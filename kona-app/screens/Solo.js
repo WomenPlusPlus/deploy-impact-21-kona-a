@@ -7,15 +7,16 @@ import { QuestionStyles } from '../components/locals/QuestionStyles';
 import Footer from "../components/globals/Footer";
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import { LinearGradient } from 'expo-linear-gradient';
+import { LogoMappings } from '../assets/LogoMappings';
 
 export default function Solo ({route}) {
-    console.log(route.params)
-    const item = route.params
+    const item = route.params;
+    const logo = LogoMappings[item.ID];
 
     return (
         <ScrollView>
             <View style= {QuestionStyles.soloImageContainer}>
-                <Image source={item.Logo} style={ QuestionStyles.soloImageContainer } resizeMode="contain"></Image>
+                <Image source={logo} style={ QuestionStyles.soloImageContainer } resizeMode="contain"></Image>
             </View>
                 <View style={GlobalStyles.soloWhite}>
                     <Text style={ QuestionStyles.name}>{item.Name}</Text>

@@ -3,7 +3,7 @@ import { Text, View, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import ResultsButton from '../components/locals/ResultsButton';
 import { QuestionStyles } from '../components/locals/QuestionStyles';
-import Data from '../assets/kona_orgs1.js';
+import Data from '../assets/kona_orgs.json';
 import AccordionFilter from '../components/locals/Accordion';
 import Footer from "../components/globals/Footer";
 
@@ -53,8 +53,8 @@ export default function Accordion({ route, navigation }) {
     const newSelectedKeywords = new Set(selectedKeywords);
     newSelectedKeywords.add(subCategoryTitle);
 
-    if (category.content.every((subCategory) => newSelectedKeywords.has(subCategory.key))) {
-      category.content.forEach((subCategory) => newSelectedKeywords.delete(subCategory.key));
+    if (category.content.every((subCategory) => newSelectedKeywords.has(subCategory))) {
+      category.content.forEach((subCategory) => newSelectedKeywords.delete(subCategory));
       newSelectedKeywords.add(category.title);
     }
     setSelectedKeywords(newSelectedKeywords);
@@ -64,7 +64,7 @@ export default function Accordion({ route, navigation }) {
   const onCheckMainHandler = (category) => {
     const newSelectedKeywords = new Set(selectedKeywords);
     newSelectedKeywords.add(category.title);
-    category.content.forEach((subCategory) => {newSelectedKeywords.delete(subCategory.key)});
+    category.content.forEach((subCategory) => {newSelectedKeywords.delete(subCategory)});
     setSelectedKeywords(newSelectedKeywords);
   }
 
@@ -72,7 +72,7 @@ export default function Accordion({ route, navigation }) {
     const newSelectedKeywords = new Set(selectedKeywords);
     if (selectedKeywords.has(category.title)) {
       newSelectedKeywords.delete(category.title);
-      category.content.forEach((subCategory) => newSelectedKeywords.add(subCategory.key));
+      category.content.forEach((subCategory) => newSelectedKeywords.add(subCategory));
     }
     newSelectedKeywords.delete(subCategoryTitle);
     setSelectedKeywords(newSelectedKeywords);
