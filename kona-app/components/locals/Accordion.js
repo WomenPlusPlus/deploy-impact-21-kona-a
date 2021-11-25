@@ -78,14 +78,14 @@ const mainCategories = [
     title: 'Migration',
     content:
       [
-        'Refugee', 'Asylum', 'Integration', 'Citizenship'
+        'Refugee', 'Asylum', 'Reintegration', 'Citizenship'
       ],
     }, 
     {
     title: 'Legal',
     content:
       [
-        "Women's Rights", "Children's Rights", "Human Trafficking", "Security", "Child Protection", "Reintegration", "Discrimination", "Advisory", "Victim Advocacy", "Victim"
+        "Women's Rights", "Children's Rights", "Human Rights", "Human Trafficking", "Child Protection", "Victim Advocacy", "Victim of Violence"
       ]
     }, 
   {
@@ -105,11 +105,11 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
   const [multipleSelect, setMultipleSelect] = useState(false);
 
   const setSections = (sections) => {
-    console.log("Active sections:");
-    console.log(activeSections);
-    console.log("sections:");
-    console.log(sections);
-    setActiveSections(sections);
+    // console.log("Active sections:");
+    // console.log(activeSections);
+    // console.log("sections:");
+    // console.log(sections);
+    // setActiveSections(sections);
     // return;
     //setting up a active section state
     setActiveSections(sections.includes(undefined) ? [] : sections);
