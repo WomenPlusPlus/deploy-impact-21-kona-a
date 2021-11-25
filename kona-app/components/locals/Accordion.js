@@ -9,59 +9,32 @@ import Collapsible from 'react-native-collapsible';
 import CheckBox from '../globals/CheckBox';
 
 const CONTENT = [
-  {
-    title: 'Area of Support'
-  },
-  {
-    title: 'People to Support',
-    content:
-      [
-        'Refugees', 'Homeless People', 'LGBTQIA+'
-      ]
-  }];
-
-const CONTENT2 = [
 {
   title: 'Area of Support'
 },
 {
   title: 'People to Support',
-  content:
-    [
-      {key: 'Refugees'},
-      {key: 'Homeless People'},
-      {key: 'LGBTQIA+'},
-    ]
+  content: ['Refugees', 'Homeless People', 'LGBTQIA+']
 },
 {
   title: 'Gender',
   content:
     [
-      {key: 'Woman'},
-      {key: 'Man'},
-      {key: 'Non-binary'},
-      {key: 'Other'},
-    ],
-    value: false
+      'Woman', 'Man', 'Non-binary', 'Other'
+    ]
 },
 {
   title: 'Age Group',
   content:
-    [
-      {key: 'Children'},
-      {key: 'Youth'},
-      {key: 'Adult'},
-    ],
-    value: false
+    [ 'Children', 'Youth', 'Adult'
+    ]
 },
 {
   title: 'Location',
   content:
     [
-      {key: 'Country'},
-      {key: 'City'},
-    ],
-    value: false
+      'Country', 'City'
+    ]
 },
 ];
 
@@ -69,92 +42,50 @@ const mainCategories = [
   {
   title: 'Health',
   content:
-    ['Disable',
-     'Sex',
-     'Maternal',
-     'Disease',
-     'Healthcare',
-     'Nutrition',
-    ],
-  }];
-
-const mainCategories2 = [
-  {
-  title: 'Health',
-  content:
     [
-      {key: 'Disable'},
-      {key: 'Sex'},
-      {key: 'Maternal'},
-      {key: 'Disease'},
-      {key: 'Healthcare'},
-      {key: 'Nutrition'},
-    ],
-    value: false
+      'Disable',
+      'Sex',
+      'Maternal',
+      'Disease',
+      'Healthcare',
+      'Nutrition'
+    ]
   },
   {
   title: 'Education',
   content:
-    [
-      {key: 'Training'},
-      {key: 'Finance'},
-      {key: 'Facilities'},
-      {key: 'AIDS'},
-      {key: 'Entrepreneur'},
-    ],
-    value: false
+    [ 'Training', 'Finance', 'Facilities', 'AIDS', 'Entrepreneur'
+    ]
   },
   {
   title: 'Social Services',
   content:
     [
-      {key: 'Violence'},
-      {key: 'Victim'},
-      {key: 'Safety'},
-      {key: 'Poverty'},
-      {key: 'Sanitation'},
-      {key: 'Water'},
-      {key: 'Protection'},
-      {key: 'LBGT'},
-    ],
-    value: false
+      'Violence', 'Victim', 'Safety', 'Poverty', 'Sanitation', 'Water', 'Protection', 'LBGT'
+    ]
   },
   {
   title: 'Agriculture',
   content:
     [
-      {key: 'Technology'},
-      {key: 'Education'},
-      {key: 'Seed Donation'},
-      {key: 'Agriculture Development'},
-    ],
-    value: false
+      'Technology',
+      'Education',
+      'Seed Donation',
+      'Agriculture Development',
+    ]
   },
   {
   title: 'Legal',
   content:
     [
-      {key: "Women's Rights"},
-      {key: "Children's Rights"},
-      {key: "Human Trafficking"},
-      {key: "Security"},
-      {key: "Child Protection"},
-      {key: "Reintegration"},
-      {key: "Discrimination"},
-      {key: "Advisory"},
-      {key: "Victim Advocacy"},
-      {key: "Victim"},
-    ],
-    value: false
+      "Women's Rights", "Children's Rights", "Human Trafficking", "Security", "Child Protection", "Reintegration", "Discrimination", "Advisory", "Victim Advocacy", "Victim"
+    ]
   },
   {
   title: 'Migration',
   content:
     [
-      {key: 'Refugee'},
-      {key: 'Asylum'},
-      {key: 'Integration'},
-      {key: 'Citizenship'},
+      'Refugee', 'Asylum', 'Integration', 'Citizenship'
     ],
     value: true
   },
@@ -162,25 +93,15 @@ const mainCategories2 = [
   title: 'Employment',
   content:
     [
-      {key: 'Entrepreneur'},
-      {key: 'Technical'},
-      {key: 'Partnerships'},
-      {key: 'Finance'},
-      {key: 'Apprenticeship'},
-    ],
-    value: false
+      'Entrepreneur', 'Technical', 'Partnerships', 'Finance', 'Apprenticeship'
+    ]
   },
   {
   title: 'Crisis',
   content:
     [
-      {key: 'Humanitarian' },
-      {key: 'Emergencies'},
-      {key: 'Disaster'},
-      {key: 'Human Trafficking'},
-      {key: 'War'},
-    ],
-    value: false
+      'Humanitarian',  'Emergencies',  'Disaster',  'Human Trafficking',  'War'
+    ]
   },
 ];
 
