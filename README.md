@@ -18,10 +18,7 @@
 ## 🧐  About 
 
 Kona Connect’s legal team, together with students and expert volunteers from around the world, are developing a tool to connect people in need to 
-the organisations best equipped to help them. This tool – a legal aid chatbot – accessible 24/7 through any smartphone device, will automatically 
-guide its users, whilst simultaneously reducing aid agencies’ staggering workloads, freeing up time to help more individuals.
-
-This has been a 6 week volunteer project in collaboration with Kona-Connect and Women++. The team's goal is to develop an application that will connect Sengalese people to various NGO's and organizations that can provide assistance for specific needs.
+the organisations best equipped to help them. This has been a 6 week volunteer project in collaboration with Kona-Connect and Women++. The team's goal is to develop an application that will connect Sengalese people to various NGO's and organizations that can provide assistance for specific needs.
 
 
 ## 🔺 Dependencies
@@ -109,6 +106,10 @@ kona-app
     |   modified_orgs.gs
 └─── docs
     │   technical_specification.md
+└───src 
+│    │   
+│    └───test
+│       
 
 ```
 
