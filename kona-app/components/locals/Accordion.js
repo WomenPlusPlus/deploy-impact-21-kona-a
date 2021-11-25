@@ -40,67 +40,58 @@ const CONTENT = [
 
 const mainCategories = [
   {
+    title: 'Crisis',
+    content:
+      [
+        'Humanitarian',  'Emergencies',  'Disaster',  'Human Trafficking',  'War'
+      ]
+    },
+  {
   title: 'Health',
   content:
     [
-      'Disable',
-      'Sex',
-      'Maternal',
-      'Disease',
-      'Healthcare',
-      'Nutrition'
+      'Maternal care', 'Disease', 'HIV/AIDS', 'Disability', 'Sexual Health', 'Nutrition', 'Healthcare', 'Mental Health'
     ]
   },
+  {
+    title: 'Social Services',
+    content:
+      [
+        'Shelter', 'Water', 'Food', 'Protection', 'Victim of violence',  'Safety',  'Poverty', 'Sanitation', 'LBGT'
+      ]
+    },
   {
   title: 'Education',
   content:
-    [ 'Training', 'Finance', 'Facilities', 'AIDS', 'Entrepreneur'
+    [ 
+      'Training', 'Financial Support', 'Facilities', 'Entrepreneurship'
     ]
-  },
-  {
-  title: 'Social Services',
-  content:
-    [
-      'Violence', 'Victim', 'Safety', 'Poverty', 'Sanitation', 'Water', 'Protection', 'LBGT'
-    ]
-  },
-  {
-  title: 'Agriculture',
-  content:
-    [
-      'Technology',
-      'Education',
-      'Seed Donation',
-      'Agriculture Development',
-    ]
-  },
-  {
-  title: 'Legal',
-  content:
-    [
-      "Women's Rights", "Children's Rights", "Human Trafficking", "Security", "Child Protection", "Reintegration", "Discrimination", "Advisory", "Victim Advocacy", "Victim"
-    ]
-  },
-  {
-  title: 'Migration',
-  content:
-    [
-      'Refugee', 'Asylum', 'Integration', 'Citizenship'
-    ],
-    value: true
   },
   {
   title: 'Employment',
   content:
     [
-      'Entrepreneur', 'Technical', 'Partnerships', 'Finance', 'Apprenticeship'
+      'Vocational Training', 'Entrepreneurship', 'Technical Support', 'Partnerships', 'Financial Support', 'Apprenticeship'
     ]
   },
   {
-  title: 'Crisis',
+    title: 'Migration',
+    content:
+      [
+        'Refugee', 'Asylum', 'Integration', 'Citizenship'
+      ],
+    }, 
+    {
+    title: 'Legal',
+    content:
+      [
+        "Women's Rights", "Children's Rights", "Human Trafficking", "Security", "Child Protection", "Reintegration", "Discrimination", "Advisory", "Victim Advocacy", "Victim"
+      ]
+    }, 
+  {
+  title: 'Agriculture',
   content:
-    [
-      'Humanitarian',  'Emergencies',  'Disaster',  'Human Trafficking',  'War'
+    [ 'Technology', 'Education', 'Seed Donation', 'Agriculture Development',
     ]
   },
 ];
@@ -114,6 +105,12 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
   const [multipleSelect, setMultipleSelect] = useState(false);
 
   const setSections = (sections) => {
+    console.log("Active sections:");
+    console.log(activeSections);
+    console.log("sections:");
+    console.log(sections);
+    setActiveSections(sections);
+    // return;
     //setting up a active section state
     setActiveSections(sections.includes(undefined) ? [] : sections);
   };
@@ -200,6 +197,7 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
             duration={400}
             //Duration for Collapse and expand
             onChange={setSections}
+            
             //setting the state of active sections
           />
           {/*Code for Accordion/Expandable List ends here*/}
@@ -221,8 +219,12 @@ const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, 
   const [multipleSelect, setMultipleSelect] = useState(false);
 
   const setSections = (sections) => {
+    console.log("123");
+    console.log(activeSections);
+    console.log(sections);
+    setActiveSections(sections);
     //setting up a active section state
-    setActiveSections(sections.includes(undefined) ? [] : sections);
+    // setActiveSections(sections.includes(undefined) ? [] : sections);
   };
 
   const renderHeader = (section, _, isActive) => {

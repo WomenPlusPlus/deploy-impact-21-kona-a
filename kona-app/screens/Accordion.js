@@ -3,7 +3,7 @@ import { Text, View, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import ResultsButton from '../components/locals/ResultsButton';
 import { QuestionStyles } from '../components/locals/QuestionStyles';
-import Data from '../assets/kona_orgs1.js';
+import Data from '../assets/kona_orgs.json';
 import AccordionFilter from '../components/locals/Accordion';
 import Footer from "../components/globals/Footer";
 

@@ -3,7 +3,7 @@ import { Text, View, Image, ScrollView, TouchableOpacity } from "react-native";
 import { GlobalStyles } from "../components/globals/GlobalStyles";
 import { QuestionStyles } from "../components/locals/QuestionStyles";
 import MainButton from "../components/globals/MainButton";
-import Data from "../assets/kona_orgs1.js";
+import Data from "../assets/kona_orgs.json";
 import IconImages from "../assets/iconImages";
 import SearchBar from "../components/globals/SearchBar";
 import HomeFooter from "../components/globals/HomeFooter";
@@ -13,17 +13,14 @@ import OrgList from '../components/organizations/OrganizatonsList';
 import FilteredBySDG from "./FilteredBySDG";
 import { color } from "react-native-elements/dist/helpers";
 import { LinearGradient } from 'expo-linear-gradient';
+import { filterByKeywordInAnyField } from "../components/globals/FilterUtils";
 
 
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filterByFieldsAndNavigate = (fields, screen, keyword) => {
-    const filteredOrgs = Data.filter((org) => {
-      if (fields.find( (field) => org[field].toUpperCase().includes((keyword).toUpperCase()))) {
-        return org;
-      }
-    });
+    const filteredOrgs = filterByKeywordInAnyField(Data, fields, keyword);
 
     navigation.navigate(screen, {
       orgs: filteredOrgs,
@@ -132,12 +129,9 @@ export default function Home({ navigation }) {
             answer="Disabled People"
             onPressWithParam={filterByTargetGroup}
           />
-          <MainButton answer="LGBTQIA+" onPressWithParam={filterByTargetGroup} />
+          <MainButton answer="LGBTI" onPressWithParam={filterByTargetGroup} />
           <MainButton answer="Migrants" onPressWithParam={filterByTargetGroup} />
           </View>
-          
-          
-       
       )}
       </View>
       </View>
