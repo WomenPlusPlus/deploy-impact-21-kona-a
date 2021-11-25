@@ -6,12 +6,14 @@ import { Entypo } from '@expo/vector-icons';
 import { useState } from 'react';
 import { Storage } from 'expo-storage';
 import { useNavigation } from '@react-navigation/native';
+import { LogoMappings } from '../../assets/LogoMappings.js';
 
 const OrgCard = ({item}) => {
 
     const storageKey = item.Name;
     const [save, setSaved] = useState(false);
     const navigation = useNavigation();
+    const logo = LogoMappings[item.ID];
 
     Storage.getItem({ key: `${storageKey}` }).then((storedValue) => {
         const newSaveValue = !!storedValue;
@@ -46,7 +48,7 @@ const OrgCard = ({item}) => {
                         <Text style={QuestionStyles.questionText, {color: 'white'}}>Refugees</Text>
                     </View>
                     <View style={ QuestionStyles.imageContainer}>
-                        <Image source={item.Logo} style={QuestionStyles.orgImage} resizeMode="contain"></Image>
+                        <Image source={logo} style={QuestionStyles.orgImage} resizeMode="contain"></Image>
                     </View>
                 </TouchableOpacity>
                 <View style={QuestionStyles.orgTextContainer}>

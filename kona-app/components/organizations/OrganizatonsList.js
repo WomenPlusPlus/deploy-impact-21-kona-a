@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, FlatList, SafeAreaView} from 'react-native';
 import { GlobalStyles } from '../globals/GlobalStyles';
-import OrgCard from './OrgCard'
+import OrgCard from './OrgCard';
 
 const OrgList = ({orgs}) => {
     const renderItem = ({item}) => (
