@@ -49,6 +49,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
     setFilteredOrgs(filteredData);
   }
 
+  
   const onCheckHandler = (answer) => {
     const newSelectedKeywords = new Set(selectedKeywords);
     newSelectedKeywords.add(answer);
@@ -69,7 +70,25 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
     navigation.navigate('Accordion', selectedKeywords )
   };
 
+  const onSearchButtonCheck = (filterKeyword) => {
+    switch(filterKeyword) {
+     case "Food":
+      return "food-variant";
+     case "Shelter":
+      return "home-heart";
+     case "Education":
+       return "book-open-page-variant";
+     case "Health":
+       return "medical-bag";
+     case "Employment":
+       return "account-hard-hat"
+     default:
+      return ""
+    }
+   }
+  
   console.log(selectedKeywords);
+  console.log(filterKeyword)
 
   return (
     <View>
@@ -81,7 +100,10 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
             <Text style={GlobalStyles.searchResText}>You searched for:</Text>            
           </View>
           <View style={QuestionStyles.flexDirectionColumn}>
-            <CheckButton answer={filterKeyword} onCheck={onCheckHandler} onUncheck={onUncheckHandler} initiallyChecked />
+            <CheckButton 
+            
+            answer={filterKeyword} 
+            iconName={onSearchButtonCheck(filterKeyword)}onCheck={onCheckHandler} onUncheck={onUncheckHandler} initiallyChecked />
             {/* <ExpandSeeAll categories={remainingMainCategories}  onCheck={onCheckHandler} onUncheck={onUncheckHandler}/> */}
           </View>
           <Text style={GlobalStyles.searchResText}>Add more filters to narrow down the results:</Text>
