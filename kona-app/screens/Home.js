@@ -74,8 +74,10 @@ export default function Home({ navigation }) {
     
         <SearchBar
           data={Data}
-          setSearchQuery={setSearchQuery}
+          // key="homePage"
+          // setSearchQuery={setSearchQuery}
           onSubmit={navigateToFilteredOrgs}
+          navigateOnChange
           // onPress={navigateToSearchPage}
         />
       </View>
