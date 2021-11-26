@@ -12,6 +12,7 @@ export const GlobalStyles = StyleSheet.create({
     sbWhiteContainer: {
         flexDirection: 'column',
         padding: 24,
+        backgroundColor: 'white',
     },
     whiteContainer: {
         flexDirection: 'column',
@@ -180,7 +181,6 @@ export const GlobalStyles = StyleSheet.create({
       paddingTop: 12
     },
     searchContainer: {
-      backgroundColor: "#F5DEDE",
       padding: 10,
       borderRadius: 41,
       flex: 1,
