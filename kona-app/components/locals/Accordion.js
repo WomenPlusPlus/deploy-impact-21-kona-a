@@ -4,8 +4,7 @@ import * as Animatable from 'react-native-animatable';
 import Accordion from 'react-native-collapsible/Accordion';
 import { GlobalStyles } from '../globals/GlobalStyles';
 import { LocalStyles } from './LocalStyles';
-import { AntDesign, Feather } from '@expo/vector-icons';
-import Collapsible from 'react-native-collapsible';
+import { AntDesign } from '@expo/vector-icons';
 import CheckBox from '../globals/CheckBox';
 
 const CONTENT = [
@@ -166,15 +165,15 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
       <View style={GlobalStyles.whiteContainer}>
         <ScrollView>
           <View>
-            <Text style={GlobalStyles.normalText}>
+            {/* <Text style={GlobalStyles.normalText}>
               Multiple Expand Allowed?
-            </Text>
-            <Switch
+            </Text> */}
+            {/* <Switch
               value={multipleSelect}
               onValueChange={(multipleSelect) =>
                 setMultipleSelect(multipleSelect)
               }
-            />
+            /> */}
           </View>
           {/*Code for Accordion/Expandable List starts here*/}
           <Accordion
@@ -268,7 +267,7 @@ const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, 
     <SafeAreaView>
       <View style={GlobalStyles.whiteContainer}>
         <ScrollView>
-          <View>
+          {/* <View>
             <Text style={GlobalStyles.normalText}>
               Multiple Expand Allowed?
             </Text>
@@ -278,7 +277,7 @@ const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, 
                 setMultipleSelect(multipleSelect)
               }
             />
-          </View>
+          </View> */}
 
           <Accordion
             activeSections={activeSections}
