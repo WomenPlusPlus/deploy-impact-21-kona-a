@@ -10,20 +10,8 @@ import { filterByKeywordInAnyField } from '../components/globals/FilterUtils';
 export default function Accordion({ route, navigation }) {
 
   const receivedKeywords = route.params;
-  console.log("We received this from the Filtered Orgs:")
-  console.log(receivedKeywords);
 
   const [selectedKeywords, setSelectedKeywords] = useState(receivedKeywords);
-
-  // const targetGroups = ['Victims of domestic Violence', 'Refugees', 'Homeless People', 'Disabled People', 'LGBTQIA+', 'Migrants']
-  // const filterBy = (selectedCat, buttonNames) => {
-  //   const filteredCats = buttonNames.filter((cat) => {
-  //     if (cat != selectedCat) {
-  //       return cat
-  //     }
-  //   });
-  //   return filteredCats
-  // };
 
   const filterByOneOfThreeCategories = (orgs, keyword) => {
     const keywordUppercase = keyword.toUpperCase();

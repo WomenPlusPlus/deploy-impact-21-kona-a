@@ -27,7 +27,7 @@ const CoverStack = () => {
                  headerStyle: {
                     backgroundColor: '#F5DEDE',
                  },
-                 headerShadowVisible: false, // applied here
+                 headerShadowVisible: false, 
                  headerBackTitleVisible: false,
                  headerTitle: (props) => <Logo {...props} /> }}
             />

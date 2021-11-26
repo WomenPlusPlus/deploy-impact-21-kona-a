@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { ScrollView, Text, View, TouchableOpacity, SafeAreaView, } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 import { GlobalStyles } from '../globals/GlobalStyles';
-import { LocalStyles } from './LocalStyles';
-import MainButton from '../globals/MainButton';
 import CheckButton from '../globals/CheckButton';
 
 const ExpandSeeAll = ({categories, onCheck, onUncheck}) => {
@@ -14,8 +12,6 @@ const ExpandSeeAll = ({categories, onCheck, onUncheck}) => {
   };
 
   const buttonNames = categories
-
-  // const selectedButton = (answer) => {console.log(answer)}
 
   return (
     <SafeAreaView>
@@ -41,4 +37,3 @@ const ExpandSeeAll = ({categories, onCheck, onUncheck}) => {
 };
 
 export default ExpandSeeAll;
-

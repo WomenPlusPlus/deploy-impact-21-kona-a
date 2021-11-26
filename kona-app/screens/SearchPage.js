@@ -31,10 +31,8 @@ export default function SearchPage({route, navigation}) {
       <ScrollView>
       <View style={GlobalStyles.bgWhite, GlobalStyles.sbWhiteContainer}>
         <View>
-        <Text style={[GlobalStyles.normalText, GlobalStyles.ptpb]}>What do you need help with?</Text>
-        
-       
-            <SearchBar style={{backgroundColor: "white"}} initialSearchQuery={route.params} onSubmit={navigateToFilteredOrgs} autoFocus /*key="searchPage"*//>  
+        <Text style={[GlobalStyles.normalText, GlobalStyles.ptpb]}>What do you need help with?</Text> 
+        <SearchBar style={{backgroundColor: "white"}} initialSearchQuery={route.params} onSubmit={navigateToFilteredOrgs} autoFocus />  
             </View>
         <View style={{marginTop: -30}}>
         <MainButton 
