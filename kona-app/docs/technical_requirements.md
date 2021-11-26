@@ -4,7 +4,7 @@
 ## Mobile App Objectives
 The Dots Application was created to bridge the gap between people in need to organizations that can offer assistance within the Senegal region.
 The application was created because it was difficult for people to find the correct organizations to help them with specific problems.
-A mobile application will ask a series of questions that will guide the user to a list of organizations that can offer assistance for their specific problem.
+A mobile application will uses filters that will guide users to the organizations most suited to their needs.
 
 ## Special Considerations
 * 50% of Kona's users are illiterate, therefore app must have icons, audio, and easy to understand language that will help to guide the user
@@ -46,7 +46,7 @@ This structure allowed the development team to filter on specific organizations 
   7. Migration
   8. Crisis
 
-<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/categories.png" alt="Organization Categories">
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/updated_catagories.png" alt="Organization Categories">
 
 We have found 140 subcategories within the data. It is my recommendation that these subcatagories are transformed to fall into similar groups so that the data can be filtered in a more maintainable way. An example of this would be to group synonyms such as "War" and "Armed Conflict" into the same group. By doing this, when a new organization joins Dots, they can simply tag themselves and the organization will become searchable to the user.
 
@@ -56,14 +56,21 @@ Crisis is a special category that encompasses natural disasters, war, and other 
 
 Two graphs were created that show what are the most popular topics within the Dots ecosystem. The graphs tell us that the organizations most cater to Social Services, Education, and Health. The people that are supported most frequently are children and youth. Youth is a category that encompasses people in the age ranges of 12-20 that are capable of having some capacity for self autonomy, while children are dependent on their caretakers for all of their needs
 
-<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/category_graph.png" alt="Frequency of Topics within all Organizations">
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/frequency_of_catagories.png" alt="Frequency of Topics within all Organizations">
 
 
-<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/user_graph.png" alt="Frequency of User Groups within all Organizations">
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/frequency_of_sub_target_group.png" alt="Frequency of User Types within all Organizations">
 
+For more graphs, and refrences to how we created these visualizations please refer to:
+<a href="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/tree/main/kona-app/data/data_transformation">The Data Transformation Directory text</a>
 
 ## Maintenance needs 
 * Maintenance will be performed by Kona
+
+## Lessons Learned and What We Would do Differently
+We originaly used expo and a JSON file to keep the application lightweight. One of the issues we ran into was adding images along with the data from the JSON file. This was tricky to do without adding the images to the JSON file, which is not good if you ever want to modify the data in the future. If we had to do it over again we would have created a proper relational database as it is much easier to work with 
+
+Additionally, all of the catagorization was performed manually, which is error prone and extremely time consuming. If we had to do it over again we would have created a NLP model that found the top 3 catagories for each organization and created the catagories this way. The NLP model would have been much faster and probably more accurate. As mentioned below, having a set list of catagories and having each organization tag themselves would be even better than NLP. 
  
  ## Future Work
 * Admin panel:
@@ -75,3 +82,6 @@ Two graphs were created that show what are the most popular topics within the Do
 * The app should delete user history after X amount of time. In the cases of domestic abuse it could be harmful to the user to save information
 * Language setting button that can change the language from French to the other primary languages spoken in Senegal.
 * In order to develop the database, the PO or the organization itself, should tag their objectives in accordance with the categories that exist within the data, this will make the data easier to search and display on to the user.
+
+* Data will be updated and modified by using an Azure pipeline as referenced in the diagram below
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/data_flow_chart.png" alt= "Data Updating and Modification in Azure">
