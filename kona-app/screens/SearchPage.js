@@ -1,11 +1,13 @@
 import React from "react"; 
 import { StackRouter } from "react-navigation";
 import SearchBar from "../components/globals/SearchBar";
+import Footer from "../components/globals/Footer";
 import { Text, View } from "react-native";
 import { GlobalStyles } from "../components/globals/GlobalStyles";
 import { filterByKeywordInAnyField } from "../components/globals/FilterUtils";
 import MainButton from "../components/globals/MainButton";
 import Data from "../data/kona_orgs.json";
+import { ScrollView } from "react-native-gesture-handler";
 
 export default function SearchPage({route, navigation}) {
 
@@ -25,14 +27,16 @@ export default function SearchPage({route, navigation}) {
 
     const filterByMainOrSubCat = (category) => (filterByFieldsAndNavigate(["MainCategory", "SubCategory"], "FilteredOrgs", category));
 
-    return (
-      <View style={GlobalStyles.whiteContainer}>
+    return ( 
+      <ScrollView>
+      <View style={GlobalStyles.bgWhite, GlobalStyles.sbWhiteContainer}>
         <View>
         <Text style={[GlobalStyles.normalText, GlobalStyles.ptpb]}>What do you need help with?</Text>
-        </View>
+        
+       
             <SearchBar style={{backgroundColor: "white"}} initialSearchQuery={route.params} onSubmit={navigateToFilteredOrgs} autoFocus /*key="searchPage"*//>  
-            
-        <View style={{marginTop: -15}}>
+            </View>
+        <View style={{marginTop: -30}}>
         <MainButton 
           answer="Food"
           iconName="food-variant"
@@ -55,7 +59,10 @@ export default function SearchPage({route, navigation}) {
           iconName="account-hard-hat"
           onPressWithParam={filterByMainOrSubCat}
         />
+        
         </View>
-      </View>   
+      </View>  
+      <Footer/> 
+      </ScrollView>
     )
 }
