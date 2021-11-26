@@ -119,22 +119,23 @@ kona-app
 <p>This Project includes directories:</p>
 <h4>assets:</h4>
 <ul>
-  <li></b>  This directory contains all of the images and fonts .</li>
+  <li></b>  This directory contains all of the images and fonts.</li>
 </ul>
 
 <h4>components:</h4>
 <ul>
-  <li></b>  This folder contains the global stying for the components used for the app </li>
+  <li></b>  This folder contains the components used for the app, including global components, used on different screens (different types of buttons, Footer, Logo, Search bar, global stylesheet, etc.); more specific local components, including Filter section,  SearchedFor section and local styling; and organizations folder with components displaying NGOs. </li>
 </ul>
 
 <h4>routes:</h4>
 <ul>
-  <li><b>CoverStack.js</b> - What does this one do? </li>
+  <li><b>CoverStack.js</b> This is how navigation between the screens works in our app </li>
 </ul>
 
 <h4>screens:</h4>
 <ul>
-  <li><b>Accordian.js</b> - Lets talk about what files to add here :) </li>
+  <li><b>Home.js</b> First screen with Searchbar, fast help buttons, quick glance to organizations and SDGs section </li>
+  <li><b>Filter.js</b> - Lets talk about what files to add here :) </li>
   <li><b>FilteredOrgs.js</b> - Lets talk about what files to add here :)</li>
   <li><b>StartQuestionnaire.js</b> - Lets talk about what files to add here :)</li>
 </ul>

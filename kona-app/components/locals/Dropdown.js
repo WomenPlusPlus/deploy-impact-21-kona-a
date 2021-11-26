@@ -1,14 +1,14 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 import { GlobalStyles } from '../globals/GlobalStyles';
-import { QuestionStyles } from './QuestionStyles';
+import { LocalStyles } from './LocalStyles';
 import SelectDropdown from 'react-native-select-dropdown'
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 const Dropdown = () => {
   const countries = ["Senegal", "Switzerland", "Ghana", "England"]
     return (
-    <View style={QuestionStyles.dropdownContainer}>
+    <View style={LocalStyles.dropdownContainer}>
       <Text style={GlobalStyles.normalText}>
         <SelectDropdown
           data={countries}
@@ -22,7 +22,7 @@ const Dropdown = () => {
           rowTextForSelection={(item, index) => {
             return item;
           }}
-          buttonStyle={QuestionStyles.dropdownBtnStyle}
+          buttonStyle={LocalStyles.dropdownBtnStyle}
           buttonTextStyle={GlobalStyles.normalText}
           renderDropdownIcon={() => {
             return (
@@ -30,9 +30,9 @@ const Dropdown = () => {
             );
           }}
           dropdownIconPosition={"right"}
-          dropdownStyle={QuestionStyles.dropdownDropdownStyle}
-          rowStyle={QuestionStyles.dropdownRowStyle}
-          rowTextStyle={QuestionStyles.dropdownRowTxtStyle}
+          dropdownStyle={LocalStyles.dropdownDropdownStyle}
+          rowStyle={LocalStyles.dropdownRowStyle}
+          rowTextStyle={LocalStyles.dropdownRowTxtStyle}
         />
       </Text>
     </View>

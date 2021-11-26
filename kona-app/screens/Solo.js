@@ -3,11 +3,11 @@ import { ScrollView, View, Text, Image } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
-import { QuestionStyles } from '../components/locals/QuestionStyles';
+import { LocalStyles } from '../components/locals/LocalStyles';
 import Footer from "../components/globals/Footer";
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import { LinearGradient } from 'expo-linear-gradient';
-import { LogoMappings } from '../assets/LogoMappings';
+import { LogoMappings } from '../data/LogoMappings';
 
 export default function Solo ({route}) {
     const item = route.params;
@@ -15,57 +15,57 @@ export default function Solo ({route}) {
 
     return (
         <ScrollView>
-            <View style= {QuestionStyles.soloImageContainer}>
-                <Image source={logo} style={ QuestionStyles.soloImageContainer } resizeMode="contain"></Image>
+            <View style= {LocalStyles.soloImageContainer}>
+                <Image source={logo} style={ LocalStyles.soloImageContainer } resizeMode="contain"></Image>
             </View>
                 <View style={GlobalStyles.soloWhite}>
-                    <Text style={ QuestionStyles.name}>{item.Name}</Text>
-                    <View style={ QuestionStyles.field }>  
+                    <Text style={ LocalStyles.name}>{item.Name}</Text>
+                    <View style={ LocalStyles.field }>  
                         <FontAwesome name="building" size={20} color='#6B6B6B' style={{marginRight: 4}} />
-                        <Text style={ QuestionStyles.fieldText }>Address</Text>
+                        <Text style={ LocalStyles.fieldText }>Address</Text>
                     </View>
-                    <Text style={QuestionStyles.questionText} >{item["Address"]}</Text>
-                    <Text style={QuestionStyles.questionText} >{item["Region"]}</Text>
-                    <View style={ QuestionStyles.field }>
+                    <Text style={LocalStyles.questionText} >{item["Address"]}</Text>
+                    <Text style={LocalStyles.questionText} >{item["Region"]}</Text>
+                    <View style={ LocalStyles.field }>
                         <Entypo name="old-mobile" size={24} color= '#6B6B6B' style={{marginRight: 2}} />
-                        <Text style={ QuestionStyles.fieldText }>Phone</Text>
+                        <Text style={ LocalStyles.fieldText }>Phone</Text>
                     </View>
-                    <Text style={QuestionStyles.questionText} >{item["Phone"]}</Text>
-                    <View style={ QuestionStyles.field }>
+                    <Text style={LocalStyles.questionText} >{item["Phone"]}</Text>
+                    <View style={ LocalStyles.field }>
                         <FontAwesome name="envelope" size={20} color='#6B6B6B' style={{marginRight: 6}} />
-                        <Text style={ QuestionStyles.fieldText }>Email</Text>
+                        <Text style={ LocalStyles.fieldText }>Email</Text>
                     </View>
-                    <Text style={QuestionStyles.questionText}>{item.Email}</Text>
-                    <View style={ QuestionStyles.field }>
+                    <Text style={LocalStyles.questionText}>{item.Email}</Text>
+                    <View style={ LocalStyles.field }>
                         <SimpleLineIcons name="globe" size={20} color='#6B6B6B' style={{marginRight: 6}} />
-                        <Text style={ QuestionStyles.fieldText }>Website</Text>
+                        <Text style={ LocalStyles.fieldText }>Website</Text>
                     </View>
-                    <Text style={ QuestionStyles.questionText }>{item["WebAddress"]}</Text>
+                    <Text style={ LocalStyles.questionText }>{item["WebAddress"]}</Text>
                 </View>
                 <View style={{backgroundColor: 'rgba(255, 255, 255, 1)'}}>
                     <LinearGradient colors={['rgb(239,236,232)', 'rgb(255,255,255)']} style={{padding:20}}>
-                        <View style={ QuestionStyles.helpContainer}>
-                            <Text style={ QuestionStyles.name}>
+                        <View style={ LocalStyles.helpContainer}>
+                            <Text style={ LocalStyles.name}>
                                 Areas of support
                             </Text>
-                            <Text style={ QuestionStyles.questionText } >
+                            <Text style={ LocalStyles.questionText } >
                                 {item["MainCategory"].split(', ').join('\n')}
                             </Text>
                         </View>
-                        <View style={ QuestionStyles.helpContainer}>    
-                            <Text style={ QuestionStyles.name}>
+                        <View style={ LocalStyles.helpContainer}>    
+                            <Text style={ LocalStyles.name}>
                                 Target group
                             </Text>
-                            <Text style={ QuestionStyles.questionText } >
+                            <Text style={ LocalStyles.questionText } >
                                 {item["TargetGroup"].split(', ').join('\n')}
                             </Text>
                         </View>
                     </LinearGradient>
                     <View style={ GlobalStyles.soloWhite}>    
-                        <Text style={ QuestionStyles.name}>
+                        <Text style={ LocalStyles.name}>
                             Description
                         </Text>
-                        <Text style={ QuestionStyles.questionText } >
+                        <Text style={ LocalStyles.questionText } >
                             {item["Objective"]}
                         </Text>
                     </View>

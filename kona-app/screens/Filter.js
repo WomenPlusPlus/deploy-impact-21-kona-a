@@ -3,11 +3,11 @@ import { Text, View, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import MainButton from '../components/globals/MainButton';
 import CheckButton from '../components/globals/CheckButton';
-import { QuestionStyles } from '../components/locals/QuestionStyles';
+import { LocalStyles } from '../components/locals/LocalStyles';
 import FilterButton from '../components/locals/FilterButton';
 import ExpandSeeAll from '../components/locals/Expand';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import Data from '../assets/kona_orgs.json';
+import Data from '../data/kona_orgs.json';
 import AccordionFilter from '../components/locals/Accordion';
 import { useNavigation } from '@react-navigation/native';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -90,7 +90,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
           <View style={GlobalStyles.topFilterSection}>
             <Text style={GlobalStyles.searchResText}>You searched for:</Text>            
           </View>
-          <View style={QuestionStyles.flexDirectionColumn}>
+          <View style={LocalStyles.flexDirectionColumn}>
             <CheckButton 
             
             answer={filterKeyword} 
@@ -98,7 +98,7 @@ export default function Filter({ filterKeyword, setFilteredOrgs }) {
             {/* <ExpandSeeAll categories={remainingMainCategories}  onCheck={onCheckHandler} onUncheck={onUncheckHandler}/> */}
           </View>
           <Text style={GlobalStyles.searchResText}>Add more filters to narrow down the results:</Text>
-          <View style={QuestionStyles.flexDirectionColumn}>
+          <View style={LocalStyles.flexDirectionColumn}>
             <CheckButton answer='Refugees' onCheck={onCheckHandler} onUncheck={onUncheckHandler} />
             <CheckButton answer='Homeless People' onCheck={onCheckHandler} onUncheck={onUncheckHandler} />
             {/* <ExpandSeeAll categories={remainingTargetGroups} onCheck={onCheckHandler} onUncheck={onUncheckHandler} /> */}

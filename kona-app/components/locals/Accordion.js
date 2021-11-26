@@ -3,7 +3,7 @@ import { ScrollView, Text, View, TouchableOpacity, SafeAreaView, Switch, StyleSh
 import * as Animatable from 'react-native-animatable';
 import Accordion from 'react-native-collapsible/Accordion';
 import { GlobalStyles } from '../globals/GlobalStyles';
-import { QuestionStyles } from './QuestionStyles';
+import { LocalStyles } from './LocalStyles';
 import { AntDesign, Feather } from '@expo/vector-icons';
 import Collapsible from 'react-native-collapsible';
 import CheckBox from '../globals/CheckBox';
@@ -125,8 +125,8 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
       <Animatable.View
         duration={400}>
         <View style={GlobalStyles.flexDirectionColumn}>
-          <View style={QuestionStyles.topFilterCategories}>
-            <View style={QuestionStyles.checkboxItems}>
+          <View style={LocalStyles.topFilterCategories}>
+            <View style={LocalStyles.checkboxItems}>
               <CheckBox answer = {section.title} 
               onCheck={(answer) => onCheckMain(section)}
               onUncheck={onUncheckMain} initiallyChecked={initiallyCheckedMain(section)}/>
@@ -149,7 +149,7 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
           <View>
             { mainCategoriesText.map((subCategory) => (
               <TouchableOpacity >
-                <View style={QuestionStyles.subCategories}>
+                <View style={LocalStyles.subCategories}>
                   <CheckBox answer={subCategory} initiallyChecked={selectedKeywords.has(section.title) || selectedKeywords.has(subCategory)} onCheck={() => onCheckSub(section,subCategory)} onUncheck={() => onUncheckSub(section,subCategory)} />
                 </View>
               </TouchableOpacity>
@@ -178,7 +178,7 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
           </View>
           {/*Code for Accordion/Expandable List starts here*/}
           <Accordion
-            style={QuestionStyles.accordion}
+            style={LocalStyles.accordion}
             activeSections={activeSections}
             //for any default active section
             sections={mainCategories}
@@ -231,8 +231,8 @@ const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, 
     return (
       <Animatable.View
         duration={400}>
-        <View style={QuestionStyles.topFilterSection}>
-          <Text style={QuestionStyles.accordionTextTitle}>{section.title}</Text>
+        <View style={LocalStyles.topFilterSection}>
+          <Text style={LocalStyles.accordionTextTitle}>{section.title}</Text>
           { isActive ? <AntDesign name="minus" size={24} color="#212121" /> : <AntDesign name="plus" size={24} color="#212121" /> }
         </View>
       </Animatable.View>
@@ -252,7 +252,7 @@ const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, 
               ? <AccordionMainCategories onCheckMain={onCheckMain} onCheckSub={onCheckSub} onUncheckMain={onUncheckMain} onUncheckSub={onUncheckSub} selectedKeywords={selectedKeywords}/> // write the new accordion in here
               : checkboxText.map((text) => (
                   <TouchableOpacity >
-                    <View style={QuestionStyles.checkboxItems}>
+                    <View style={LocalStyles.checkboxItems}>
                       <CheckBox answer={text} onCheck={onCheck} onUncheck={onUncheck} initiallyChecked={selectedKeywords.has(text)} />
                     </View>
                   </TouchableOpacity>

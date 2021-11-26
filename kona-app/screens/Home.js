@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Text, View, Image, ScrollView, TouchableOpacity } from "react-native";
 import { GlobalStyles } from "../components/globals/GlobalStyles";
-import { QuestionStyles } from "../components/locals/QuestionStyles";
+import { LocalStyles } from "../components/locals/LocalStyles";
 import MainButton from "../components/globals/MainButton";
-import Data from "../assets/kona_orgs.json";
+import Data from "../data/kona_orgs.json";
 import IconImages from "../assets/iconImages";
 import SearchBar from "../components/globals/SearchBar";
 import HomeFooter from "../components/globals/HomeFooter";
@@ -148,10 +148,10 @@ export default function Home({ navigation }) {
       </View>
     
       <View style={{backgroundColor: 'white'}}>
-        <View style={QuestionStyles.allOrgsContainer}>
-          <Text style={QuestionStyles.allOrgsText}>All organizations</Text>
-          <TouchableOpacity style={QuestionStyles.allFiltersButton} onPress = {navigateToAccordion}>
-            <Text style={ QuestionStyles.allFiltersText }>See all filters {Arrow}</Text>
+        <View style={LocalStyles.allOrgsContainer}>
+          <Text style={LocalStyles.allOrgsText}>All organizations</Text>
+          <TouchableOpacity style={LocalStyles.allFiltersButton} onPress = {navigateToAccordion}>
+            <Text style={ LocalStyles.allFiltersText }>See all filters {Arrow}</Text>
           </TouchableOpacity>
         </View> 
         <OrgList orgs={ThreeOrgs}/>
