@@ -5,7 +5,7 @@ import { Text, View } from "react-native";
 import { GlobalStyles } from "../components/globals/GlobalStyles";
 import { filterByKeywordInAnyField } from "../components/globals/FilterUtils";
 import MainButton from "../components/globals/MainButton";
-import Data from "../assets/kona_orgs.json";
+import Data from "../data/kona_orgs.json";
 
 export default function SearchPage({route, navigation}) {
 
