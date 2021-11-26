@@ -170,12 +170,13 @@ export const LocalStyles = StyleSheet.create({
     fontFamily: 'poppins-medium',
     fontSize: 18,
     lineHeight: 27,
-    color: '#212121',
+    color: '#453748',
     marginVertical: 10,
   },
   checkboxItems: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
+    color: "#453748"
   },
   marginTop: {
     marginTop: 20,
@@ -183,9 +184,11 @@ export const LocalStyles = StyleSheet.create({
   checkboxText: {
     marginLeft: 10,
     marginTop: 5,
+    color: "#453748"
   },
   resultsButton: {
-    backgroundColor: '#6b6b6b',
+    backgroundColor: '#453748',
+    borderRadius: 10,
     color: '#FFFFFF',
     width: 323,
     height: 50,
