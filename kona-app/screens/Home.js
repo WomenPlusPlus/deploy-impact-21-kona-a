@@ -75,7 +75,7 @@ export default function Home({ navigation }) {
               What do you need help with?
             </Text>
           </View>
-    
+      <View style={{paddingBottom: 70}}>
         <SearchBar
           data={Data}
           // key="homePage"
@@ -84,6 +84,7 @@ export default function Home({ navigation }) {
           navigateOnChange
           // onPress={navigateToSearchPage}
         />
+        </View>
       </View>
       <View>
       <LinearGradient
