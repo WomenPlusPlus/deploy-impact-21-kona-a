@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, ScrollView } from 'react-native';
+import { View, ScrollView } from 'react-native';
 import { GlobalStyles } from '../components/globals/GlobalStyles';
 import ResultsButton from '../components/locals/ResultsButton';
 import Data from '../data/kona_orgs.json';
@@ -15,29 +15,18 @@ export default function Accordion({ route, navigation }) {
 
   const [selectedKeywords, setSelectedKeywords] = useState(receivedKeywords);
 
-  console.log("Selected keywords:")
-  console.log(selectedKeywords);
-
-  const targetGroups = ['Victims of domestic Violence', 'Refugees', 'Homeless People', 'Disabled People', 'LGBTQIA+', 'Migrants']
-  const filterBy = (selectedCat, buttonNames) => {
-    const filteredCats = buttonNames.filter((cat) => {
-      if (cat != selectedCat) {
-        return cat
-      }
-    });
-    return filteredCats
-  };
-  //const remainingMainCategories = filterBy('food', mainCategories);
-  // const remainingTargetGroups = filterBy('Refugees', targetGroups);
+  // const targetGroups = ['Victims of domestic Violence', 'Refugees', 'Homeless People', 'Disabled People', 'LGBTQIA+', 'Migrants']
+  // const filterBy = (selectedCat, buttonNames) => {
+  //   const filteredCats = buttonNames.filter((cat) => {
+  //     if (cat != selectedCat) {
+  //       return cat
+  //     }
+  //   });
+  //   return filteredCats
+  // };
 
   const filterByOneOfThreeCategories = (orgs, keyword) => {
     const keywordUppercase = keyword.toUpperCase();
-    // const newOrgs = orgs.filter( (org) =>
-    //   org['MainCategory'].toLowerCase().includes(keywordLowercase) ||
-    //   org['SubCategory'].toLowerCase().includes(keywordLowercase) ||
-    //   org['TargetGroup'].toLowerCase().includes(keywordLowercase) ||
-    //   org['Region'].toLowerCase().includes(keywordLowercase)
-    // );
     const fields = ["MainCategory", "SubCategory", "TargetGroup", "SubTargetGroup", "Region"];
     const newOrgs = filterByKeywordInAnyField(orgs, fields, keywordUppercase);
       return newOrgs;
@@ -47,7 +36,6 @@ export default function Accordion({ route, navigation }) {
     let filteredData = Data;
     keywords.forEach((keyword) => filteredData = filterByOneOfThreeCategories(filteredData, keyword) );
     return filteredData;
-    //setFilteredOrgs(filteredData);
   }
 
   const filteredBySelectedKeywords = filterByKeywords(selectedKeywords);
@@ -61,7 +49,6 @@ export default function Accordion({ route, navigation }) {
       newSelectedKeywords.add(category.title);
     }
     setSelectedKeywords(newSelectedKeywords);
-    console.log("test");
   }
 
   const onCheckMainHandler = (category) => {
