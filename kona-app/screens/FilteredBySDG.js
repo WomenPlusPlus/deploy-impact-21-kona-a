@@ -11,7 +11,7 @@ export default function FilteredBySDG({ route }) {
 
     return(
         <ScrollView>
-            <View>
+            <View style={{backgroundColor: "white"}}>
                 <OrgList orgs={filteredOrgs}/>
             </View>
             <Footer/>
