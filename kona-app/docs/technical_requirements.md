@@ -46,7 +46,7 @@ This structure allowed the development team to filter on specific organizations 
   7. Migration
   8. Crisis
 
-<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/categories.png" alt="Organization Categories">
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/updated_catagories.png" alt="Organization Categories">
 
 We have found 140 subcategories within the data. It is my recommendation that these subcatagories are transformed to fall into similar groups so that the data can be filtered in a more maintainable way. An example of this would be to group synonyms such as "War" and "Armed Conflict" into the same group. By doing this, when a new organization joins Dots, they can simply tag themselves and the organization will become searchable to the user.
 
