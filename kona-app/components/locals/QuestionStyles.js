@@ -22,7 +22,7 @@ export const QuestionStyles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'flex-start',
     paddingVertical: 10,
-    paddingHorizontal: 20
+    paddingHorizontal: 20,
   },
   smallerQuestionContainer: {
     alignSelf: 'center'

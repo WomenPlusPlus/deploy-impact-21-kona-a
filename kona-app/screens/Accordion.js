@@ -35,7 +35,8 @@ export default function Accordion({ route, navigation }) {
     const newOrgs = orgs.filter( (org) =>
       org['MainCategory'].toLowerCase().includes(keywordLowercase) ||
       org['SubCategory'].toLowerCase().includes(keywordLowercase) ||
-      org['TargetGroup'].toLowerCase().includes(keywordLowercase)
+      org['TargetGroup'].toLowerCase().includes(keywordLowercase) ||
+      org['Region'].toLowerCase().includes(keywordLowercase)
     );
     return newOrgs;
   }
@@ -97,7 +98,7 @@ export default function Accordion({ route, navigation }) {
   }
 
     return(
-        <ScrollView>
+        <ScrollView style={ GlobalStyles.bgWhite }>
             <View>
               <AccordionFilter onCheckMain={onCheckMainHandler} onCheckSub={onCheckSubHandler} onUncheckMain={onUncheckMainHandler} onUncheckSub={onUncheckSubHandler} onCheck={onCheckHandler} onUncheck={onUncheckHandler} selectedKeywords={selectedKeywords}/>
             </View>

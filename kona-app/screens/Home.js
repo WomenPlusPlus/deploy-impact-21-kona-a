@@ -49,6 +49,10 @@ export default function Home({ navigation }) {
     navigation.navigate('Accordion', NoFilter )
   };
 
+  const navigateToAll = () => {
+    navigation.navigate('FilteredOrgs',  )
+  }
+
   return (
     <ScrollView>
       <View
@@ -151,6 +155,9 @@ export default function Home({ navigation }) {
           </TouchableOpacity>
         </View> 
         <OrgList orgs={ThreeOrgs}/>
+        <TouchableOpacity onPress={navigateToFilteredOrgs}>
+          <Text style={ GlobalStyles.textLink }>See all</Text>
+        </TouchableOpacity>
       </View>
      
       

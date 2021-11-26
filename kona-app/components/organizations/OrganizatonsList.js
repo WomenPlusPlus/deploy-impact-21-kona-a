@@ -10,9 +10,7 @@ const OrgList = ({orgs}) => {
                 {orgs.map((org) => 
                     <OrgCard item={org} key={org["ID"].toString()}/>
                 )}
-
             </View>
-            <Text style={ GlobalStyles.textLink }>See all</Text>
         </SafeAreaView>
     ) }
 

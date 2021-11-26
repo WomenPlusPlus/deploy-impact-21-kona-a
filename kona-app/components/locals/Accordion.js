@@ -33,7 +33,7 @@ const CONTENT = [
   title: 'Location',
   content:
     [
-      'Country', 'City'
+      'Dakar', 'Saint-Louis', 'Mbour', 'Pikine'
     ]
 },
 ];
