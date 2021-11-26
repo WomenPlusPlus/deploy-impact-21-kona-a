@@ -230,7 +230,7 @@ export const GlobalStyles = StyleSheet.create({
       flexDirection: 'row',
       flexWrap: "wrap",
       alignContent: "space-between",
-      marginTop: -45,
+      marginTop: -115,
     },
     helpText: {
       fontFamily: 'poppins-regular',
