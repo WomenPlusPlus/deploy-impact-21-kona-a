@@ -100,7 +100,7 @@ export default function Accordion({ route, navigation }) {
   }
 
     return(
-        <ScrollView style={ GlobalStyles.bgWhite }>
+        <ScrollView style={{backgroundColor: "white"}}>
             <View>
               <AccordionFilter onCheckMain={onCheckMainHandler} onCheckSub={onCheckSubHandler} onUncheckMain={onUncheckMainHandler} onUncheckSub={onUncheckSubHandler} onCheck={onCheckHandler} onUncheck={onUncheckHandler} selectedKeywords={selectedKeywords}/>
             </View>
