@@ -5,6 +5,7 @@ import ResultsButton from '../components/locals/ResultsButton';
 import Data from '../data/kona_orgs.json';
 import AccordionFilter from '../components/locals/Accordion';
 import Footer from "../components/globals/Footer";
+import { filterByKeywordInAnyField } from '../components/globals/FilterUtils';
 
 export default function Accordion({ route, navigation }) {
 
@@ -30,14 +31,16 @@ export default function Accordion({ route, navigation }) {
   // const remainingTargetGroups = filterBy('Refugees', targetGroups);
 
   const filterByOneOfThreeCategories = (orgs, keyword) => {
-    const keywordLowercase = keyword.toLowerCase();
-    const newOrgs = orgs.filter( (org) =>
-      org['MainCategory'].toLowerCase().includes(keywordLowercase) ||
-      org['SubCategory'].toLowerCase().includes(keywordLowercase) ||
-      org['TargetGroup'].toLowerCase().includes(keywordLowercase) ||
-      org['Region'].toLowerCase().includes(keywordLowercase)
-    );
-    return newOrgs;
+    const keywordUppercase = keyword.toUpperCase();
+    // const newOrgs = orgs.filter( (org) =>
+    //   org['MainCategory'].toLowerCase().includes(keywordLowercase) ||
+    //   org['SubCategory'].toLowerCase().includes(keywordLowercase) ||
+    //   org['TargetGroup'].toLowerCase().includes(keywordLowercase) ||
+    //   org['Region'].toLowerCase().includes(keywordLowercase)
+    // );
+    const fields = ["MainCategory", "SubCategory", "TargetGroup", "SubTargetGroup", "Region"];
+    const newOrgs = filterByKeywordInAnyField(orgs, fields, keywordUppercase);
+      return newOrgs;
   }
 
   const filterByKeywords = (keywords) => {

@@ -14,19 +14,19 @@ const CONTENT = [
 },
 {
   title: 'People to Support',
-  content: ['Refugees', 'Homeless People', 'LGBTQIA+']
+  content: ['Refugees', 'Homeless People', 'LGBT', 'Victims of domestic violence', 'Disabled People', 'Victims of violence', 'Victims of human trafficking', 'Orphans', 'Mothers', 'Migrants', 'Farmers', 'Students']
 },
 {
   title: 'Gender',
   content:
     [
-      'Woman', 'Man', 'Non-binary', 'Other'
+      'Women', 'Men', 'Non-binary', 'Other'
     ]
 },
 {
   title: 'Age Group',
   content:
-    [ 'Children', 'Youth', 'Adult'
+    [ 'Children', 'Youth', 'Adults'
     ]
 },
 {
