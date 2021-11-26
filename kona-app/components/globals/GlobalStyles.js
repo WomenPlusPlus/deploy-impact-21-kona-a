@@ -1,4 +1,3 @@
-import { Inter_400Regular } from '@expo-google-fonts/inter';
 import { StyleSheet } from 'react-native';
 
 export const GlobalStyles = StyleSheet.create({
@@ -40,18 +39,6 @@ export const GlobalStyles = StyleSheet.create({
     flexDirectionColumn: {
       flexDirection: 'column',
     },
-    titleTextHomepage: {
-      fontFamily: 'poppins-medium',
-      fontSize: 24,
-      lineHeight: 36,
-      color: '#6B6B6B',
-    },
-    titleTextBold: {
-      fontFamily: 'poppins-bold',
-      fontSize: 16,
-      lineHeight: 24,
-      color: '#212121',
-    },
     normalText: {
       fontFamily: 'poppins-medium',
       fontSize: 16,
@@ -61,21 +48,6 @@ export const GlobalStyles = StyleSheet.create({
     card: {
         width: 100,
         height: 100,
-    },
-    button: {
-      alignItems: 'center',
-      paddingVertical: 15,
-      paddingHorizontal: 20,
-      backgroundColor: '#212121',
-      borderRadius: 10,
-    },
-    buttonText: {
-      fontFamily: 'poppins-medium',
-      fontSize: 16,
-      lineHeight: 24,
-      color: '#ffffff',
-      marginVertical: 0,
-      marginHorizontal: 10,
     },
     textLink: {
         paddingTop: 10,
@@ -98,31 +70,11 @@ export const GlobalStyles = StyleSheet.create({
       borderColor: 'rgba(66, 47, 70, 1)',
       borderWidth: 1,
     },
-    cardsContainer: {
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      justifyContent: 'space-around',
-      marginVertical: 16
-    },
     cardsContainerLeft: {
       flexDirection: 'row',
       flexWrap: 'wrap',
       justifyContent: 'space-between',
       marginVertical: 16
-    },
-    pt: {
-      paddingTop: 10
-    },
-    questionContainer: {
-      flexDirection: 'column',
-      justifyContent: 'center',
-      alignItems: 'flex-start',
-      paddingVertical: 10,
-      paddingHorizontal: 20,
-      height: '100%'
-    },
-    smallerQuestionContainer: {
-      alignSelf: 'center'
     },
     questionText: {
       fontFamily: 'poppins-medium',
@@ -130,17 +82,6 @@ export const GlobalStyles = StyleSheet.create({
       lineHeight: 24,
       color: '#212121',
     },
-    itemStyle: {
-      padding: 10,
-    },
-    h2: {
-      paddingLeft: 16,
-      paddingBottom: 10
-    },
-
-    supportContainer: {
-      flex: 1,
-      },
     bannerText: {
       fontFamily: 'poppins-medium',
       fontSize: 34,
@@ -215,7 +156,6 @@ export const GlobalStyles = StyleSheet.create({
       flexWrap: "wrap",
       alignContent: "space-between",
     },
-
     singleSDG: {
       flexBasis: "33.33%",
       paddingBottom: 10,

@@ -10,11 +10,8 @@ import HomeFooter from "../components/globals/HomeFooter";
 import SDGs from "../components/globals/SDGs";
 import { MaterialIcons } from '@expo/vector-icons'; 
 import OrgList from '../components/organizations/OrganizatonsList';
-import FilteredBySDG from "./FilteredBySDG";
-import { color } from "react-native-elements/dist/helpers";
 import { LinearGradient } from 'expo-linear-gradient';
 import { filterByKeywordInAnyField } from "../components/globals/FilterUtils";
-
 
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -28,9 +25,6 @@ export default function Home({ navigation }) {
     });
   }
 
-  const navigateToSearchPage = () => {
-    navigation.navigate("SearchPage")
-  }
   const filterByMainOrSubCat = (category) => (filterByFieldsAndNavigate(["MainCategory", "SubCategory"], "FilteredOrgs", category));
 
   const navigateToFilteredOrgs = () => filterByFieldsAndNavigate(["MainCategory", "SubCategory"], "FilteredOrgs", searchQuery) 
@@ -49,10 +43,6 @@ export default function Home({ navigation }) {
     navigation.navigate('Accordion', NoFilter )
   };
 
-  const navigateToAll = () => {
-    navigation.navigate('FilteredOrgs',  )
-  }
-
   return (
     <ScrollView>
       <View
@@ -60,8 +50,7 @@ export default function Home({ navigation }) {
           searchQuery ? GlobalStyles.sbWhiteContainer : GlobalStyles.container
         }
       > 
-  
-        
+          
           <View style={GlobalStyles.homepageContainer}>
             <Image
               style={GlobalStyles.handImage}
@@ -78,17 +67,12 @@ export default function Home({ navigation }) {
       <View style={{paddingBottom: 70}}>
         <SearchBar
           data={Data}
-          // key="homePage"
-          // setSearchQuery={setSearchQuery}
-          onSubmit={navigateToFilteredOrgs}
           navigateOnChange
-          // onPress={navigateToSearchPage}
         />
         </View>
       </View>
       <View>
       <LinearGradient
-        // Background Linear Gradient
         colors={['rgba(255, 255, 255, 1)',
           'rgba(255, 249, 243, 0.63)',
           'rgba(248, 208, 171, 0.5)' ]}

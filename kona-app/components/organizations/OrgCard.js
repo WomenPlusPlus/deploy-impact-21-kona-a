@@ -44,9 +44,6 @@ const OrgCard = ({item}) => {
        <ScrollView style={  LocalStyles.orgContainer }>
            <View style={ LocalStyles.cardStyle}>
                 <TouchableOpacity style= { LocalStyles.imageContainer} onPress={navigateToSolo} >
-                    {/* <View style={ LocalStyles.label}>
-                        <Text style={ LocalStyles.questionText, {color: 'white'}}>Refugees</Text>
-                    </View> */}
                     <View style={  LocalStyles.imageContainer}>
                         <Image source={logo} style={ LocalStyles.orgImage} resizeMode="contain"></Image>
                     </View>

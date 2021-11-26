@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import OrgList from '../components/organizations/OrganizatonsList';
 import { View, ScrollView } from 'react-native';
-import { Text } from 'react-native';
 import SearchedFor from '../components/locals/SearchedFor';
 import { LocalStyles} from '../components/locals/LocalStyles';
 import {GlobalStyles} from '../components/globals/GlobalStyles';
 import CheckButton from '../components/globals/CheckButton';
 import Footer from "../components/globals/Footer";
 
-export default function UltimatelyFiltered ({ route, navigation }) {
-
+export default function UltimatelyFiltered ({ route }) {
 
     const organizations = route.params.results;
     const selectedKeywords = route.params.selectedKeywords;
@@ -21,7 +19,6 @@ export default function UltimatelyFiltered ({ route, navigation }) {
             <View style={GlobalStyles.roseContainer}>
                 <SearchedFor />
                 { selectedArray.map((word) => (
-
                     <View style={ LocalStyles.subCategories}>
                         <CheckButton answer={word} initiallyChecked />
                     </View>
@@ -32,6 +29,6 @@ export default function UltimatelyFiltered ({ route, navigation }) {
                 <OrgList orgs={organizations}/>
             </View>
             <Footer/>
-      </ScrollView>
+        </ScrollView>
     )
 }

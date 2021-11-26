@@ -1,31 +1,12 @@
 import {StyleSheet} from 'react-native';
 
 export const LocalStyles = StyleSheet.create({
-  mainContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    alignItems: 'flex-start',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-  },
-  questionContainer: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    height: '100%'
-  },
   subjectContainer: {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
     paddingVertical: 10,
     paddingHorizontal: 20,
-  },
-  smallerQuestionContainer: {
-    alignSelf: 'center'
   },
   questionText: {
     fontFamily: 'poppins-regular',
@@ -35,57 +16,12 @@ export const LocalStyles = StyleSheet.create({
     fontWeight: '400',
     paddingLeft: 20
   },
-  dropdownContainer: {
-  },
-  btnContainer: {
-    alignItems: 'flex-end'
-  },
-  dropdownBtnStyle: {
-    width: 325,
-    height: 58,
-    backgroundColor: "#FFFFFF",
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#000000",
-  },
-  dropdownDropdownStyle: {
-    backgroundColor: "#FFFFFF",
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#000000",
-  },
-  dropdownRowStyle: {
-    backgroundColor: "#FFFFFF",
-    borderBottomColor: "#FFFFFF",
-  },
-  dropdownRowTxtStyle: {
-    color: "#212121",
-    textAlign: "left",
-    fontFamily: 'poppins-medium',
-    fontSize: 16,
-    lineHeight: 24,
-  },
-  greyText: {
-    color: 'grey',
-    marginBottom: 5
-  },
-  bold: {
-    fontWeight: 'bold'
-  },
-  smallContainer: {
-    paddingTop: 20,
-    flexDirection:'row'
-  },
   cardStyle: {
     width: '100%',
     borderRadius: 10,
     borderColor: 'rgba(69, 55, 72, 0.4)',
     borderWidth: 1,
     borderStyle: 'solid'
-  },
-  h2: {
-    paddingLeft: 16,
-    paddingBottom: 10
   },
   imageContainer: {
     width: '100%',
@@ -111,10 +47,6 @@ export const LocalStyles = StyleSheet.create({
     paddingVertical: 8,
     lineHeight: 30,
   },
-  fieldName: {
-    color: '#6B6B6B',
-    fontWeight: 'bold'
-  },
   field: {
     display: 'flex',
     flexDirection: 'row',
@@ -137,17 +69,6 @@ export const LocalStyles = StyleSheet.create({
   },
   helpContainer: {
     paddingVertical: 20
-  },
-  label: {
-    width: 96,
-    backgroundColor: 'rgb(109, 190, 109)',
-    top: 8,
-    paddingVertical: 7,
-    paddingHorizontal: 15,
-    textAlign: 'center',
-    position: 'absolute',
-    zIndex: 1,
-    elevation: 1
   },
   orgImage: {
     height: 130,
@@ -177,9 +98,6 @@ export const LocalStyles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     color: "#453748"
-  },
-  marginTop: {
-    marginTop: 20,
   },
   checkboxText: {
     marginLeft: 10,
@@ -239,5 +157,4 @@ export const LocalStyles = StyleSheet.create({
     fontSize: 16,
     paddingLeft: 6
   },
-
 })
