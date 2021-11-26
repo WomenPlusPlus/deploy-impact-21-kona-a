@@ -10,10 +10,8 @@ import HomeFooter from "../components/globals/HomeFooter";
 import SDGs from "../components/globals/SDGs";
 import { MaterialIcons } from '@expo/vector-icons'; 
 import OrgList from '../components/organizations/OrganizatonsList';
-
 import { LinearGradient } from 'expo-linear-gradient';
 import { filterByKeywordInAnyField } from "../components/globals/FilterUtils";
-
 
 export default function Home({ navigation }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -45,10 +43,6 @@ export default function Home({ navigation }) {
     navigation.navigate('Accordion', NoFilter )
   };
 
-  const navigateToAll = () => {
-    navigation.navigate('FilteredOrgs',  )
-  }
-
   return (
     <ScrollView>
       <View
@@ -56,8 +50,7 @@ export default function Home({ navigation }) {
           searchQuery ? GlobalStyles.sbWhiteContainer : GlobalStyles.container
         }
       > 
-  
-        
+          
           <View style={GlobalStyles.homepageContainer}>
             <Image
               style={GlobalStyles.handImage}
