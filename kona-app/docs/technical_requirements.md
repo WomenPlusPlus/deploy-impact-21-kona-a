@@ -56,11 +56,15 @@ Crisis is a special category that encompasses natural disasters, war, and other 
 
 Two graphs were created that show what are the most popular topics within the Dots ecosystem. The graphs tell us that the organizations most cater to Social Services, Education, and Health. The people that are supported most frequently are children and youth. Youth is a category that encompasses people in the age ranges of 12-20 that are capable of having some capacity for self autonomy, while children are dependent on their caretakers for all of their needs
 
-<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/category_graph.png" alt="Frequency of Topics within all Organizations">
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/frequency_of_catagories.png" alt="Frequency of Topics within all Organizations">
 
 
-<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/user_graph.png" alt="Frequency of User Groups within all Organizations">
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/frequency_of_users.png" alt="Frequency of User Demographics within all Organizations">
 
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/frequency_of_sub_target_group.png" alt="Frequency of User Types within all Organizations">
+
+
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/Frequency_of_SDG.png" alt= "Frequency of User Types within all Organizations">
 
 ## Maintenance needs 
 * Maintenance will be performed by Kona
