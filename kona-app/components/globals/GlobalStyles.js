@@ -78,6 +78,7 @@ export const GlobalStyles = StyleSheet.create({
     },
     textLink: {
         paddingTop: 10,
+        paddingBottom: 10,
         marginRight: 20,
         textDecorationLine: 'underline',
         textAlign: 'right',

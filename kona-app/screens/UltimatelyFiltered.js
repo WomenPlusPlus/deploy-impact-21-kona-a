@@ -17,8 +17,8 @@ export default function UltimatelyFiltered ({ route, navigation }) {
     const selectedArray = Array.from(selectedKeywords.values());
 
     return(
-        <ScrollView>
-            <View style={GlobalStyles.greyContainer}>
+        <ScrollView style={GlobalStyles.bgWhite}>
+            <View style={GlobalStyles.roseContainer}>
                 <SearchedFor />
                 { selectedArray.map((word) => (
 
