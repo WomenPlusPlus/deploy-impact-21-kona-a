@@ -4,7 +4,7 @@
 ## Mobile App Objectives
 The Dots Application was created to bridge the gap between people in need to organizations that can offer assistance within the Senegal region.
 The application was created because it was difficult for people to find the correct organizations to help them with specific problems.
-A mobile application will ask a series of questions that will guide the user to a list of organizations that can offer assistance for their specific problem.
+A mobile application will uses filters that will guide users to the organizations most suited to their needs.
 
 ## Special Considerations
 * 50% of Kona's users are illiterate, therefore app must have icons, audio, and easy to understand language that will help to guide the user
@@ -64,6 +64,11 @@ Two graphs were created that show what are the most popular topics within the Do
 
 ## Maintenance needs 
 * Maintenance will be performed by Kona
+
+## Lessons Learned and What We Would do Differently
+We originaly used expo and a JSON file to keep the application lightweight. One of the issues we ran into was adding images along with the data from the JSON file. This was tricky to do without adding the images to the JSON file, which is not good if you ever want to modify the data in the future. If we had to do it over again we would have created a proper relational database as it is much easier to work with 
+
+Additionally, all of the catagorization was performed manually, which is error prone and extremely time consuming. If we had to do it over again we would have created a NLP model that found the top 3 catagories for each organization and created the catagories this way. The NLP model would have been much faster and probably more accurate. As mentioned below, having a set list of catagories and having each organization tag themselves would be even better than NLP. 
  
  ## Future Work
 * Admin panel:
