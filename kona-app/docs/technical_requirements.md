@@ -46,7 +46,7 @@ This structure allowed the development team to filter on specific organizations 
   7. Migration
   8. Crisis
 
-<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/categories.png" alt="Organization Categories">
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/updated_catagories.png" alt="Organization Categories">
 
 We have found 140 subcategories within the data. It is my recommendation that these subcatagories are transformed to fall into similar groups so that the data can be filtered in a more maintainable way. An example of this would be to group synonyms such as "War" and "Armed Conflict" into the same group. By doing this, when a new organization joins Dots, they can simply tag themselves and the organization will become searchable to the user.
 
@@ -59,12 +59,10 @@ Two graphs were created that show what are the most popular topics within the Do
 <img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/frequency_of_catagories.png" alt="Frequency of Topics within all Organizations">
 
 
-<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/frequency_of_users.png" alt="Frequency of User Demographics within all Organizations">
-
 <img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/frequency_of_sub_target_group.png" alt="Frequency of User Types within all Organizations">
 
-
-<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/Frequency_of_SDG.png" alt= "Frequency of User Types within all Organizations">
+For more graphs, and refrences to how we created these visualizations please refer to:
+<a href="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/tree/main/kona-app/data/data_transformation">The Data Transformation Directory text</a>
 
 ## Maintenance needs 
 * Maintenance will be performed by Kona
@@ -84,3 +82,6 @@ Additionally, all of the catagorization was performed manually, which is error p
 * The app should delete user history after X amount of time. In the cases of domestic abuse it could be harmful to the user to save information
 * Language setting button that can change the language from French to the other primary languages spoken in Senegal.
 * In order to develop the database, the PO or the organization itself, should tag their objectives in accordance with the categories that exist within the data, this will make the data easier to search and display on to the user.
+
+* Data will be updated and modified by using an Azure pipeline as referenced in the diagram below
+<img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/data_flow_chart.png" alt= "Data Updating and Modification in Azure">
