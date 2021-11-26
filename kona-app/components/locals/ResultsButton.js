@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, TouchableOpacity, View, ScrollView } from "react-native";
 import { GlobalStyles } from '../globals/GlobalStyles';
-import { QuestionStyles } from "./QuestionStyles";
+import { LocalStyles } from "./LocalStyles";
 import Collapsible from 'react-native-collapsible';
 import OrgList from "../organizations/OrganizatonsList";
 import { useNavigation } from '@react-navigation/native';
@@ -24,9 +24,9 @@ const ResultsButton = ({filteredOrgs, selectedKeywords}) => {
   return (
     <ScrollView>
       <View style={GlobalStyles.flexCenter}>
-        <TouchableOpacity style={QuestionStyles.resultsButton} onPress={navigateToUltimate}>
+        <TouchableOpacity style={LocalStyles.resultsButton} onPress={navigateToUltimate}>
           <View>
-            <Text style={QuestionStyles.resultsButtonText}>See {results.length} results</Text>
+            <Text style={LocalStyles.resultsButtonText}>See {results.length} results</Text>
           </View>
         </TouchableOpacity>
       </View>

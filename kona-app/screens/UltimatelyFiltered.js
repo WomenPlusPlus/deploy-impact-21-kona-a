@@ -3,7 +3,7 @@ import OrgList from '../components/organizations/OrganizatonsList';
 import { View, ScrollView } from 'react-native';
 import { Text } from 'react-native';
 import SearchedFor from '../components/locals/SearchedFor';
-import {QuestionStyles} from '../components/locals/QuestionStyles';
+import { LocalStyles} from '../components/locals/LocalStyles';
 import {GlobalStyles} from '../components/globals/GlobalStyles';
 import CheckButton from '../components/globals/CheckButton';
 import Footer from "../components/globals/Footer";
@@ -22,7 +22,7 @@ export default function UltimatelyFiltered ({ route, navigation }) {
                 <SearchedFor />
                 { selectedArray.map((word) => (
 
-                    <View style={QuestionStyles.subCategories}>
+                    <View style={ LocalStyles.subCategories}>
                         <CheckButton answer={word} initiallyChecked />
                     </View>
             ))

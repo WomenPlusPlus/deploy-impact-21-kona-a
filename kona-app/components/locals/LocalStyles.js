@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-export const QuestionStyles = StyleSheet.create({
+export const LocalStyles = StyleSheet.create({
   mainContainer: {
     display: 'flex',
     flexDirection: 'column',

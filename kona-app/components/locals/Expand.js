@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ScrollView, Text, View, TouchableOpacity, SafeAreaView, } from 'react-native';
 import Collapsible from 'react-native-collapsible';
 import { GlobalStyles } from '../globals/GlobalStyles';
-import { QuestionStyles } from './QuestionStyles';
+import { LocalStyles } from './LocalStyles';
 import MainButton from '../globals/MainButton';
 import CheckButton from '../globals/CheckButton';
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
-import { QuestionStyles } from './QuestionStyles';
+import { LocalStyles } from './LocalStyles';
 import { GlobalStyles } from '../globals/GlobalStyles';
 
 const FilterButton = ({answer, onPress }) => {
     return (
         <TouchableOpacity onPress={onPress}>
-            <View style={QuestionStyles.filterButton}>
+            <View style={LocalStyles.filterButton}>
                 <Text style={GlobalStyles.normalText}>{ answer } </Text>
             </View>
         </TouchableOpacity>
