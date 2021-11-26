@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../screens/Home';
 import Filter from '../screens/Filter';
+import SearchPage from '../screens/SearchPage'
 import FilteredOrgs from '../screens/FilteredOrgs';
 import Accordion from '../screens/Accordion';
 import FilteredBySDG from '../screens/FilteredBySDG';
@@ -30,9 +31,21 @@ const CoverStack = () => {
                  headerBackTitleVisible: false,
                  headerTitle: (props) => <Logo {...props} /> }}
             />
+            
             <Stack.Screen
              name="Filter"
              component={Filter}
+             options={{
+                title: '',
+                headerRight: () => (
+                    <HomeButton
+                    />
+                ),
+            }}
+            />
+            <Stack.Screen
+             name="SearchPage"
+             component={SearchPage}
              options={{
                 title: '',
                 headerRight: () => (
