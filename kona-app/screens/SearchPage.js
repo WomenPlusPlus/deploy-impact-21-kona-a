@@ -1,5 +1,4 @@
 import React from "react"; 
-import { StackRouter } from "react-navigation";
 import SearchBar from "../components/globals/SearchBar";
 import Footer from "../components/globals/Footer";
 import { Text, View } from "react-native";

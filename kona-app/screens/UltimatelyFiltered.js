@@ -7,7 +7,7 @@ import {GlobalStyles} from '../components/globals/GlobalStyles';
 import CheckButton from '../components/globals/CheckButton';
 import Footer from "../components/globals/Footer";
 
-export default function UltimatelyFiltered ({ route, navigation }) {
+export default function UltimatelyFiltered ({ route }) {
 
     const organizations = route.params.results;
     const selectedKeywords = route.params.selectedKeywords;

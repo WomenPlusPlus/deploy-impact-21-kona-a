@@ -67,7 +67,6 @@ export default function Home({ navigation }) {
       <View style={{paddingBottom: 70}}>
         <SearchBar
           data={Data}
-          onSubmit={navigateToFilteredOrgs}
           navigateOnChange
         />
         </View>
