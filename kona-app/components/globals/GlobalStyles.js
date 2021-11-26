@@ -1,4 +1,3 @@
-import { Inter_400Regular } from '@expo-google-fonts/inter';
 import { StyleSheet } from 'react-native';
 
 export const GlobalStyles = StyleSheet.create({

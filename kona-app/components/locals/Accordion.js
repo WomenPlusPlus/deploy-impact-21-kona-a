@@ -98,19 +98,10 @@ const mainCategories = [
 const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, selectedKeywords}) => {
 
   const [activeSections, setActiveSections] = useState([]);
-  // MultipleSelect is for the Multiple Expand allowed
-  // True: Expand multiple at a time
-  // False: One can be expand at a time
+
   const [multipleSelect, setMultipleSelect] = useState(false);
 
   const setSections = (sections) => {
-    // console.log("Active sections:");
-    // console.log(activeSections);
-    // console.log("sections:");
-    // console.log(sections);
-    // setActiveSections(sections);
-    // return;
-    //setting up a active section state
     setActiveSections(sections.includes(undefined) ? [] : sections);
   };
 
@@ -119,7 +110,6 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
   }
 
   const renderHeader = (section, _, isActive) => {
-    //Accordion Header view
     return (
       <Animatable.View
         duration={400}>
@@ -164,42 +154,17 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
     <SafeAreaView>
       <View style={GlobalStyles.whiteContainer}>
         <ScrollView>
-          <View>
-            {/* <Text style={GlobalStyles.normalText}>
-              Multiple Expand Allowed?
-            </Text> */}
-            {/* <Switch
-              value={multipleSelect}
-              onValueChange={(multipleSelect) =>
-                setMultipleSelect(multipleSelect)
-              }
-            /> */}
-          </View>
-          {/*Code for Accordion/Expandable List starts here*/}
           <Accordion
             style={LocalStyles.accordion}
             activeSections={activeSections}
-            //for any default active section
             sections={mainCategories}
-            //title and content of accordion
             touchableComponent={TouchableOpacity}
-            //which type of touchable component you want
-            //It can be the following Touchables
-            //TouchableHighlight, TouchableNativeFeedback
-            //TouchableOpacity , TouchableWithoutFeedback
             expandMultiple={multipleSelect}
-            //Do you want to expand mutiple at a time or single at a time
             renderHeader={renderHeader}
-            //Header Component(View) to render
             renderContent={renderContent}
-            //Content Component(View) to render
             duration={400}
-            //Duration for Collapse and expand
-            onChange={setSections}
-            
-            //setting the state of active sections
+            onChange={setSections}            
           />
-          {/*Code for Accordion/Expandable List ends here*/}
         </ScrollView>
       </View>
     </SafeAreaView>
@@ -207,23 +172,13 @@ const AccordionMainCategories = ({onCheckMain, onCheckSub, onUncheckMain, onUnch
   );
 };
 
-//MAIN ACCORDION
+
 const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, onCheck, onUncheck, selectedKeywords}) => {
 
-
   const [activeSections, setActiveSections] = useState([]);
-  // MultipleSelect is for the Multiple Expand allowed
-  // True: Expand multiple at a time
-  // False: One can be expand at a time
-  const [multipleSelect, setMultipleSelect] = useState(false);
 
   const setSections = (sections) => {
-    console.log("123");
-    console.log(activeSections);
-    console.log(sections);
     setActiveSections(sections);
-    //setting up a active section state
-    // setActiveSections(sections.includes(undefined) ? [] : sections);
   };
 
   const renderHeader = (section, _, isActive) => {
@@ -267,23 +222,10 @@ const AccordionFilter = ({onCheckMain, onCheckSub, onUncheckMain, onUncheckSub, 
     <SafeAreaView>
       <View style={GlobalStyles.whiteContainer}>
         <ScrollView>
-          {/* <View>
-            <Text style={GlobalStyles.normalText}>
-              Multiple Expand Allowed?
-            </Text>
-            <Switch
-              value={multipleSelect}
-              onValueChange={(multipleSelect) =>
-                setMultipleSelect(multipleSelect)
-              }
-            />
-          </View> */}
-
           <Accordion
             activeSections={activeSections}
             sections={CONTENT}
             touchableComponent={TouchableOpacity}
-            // expandMultiple={multipleSelect}
             renderHeader={renderHeader}
             renderContent={renderContent}
             duration={400}
