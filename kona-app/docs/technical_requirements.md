@@ -85,3 +85,8 @@ Additionally, all of the catagorization was performed manually, which is error p
 
 * Data will be updated and modified by using an Azure pipeline as referenced in the diagram below
 <img src="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/images/data_flow_chart.png" alt= "Data Updating and Modification in Azure">
+
+# UI/UX
+The UI/UX documentation can be best viewed in it's motherland, Figma, please click below to check out how we made a beautiful app that serves the needs of our users.
+<a href="https://www.figma.com/file/AKgOqcFCJfssLfQ0Nif665/Dots?node-id=1%3A3">Prototype and UI/UX Exploratiory Analysis </a>
+
