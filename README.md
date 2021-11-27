@@ -63,30 +63,19 @@ kona-app
 │   .gitignore
 |   .App.js
 |   .app.json
-│
-└───.expo-shared
-│   │   file011.txt
-│   │   file012.txt
-│         
-└───assets 
-│    │   
-│    └───images
-│       │ logos
-│       │     
-│       └───fonts
-│       │   file111.txt
-│       │   file112.txt
-│       │    
-│       └───SGD
-│       │   icons
-│           
+└───.expo-shared 
+|
+└───assets     
+│    └─── fonts
+|    └─── SDG-Icons
+│    └─── logos 
+|
 └───components
 |   │   globals
 |   │   quetion
-|   |   startQuestionaire      
-│   
+|   |   startQuestionaire       
 └───routes
-|    │   coverstack.js
+|    │   CoverStack.js
 |      
 └───screens
 |   │   Accordian.js
@@ -101,15 +90,24 @@ kona-app
 |   |   StartQuestionnaire.js
 │   
 └─── data
-    │   raw_data.csv
-    │   kona_orgs.json
-    |   modified_orgs.gs
+|   │   LogoMaping.js
+|   |   kona_orgs.json
+|   │   raw_data.csv
+|   |   raw_data.xlsx
+│   |    └─── data_analysis
+|   |   └─── data_transformation
+│   |    └─── scripts
+|   |         |    AddLogos.py
+|   |         |    GenerateLogoMappings.py
+|
 └─── docs
-    │   technical_specification.md
+|    │   technical_specification.md
+|    │   Project_Summary_KONA_A.pdf
+|    │   Project_Presentation_KONA_A.pdf
+|    |
 └───src 
 │    │   
-│    └───test
-│       
+│    └───test     
 
 ```
 
@@ -146,21 +144,24 @@ kona-app
 
 <h4>data:</h4>
 <ul>
-  <li><b>raw_org_data.csv</b> - Data that was provided by Kona.</li>
-  <li><b>process_data.json</b> - Filtered and cleansed data that was preformed in pandas </li>
-  <li><b>kona_org.json</b> - Output data used by the app </li>
-  <li><b>LogoMappings.js</b> - A file created by script that contains the logo paths</li>
 
-<h4>scripts:</h4>
-<ul>
-  <li><b>AddLogos.py</b> - Checks if a logo of NGO is uploaded to the assets folder and creates a path to it in json file</li>
-  <li><b>GenerateLogoMappings.py</b> - Creates JS file with respective path to the logo to show it on the card of the organization </li>
+  <li><b>raw_org_data.csv</b> Data that was provided by Kona.</li>
+  <li><b>raw_org_data.xlsx</b>  Original Spreadsheet provided by Kona.</li>
+  <li><b>kona_orgs.json</b> Data that has been transformed, filtered, and grouped </li>
+  <li><b>LogoMapping.js</b> Data + company logos that is used to render the app </li>
+  <li><scripts dir</b> Scripts that append images to the JSON file, and create the new LogoMapping.js file that will be rendered to the application </li>
+  <li><b>data_transformation dir</b> Jupyter Notebooks that show the process of how data was cleansed, filtered, and catagorized</li>
+  <li><b>data_analysis dirs</b> -Jupyter Notebook with analysis on the frequency of times a catagory, SDG, and target group appears within the organization data </li>
+
 
 </ul>
 <h4>docs:</h4>
 <ul>
    <li><a href="https://github.com/WomenPlusPlus/deploy-impact-21-kona-a/blob/main/kona-app/docs/technical_requirements.md
-">technical_specifications.md</a> Contains information about the tech stack, decision making process, features, data structure, and future work </li>
+">technical_specifications.md</a> Contains information about the tech stack, decision making process, features, data structure, and future work. A link to Figma, where we created our UI/UX is included here </li>
+   <li><b>Project_Summary_KONA_A.pdf</b> Project summry that includes how we worked together to form a collaborative and effective team, the lessons we learned, and other project details </li>
+   <li><b>Project_Presentation_KONA_A.pdf</b> Final Presenatiation for this product</li>
+
 </ul>
 
 
