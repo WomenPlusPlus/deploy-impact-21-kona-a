@@ -133,13 +133,18 @@ kona-app
 <h4>screens:</h4>
 <ul>
   <li><b>Home.js</b> First screen with Searchbar, fast help buttons, quick glance to organizations and SDGs section </li>
-  <li><b>Filter.js</b> - Lets talk about what files to add here :) </li>
-  <li><b>FilteredOrgs.js</b> - Lets talk about what files to add here :)</li>
-  <li><b>StartQuestionnaire.js</b> - Lets talk about what files to add here :)</li>
+  <li><b>Filter.js</b> Section that allows the user to see the quick filters and narrow down the filters by clicking See all filters </li>
+  <li><b>FilteredOrgs.js</b> - Shows the organizations filtered by the applied categories</li>
+  <li><b>FilteredBySDG.js</b> - Shows the organizations filtered by Sustainable Development Goals</li>
+  <li><b>SearchPage.js</b> - Provides searching option</li>
+  <li><b>Solo.js</b> - Detailed description of the organization</li>
+  <li><b>Accordion.js</b> - Expanded filters that give possibilities to narrow down the results</li>
+  <li><b>UltimatelyFiltered.js</b> - Last screen that shows the organizations with all the filters applied</li>
 </ul>
 
 <h4>data:</h4>
 <ul>
+
   <li><b>raw_org_data.csv</b> Data that was provided by Kona.</li>
   <li><b>raw_org_data.xlsx</b>  Original Spreadsheet provided by Kona.</li>
   <li><b>kona_orgs.json</b> Data that has been transformed, filtered, and grouped </li>
@@ -147,7 +152,6 @@ kona-app
   <li><scripts dir</b> Scripts that append images to the JSON file, and create the new LogoMapping.js file that will be rendered to the application </li>
   <li><b>data_transformation dir</b> Jupyter Notebooks that show the process of how data was cleansed, filtered, and catagorized</li>
   <li><b>data_analysis dirs</b> -Jupyter Notebook with analysis on the frequency of times a catagory, SDG, and target group appears within the organization data </li>
-
 
 
 </ul>
