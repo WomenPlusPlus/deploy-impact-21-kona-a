@@ -135,16 +135,26 @@ kona-app
 <h4>screens:</h4>
 <ul>
   <li><b>Home.js</b> First screen with Searchbar, fast help buttons, quick glance to organizations and SDGs section </li>
-  <li><b>Filter.js</b> - Lets talk about what files to add here :) </li>
-  <li><b>FilteredOrgs.js</b> - Lets talk about what files to add here :)</li>
-  <li><b>StartQuestionnaire.js</b> - Lets talk about what files to add here :)</li>
+  <li><b>Filter.js</b> Section that allows the user to see the quick filters and narrow down the filters by clicking See all filters </li>
+  <li><b>FilteredOrgs.js</b> - Shows the organizations filtered by the applied categories</li>
+  <li><b>FilteredBySDG.js</b> - Shows the organizations filtered by Sustainable Development Goals</li>
+  <li><b>SearchPage.js</b> - Provides searching option</li>
+  <li><b>Solo.js</b> - Detailed description of the organization</li>
+  <li><b>Accordion.js</b> - Expanded filters that give possibilities to narrow down the results</li>
+  <li><b>UltimatelyFiltered.js</b> - Last screen that shows the organizations with all the filters applied</li>
 </ul>
 
 <h4>data:</h4>
 <ul>
   <li><b>raw_org_data.csv</b> - Data that was provided by Kona.</li>
   <li><b>process_data.json</b> - Filtered and cleansed data that was preformed in pandas </li>
-  <li><b>modified_data.gs</b> - Output data used by the app </li>
+  <li><b>kona_org.json</b> - Output data used by the app </li>
+  <li><b>LogoMappings.js</b> - A file created by script that contains the logo paths</li>
+
+<h4>scripts:</h4>
+<ul>
+  <li><b>AddLogos.py</b> - Checks if a logo of NGO is uploaded to the assets folder and creates a path to it in json file</li>
+  <li><b>GenerateLogoMappings.py</b> - Creates JS file with respective path to the logo to show it on the card of the organization </li>
 
 </ul>
 <h4>docs:</h4>
